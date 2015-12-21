@@ -45,10 +45,10 @@ var TodoApp3 = React.createClass({
     e.preventDefault();  /** this keeps the button from doing what it usually does */
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
-        text: this.state.text /** you can change the category name here from "text" to "name" */
+        name: this.state.text /** you can change the category name here from "text" to "name" */
       });
       this.setState({
-        text: '' /** you can change the category name here from "text" to "name" */
+        name: '' /** you can change the category name here from "text" to "name" */
       });
     }
   },
