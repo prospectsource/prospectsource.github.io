@@ -42,13 +42,13 @@ var TodoApp3 = React.createClass({
   },
 
   handleSubmit: function(e) {
-    e.preventDefault();
+    e.preventDefault();  /** this keeps the button from doing what it usually does */
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
-        text: this.state.text
+        name: this.state.text
       });
       this.setState({
-        text: ''
+        name: ''
       });
     }
   },
