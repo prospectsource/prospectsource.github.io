@@ -48,7 +48,7 @@ var TodoApp3 = React.createClass({
         text: this.state.text
       });
       this.setState({
-        text: ''
+        name: ''
       });
     }
   },
