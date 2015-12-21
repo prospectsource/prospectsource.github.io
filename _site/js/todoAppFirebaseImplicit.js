@@ -22,14 +22,14 @@ var TodoApp3 = React.createClass({
 
   getInitialState: function() {
     return {
-      test: [],
+      items: [],
       text: ''
     };
   },
 
   componentWillMount: function() {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/');
-    this.bindAsArray(firebaseRef.limitToLast(25), '');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
   onChange: function(e) {
@@ -45,10 +45,10 @@ var TodoApp3 = React.createClass({
     e.preventDefault();  /** this keeps the button from doing what it usually does */
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
-        name: this.state.text /** you can change the category name here from "text" to "name" */
+        text: this.state.text /** you can change the category name here from "text" to "name" */
       });
       this.setState({
-        name: '' /** you can change the category name here from "text" to "name" */
+        text: '' /** you can change the category name here from "text" to "name" */
       });
     }
   },
