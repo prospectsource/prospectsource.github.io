@@ -5,7 +5,7 @@ var TodoList3 = React.createClass({
     var createItem = function(item, index) {
       return (
         <li key={ index }>
-          { item.name }
+          { item.name } /** change the property after item." " to display the property you want */
           <span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
             X
@@ -45,10 +45,13 @@ var TodoApp3 = React.createClass({
     e.preventDefault();  /** this keeps the button from doing what it usually does */
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
-        name: this.state.text /** you can change the category name here from "text" to "name" */
+        name: this.state.text,
+        school: this.state.text
+         /** you can change the category name here from "text" to "name" */
       });
       this.setState({
-        name: '' /** you can change the category name here from "text" to "name" */
+        name: '', 
+        school: '' /** you can change the category name here from "text" to "name" */
       });
     }
   },
