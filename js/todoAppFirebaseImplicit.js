@@ -29,7 +29,7 @@ var TodoApp3 = React.createClass({
 
   componentWillMount: function() {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test/');
-    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'test');
   },
 
   onChange: function(e) {
@@ -44,14 +44,14 @@ var TodoApp3 = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();  /** this keeps the button from doing what it usually does */
     if (this.state.text && this.state.text.trim().length !== 0) {
-      this.firebaseRefs['items'].push({
+      this.firebaseRefs['test'].push({
         name: this.state.text,
         school: this.state.text
-         /** you can change the category name here from "text" to "name" */
+         /** you can change/add the property name here from "text" to "name" */
       });
       this.setState({
         name: '', 
-        school: '' /** you can change the category name here from "text" to "name" */
+        school: '' /** you can change/add the property name here from "text" to "name" */
       });
     }
   },
@@ -61,7 +61,7 @@ var TodoApp3 = React.createClass({
       <div>
         <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
-          <input onChange={ this.onChange } value={ this.state.name } />
+          <input onChange={ this.onChange } value={ this.state.name } /><br>
           <input onChange={ this.onChange } value={ this.state.school } />
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
