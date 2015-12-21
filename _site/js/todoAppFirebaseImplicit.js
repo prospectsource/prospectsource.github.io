@@ -22,13 +22,13 @@ var TodoApp3 = React.createClass({
 
   getInitialState: function() {
     return {
-      items: [],
+      test: [],
       text: ''
     };
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test/');
     this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
@@ -37,7 +37,7 @@ var TodoApp3 = React.createClass({
   },
 
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test/');
     firebaseRef.child(key).remove();
   },
 
