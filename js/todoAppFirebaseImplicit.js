@@ -23,7 +23,8 @@ var TodoApp3 = React.createClass({
   getInitialState: function() {
     return {
       items: [],
-      name: ''
+      name: '',
+      school: ''
     };
   },
 
