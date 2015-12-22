@@ -29,7 +29,7 @@ var TodoApp3 = React.createClass({
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test');
     this.bindAsArray(ref, 'test');
   },
 
@@ -42,7 +42,7 @@ var TodoApp3 = React.createClass({
   },
 
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test');
     firebaseRef.child(key).remove();
   },
 
