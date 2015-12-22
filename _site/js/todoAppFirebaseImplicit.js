@@ -64,7 +64,7 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       <div>
-        <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
+        <TodoList3 items={ this.state.test } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <input onChange={ this.onChange } value={ this.state.text } />
           <input onChange={ this.onChange2 } value={ this.state.text } />
