@@ -23,26 +23,21 @@ var TodoApp3 = React.createClass({
   getInitialState: function() {
     return {
       items: [],
-      name: '',
-      school: ''
+      name: ''
     };
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test');
-    this.bindAsArray(ref, 'test');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test/');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
   onChange: function(e) {
     this.setState({text: e.target.value});
   },
-  
-  onChange2: function(e) {
-    this.setState({text: e.target.value});
-  },
 
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/test/');
     firebaseRef.child(key).remove();
   },
 
@@ -64,10 +59,9 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       <div>
-        <TodoList3 items={ this.state.test } removeItem={ this.removeItem } />
+        <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <input onChange={ this.onChange } value={ this.state.text } />
-          <input onChange={ this.onChange2 } value={ this.state.text } />
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
