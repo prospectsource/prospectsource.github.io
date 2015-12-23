@@ -64,6 +64,8 @@ var TodoApp3 = React.createClass({
         <form onSubmit={ this.handleSubmit }>
           <input onChange={ this.onChange } value={ this.state.text } />
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
+          <input onChange={ this.onChange } value={ this.state.text } />
+          <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
     );
