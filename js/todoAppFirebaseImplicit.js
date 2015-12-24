@@ -22,7 +22,7 @@ var TodoApp3 = React.createClass({
 
   getInitialState: function() {
     return {
-      items: [],
+      players: [],
       text: ''
     };
   },
