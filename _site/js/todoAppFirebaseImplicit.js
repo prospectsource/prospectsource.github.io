@@ -22,14 +22,14 @@ var TodoApp3 = React.createClass({
 
   getInitialState: function() {
     return {
-      players: [],
+      items: [],
       text: ''
     };
   },
 
   componentWillMount: function() {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
-    this.bindAsArray(firebaseRef.limitToLast(25), 'players');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
   onChange: function(e) {
