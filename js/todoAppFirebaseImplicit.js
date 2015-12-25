@@ -5,7 +5,7 @@ var TodoList3 = React.createClass({
     var createItem = function(item, index) {
       return (
         <li key={ index }>
-          { item.text }
+          { item.last }
           <span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
             X
@@ -23,7 +23,7 @@ var TodoApp3 = React.createClass({
   getInitialState: function() {
     return {
       items: [],
-      last: ''
+      text: ''
     };
   },
 
