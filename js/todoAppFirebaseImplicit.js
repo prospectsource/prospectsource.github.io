@@ -44,7 +44,7 @@ var TodoApp3 = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     if (this.state.text && this.state.text.trim().length !== 0) {
-      this.firebaseRefs['items'].push({
+      this.firebaseRefs['players'].push({
         text: this.state.text
       });
       this.setState({
