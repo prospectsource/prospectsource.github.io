@@ -5,7 +5,7 @@ var TodoList3 = React.createClass({
     var createItem = function(item, index) {
       return (
         <li key={ index }>
-          { item.name }
+          { item.name } //this ".name" changes the attribute displayed in the todo list
           <span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
             X
@@ -22,7 +22,7 @@ var TodoApp3 = React.createClass({
 
   getInitialState: function() {
     return {
-      player: [],
+      items: [],
       text: ''
     };
   },
@@ -45,7 +45,7 @@ var TodoApp3 = React.createClass({
     e.preventDefault();
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
-        name: this.state.text
+        name: this.state.text // this changes the input attribute category
       });
       this.setState({
         text: ''
