@@ -10,7 +10,7 @@ var TodoList1 = React.createClass({
 
 var TodoApp1 = React.createClass({
   getInitialState: function() {
-    return {items: [], text: ""};
+    return {items: [], name: ""};
   },
 
   onChange: function(e) {
