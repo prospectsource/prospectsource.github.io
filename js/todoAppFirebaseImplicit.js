@@ -22,14 +22,14 @@ var TodoApp3 = React.createClass({
 
   getInitialState: function() {
     return {
-      items: [],
+      players: [],
       text: ''
     };
   },
 
   componentWillMount: function() {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
-    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'players');
   },
 
   onChange: function(e) {
@@ -56,7 +56,7 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       <div>
-        <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
+        <TodoList3 items={ this.state.players } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <input onChange={ this.onChange } value={ this.state.text } />
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
