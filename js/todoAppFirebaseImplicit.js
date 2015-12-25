@@ -33,7 +33,7 @@ var TodoApp3 = React.createClass({
   },
 
   onChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({position: e.target.value});
   },
 
   removeItem: function(key) {
