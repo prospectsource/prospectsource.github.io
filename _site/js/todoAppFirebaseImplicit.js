@@ -50,10 +50,9 @@ var TodoApp3 = React.createClass({
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
         name: this.state.text, // this changes the input attribute category
-        position: this.state.text
       });
       this.setState({
-        text: ''
+        name: ''
       });
     }
   },
