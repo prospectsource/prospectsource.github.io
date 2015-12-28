@@ -1,86 +1,88 @@
 /** @jsx React.DOM */
-var TodoList3 = React.createClass({
-  render: function() {
-    var _this = this;
-    var createItem = function(item, index) {
-      return (
-        <div>Position:</div>
-        <li key={ index }>
-          <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
-          <div>Position: { item.position }</div>
-          <div>Height: { item.height }</div>
-          <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
-                style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
-                  Delete Player
-          	</span>
-          </div>
-        </li>
-      );
-    };
-    return <ul>{ this.props.items.map(createItem) }</ul>;
-  }
-});
-
-var PlayerFilter = React.createClass({
-  mixins: [ReactFireMixin],
-
-  getInitialState: function() {
-    return {
-      items: [],
-      text: ''
-    };
-  },
-
-  componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
-    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
-  },
-
-  onChange: function(e) {
-    this.setState({text: e.target.value});
-  },
-  
-  onChange2: function(e) {
-    this.setState({text2: e.target.value});
-  },
-  
-  onChange3: function(e) {
-    this.setState({text3: e.target.value});
-  },
-
-  
-  removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
-    firebaseRef.child(key).remove();
-  },
-
-	
-  handleSubmit: function(e) {
-    e.preventDefault();
-    if (this.state.text && this.state.text.trim().length !== 0) {
-      this.firebaseRefs['items'].push({
-        name: this.state.text,
-        position: this.state.text2, // "name:" changes the input attribute category
-        height: this.state.text3
-      });
-      this.setState({
-        name: '',
-        position: '',
-        height: ''
-      });
+var ProductCategoryRow = React.createClass({
+    render: function() {
+        return (<tr><th colSpan="2">{this.props.category}</th></tr>);
     }
-    this.state.text = String.Empty;
-    this.state.text2 = String.Empty;
-    this.state.text3 = String.Empty;
-  },
-
-  render: function() {
-    return (
-      <div>
-        <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
-      </div>
-    );
-  }
 });
 
-React.render(<PlayerFilter />, document.getElementById('playerFilter'));
+var ProductRow = React.createClass({
+    render: function() {
+        var name = this.props.product.stocked ?
+            this.props.product.name :
+            <span style={{color: 'red'}}>
+                {this.props.product.name}
+            </span>;
+        return (
+            <tr>
+                <td>{name}</td>
+                <td>{this.props.product.price}</td>
+            </tr>
+        );
+    }
+});
+
+var ProductTable = React.createClass({
+    render: function() {
+        var rows = [];
+        var lastCategory = null;
+        this.props.products.forEach(function(product) {
+            if (product.category !== lastCategory) {
+                rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
+            }
+            rows.push(<ProductRow product={product} key={product.name} />);
+            lastCategory = product.category;
+        });
+        return (
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>{rows}</tbody>
+            </table>
+        );
+    }
+});
+
+var SearchBar = React.createClass({
+    render: function() {
+        return (
+            <form>
+                <input type="text" placeholder="Search..." />
+                <p>
+                    <input type="checkbox" />
+                    {' '}
+                    Only show products in stock
+                </p>
+            </form>
+        );
+    }
+});
+
+var FilterableProductTable = React.createClass({
+    render: function() {
+        return (
+            <div>
+                <SearchBar />
+                <ProductTable products={this.props.products} />
+            </div>
+        );
+    }
+});
+
+
+var PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
+ 
+ReactDOM.render(
+    <FilterableProductTable products={PRODUCTS} />,
+    document.getElementById('playerFilter')
+);
