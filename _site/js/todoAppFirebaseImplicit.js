@@ -50,10 +50,13 @@ var TodoApp3 = React.createClass({
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
         name: this.state.text,
-        position: this.state.text2 // "name:" changes the input attribute category
+        position: this.state.text2, // "name:" changes the input attribute category
+        height: this.state.text3
       });
       this.setState({
-        name: ''
+        name: '',
+        position: '',
+        height: ''
       });
     }
     this.state.text = String.Empty;
@@ -67,6 +70,7 @@ var TodoApp3 = React.createClass({
         <form onSubmit={ this.handleSubmit }>
           <div>Name: <input onChange={ this.onChange } value={ this.state.text } /></div>
           <div>Position: <input onChange={ this.onChange2 } value={ this.state.text2 } /></div>
+          <div>Height: <input onChange={ this.onChange3 } value={ this.state.text3 } /></div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
