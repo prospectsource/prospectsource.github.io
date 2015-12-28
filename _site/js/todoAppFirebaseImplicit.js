@@ -10,7 +10,7 @@ var TodoList3 = React.createClass({
           <div>Height: { item.height }</div>
           <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
-            Delete Player
+                  Delete Player
           	</span>
           </div>
         </li>
