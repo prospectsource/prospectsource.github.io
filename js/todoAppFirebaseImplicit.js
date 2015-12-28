@@ -6,9 +6,9 @@ var TodoList3 = React.createClass({
       return (
         <li key={ index }>
           <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
-          <div>{ item.position }</div>
-          <div>{ item.height }
-          	<span onClick={ _this.props.removeItem.bind(null, item['.key']) }
+          <div>Position: { item.position }</div>
+          <div>Height: { item.height }</div>
+          <div>Delete Player <span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
             X
           	</span>
