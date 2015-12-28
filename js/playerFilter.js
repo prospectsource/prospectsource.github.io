@@ -4,6 +4,7 @@ var TodoList3 = React.createClass({
     var _this = this;
     var createItem = function(item, index) {
       return (
+        <div>Position:</div>
         <li key={ index }>
           <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
           <div>Position: { item.position }</div>
