@@ -78,12 +78,6 @@ var PlayerFilter = React.createClass({
     return (
       <div>
         <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
-        <form onSubmit={ this.handleSubmit }>
-          <div>Name: <input onChange={ this.onChange } value={ this.state.text } /></div>
-          <div>Position: <input onChange={ this.onChange2 } value={ this.state.text2 } /></div>
-          <div>Height: <input onChange={ this.onChange3 } value={ this.state.text3 } /></div>
-          <button>{ 'Add #' + (this.state.items.length + 1) }</button>
-        </form>
       </div>
     );
   }
