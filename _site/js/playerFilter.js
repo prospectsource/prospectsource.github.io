@@ -82,7 +82,7 @@ var PRODUCTS = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
  
-ReactDOM.render(
+React.render(
     <FilterableProductTable products={PRODUCTS} />,
     document.getElementById('container')
 );
