@@ -39,6 +39,10 @@ var TodoApp3 = React.createClass({
   onChange2: function(e) {
     this.setState({text2: e.target.value});
   },
+  
+  onChange3: function(e) {
+    this.setState({text3: e.target.value});
+  },
 
   removeItem: function(key) {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
