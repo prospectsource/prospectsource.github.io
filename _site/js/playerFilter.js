@@ -47,12 +47,12 @@ var PlayerFilter = React.createClass({
     this.setState({text3: e.target.value});
   },
 
-  /**
+  
   removeItem: function(key) {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
     firebaseRef.child(key).remove();
   },
-	*/
+
 	
   handleSubmit: function(e) {
     e.preventDefault();
