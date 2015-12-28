@@ -4,7 +4,6 @@ var TodoList3 = React.createClass({
     var _this = this;
     var createItem = function(item, index) {
       return (
-        <div>Position:</div>
         <li key={ index }>
           <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
           <div>Position: { item.position }</div>
@@ -48,11 +47,13 @@ var PlayerFilter = React.createClass({
     this.setState({text3: e.target.value});
   },
 
+  /**
   removeItem: function(key) {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
     firebaseRef.child(key).remove();
   },
-
+	*/
+	
   handleSubmit: function(e) {
     e.preventDefault();
     if (this.state.text && this.state.text.trim().length !== 0) {
