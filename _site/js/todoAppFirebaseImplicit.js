@@ -53,8 +53,7 @@ var TodoApp3 = React.createClass({
         position: this.state.text2 // "name:" changes the input attribute category
       });
       this.setState({
-        name: '',
-        position: ''
+        name: ''
       });
     }
   },
