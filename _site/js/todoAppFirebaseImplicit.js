@@ -5,11 +5,14 @@ var TodoList3 = React.createClass({
     var createItem = function(item, index) {
       return (
         <li key={ index }>
-          { item.name, item.position  /**this ".name" changes the attribute displayed in the todo list */ } 
-          <span onClick={ _this.props.removeItem.bind(null, item['.key']) }
+          <div>{ item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
+          <div>{ item.position }</div>
+          <div>{ item.height }
+          	<span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
             X
-          </span>
+          	</span>
+          </div>
         </li>
       );
     };
