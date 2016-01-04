@@ -130,9 +130,9 @@ var PRODUCTS = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 
-var PRODUCTS = PRODUCTS.toLowerCase();
+var PRODUCTS1 = PRODUCTS.toLowerCase();
  
 React.render(
-    <FilterableProductTable products={PRODUCTS} />,
+    <FilterableProductTable products={PRODUCTS1} />,
     document.getElementById('container')
 );
