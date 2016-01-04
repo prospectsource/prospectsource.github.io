@@ -131,6 +131,6 @@ var PRODUCTS = [
 ];
  
 React.render(
-    <FilterableProductTable products={PRODUCTS.toLowerCase()} />,
+    <FilterableProductTable products={PRODUCTS} />,
     document.getElementById('container')
 );
