@@ -67,7 +67,7 @@ var SearchBar = React.createClass({
                 <input 
                 	type="text"
                     placeholder="Search..."
-                    value={this.props.filterText}
+                    value={this.props.filterText.toLowerCase()}
                     ref="filterTextInput"
                     onChange={this.handleChange}
                  />
