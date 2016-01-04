@@ -67,7 +67,7 @@ var SearchBar = React.createClass({
                 <input 
                 	type="text"
                     placeholder="Search..."
-                    value={this.props.filterText.toLowerCase()}
+                    value={this.props.filterText}
                     ref="filterTextInput"
                     onChange={this.handleChange}
                  />
@@ -129,10 +129,8 @@ var PRODUCTS = [
   {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
-
-var PRODUCTS1 = PRODUCTS.toLowerCase();
  
 React.render(
-    <FilterableProductTable products={PRODUCTS1} />,
+    <FilterableProductTable products={PRODUCTS.toLowerCase()} />,
     document.getElementById('container')
 );
