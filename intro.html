@@ -19,7 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/venera.css">
+    <link rel="stylesheet" href="css/timeline.css">
     
     <style type="text/css">
 
@@ -55,24 +55,52 @@
 
     body {
     background-color: white;
-	
-	font-family: 'Venera100';
+	font-size: 16px;
+	font-family: 'Venera300';
+	color: #4e4f51;
 	}
     
     a 	{
 	text-decoration: none;
-	color: #fff;
+	color: #5ccae6;
 	}
     
+    a:active {
+    text-decoration: none;
+    color: #939598;
+	}
+    
+    a:focus, a:hover {
+    text-decoration: none;
+    color: #939598;
+	}
+    
+    h1, h2, h3, h4, h5 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    }
+    
     hr   {
+    color: #939598
 	width: 75%;  
 	margin-top: 50px;
 	margin-bottom: 50px;  
     }
     
-    section {
-    margin: 50px 20px 50px 20px;
+    header {
+    padding: 50px 0px 50px 0px;
     }
+    
+    section {
+    padding: 50px 0px 50px 0px;
+    border-top: 2px solid #5ccae6;
+    }
+    
+    .btn-default {
+    color: #333;
+    background-color: #5ccae6;
+    border-color: #fff;
+	}
     
     #logo  {
     margin-top: 100px;
@@ -82,11 +110,16 @@
      #logo img {
     }
     
-    #section  {
-    background-color: #939598;
-    margin-left: 0px;
-    margin-right: 0px;
-	margin-top: 0px;
+    #about {
+	background-color: #e7e7e7;
+    }
+    
+	#contact  {
+	background-color: #939598;
+    }
+    
+    #serve h2 {
+    text-align:left;
     }
     
     img {
@@ -94,30 +127,67 @@
     }
     
     .navbar-default {
-    background-color: rgba(255,255,255,.50);
-    border-color: black;
+    background-color: rgba(255,255,255,.90);
+    border-color: #939598;
 	}
     
     .navbar-default .navbar-nav>li>a {
     color: #5ccae6;
+    font-size: 14px;
 	}
     
     .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: white;
+    color: #939598;
     background-color: transparent;
+	}
+    
+    .navbar-toggle {
+    font-size: 14px;
 	}
     
     .navbar-brand {
 	padding: 8px 20px;
-
 	}
-    
+	
     .navbar-brand img {
     height: 35px;
     width: 35px;
 	}
     
+    .header-icon {
+	margin: 0px 12px;
+	height: 35px;
+    width: 35px;
+	}
     
+    @media(min-width:1000px) {
+	
+	.navbar-default .navbar-nav>li>a {
+    color: #5ccae6;
+    font-size: 16px;
+	}
+	
+	}
+	
+	#results h4 {
+	margin-top: 65px;
+	}
+	
+	#prospect-timeline {
+	background-color: #e7e7e7;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-bottom: 40px;
+	}
+	
+	#prospect-timeline ul h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	}
+	
+	 p {
+	padding-bottom: 40px;
+	}
     
     </style>
     
@@ -142,10 +212,10 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#prospects">Basketball Prospects</a>
+                        <a class="page-scroll" href="#prospects">Prospects</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#programs">Basketball Programs</a>
+                        <a class="page-scroll" href="#programs">College Programs</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#programs">Contact Us</a>
@@ -161,120 +231,165 @@
 
 <!-- landing page logo -->
 
-	<section id="logo">
+	<header id="logo">
 	  <div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 text-center">
+			<div class="col-lg-10 col-lg-offset-1 text-center">
 				<img src="img/ps-logo-lg.png" class="image-responsive" alt="">
 				<hr>
 				
 			</div>
 		</div>
 	  </div>
-	</section>
+	</header>
 	
-	<section id="banner">
+	<section id="about">
 	  <div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 text-center">
-				<h1>Launching in Spring 2016 with select AAU Programs!</h1>
+			<div class="col-lg-10 col-lg-offset-1">
+				<h1><img class="header-icon" src="img/ps-icon.png" />WHAT WE DO</h1>
+				<p>Prospect Source is a recruiting service built to help athletes through the recruiting process. We believe 
+				the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in 
+				order to have the opportunity to play college basketball. We believe it is our job to help educate and train 
+				athletes on this process, while offering resources. Our end goal is to empower both athletes and college 
+				basketball coaching staffs.
+				</p>
 			</div>
 		</div>
 	  </div>
 	</section>
-
-
-
-
-
-INTRO PAGE
-
-Launching in spring 2016 with select AAU Programs!
-
-Enter to learn more
-
-
-
-
-
-
-
-
-
-
-
-TOP NAVIGATION
-
-About
-
-Prospect Source is a recruiting service built to help athletes through the recruiting process. We believe the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in order to have the opportunity to play college basketball. We believe it is our job to help educate and train athletes on this process, while offering resources. Our end goal is to empower both athletes and college basketball coaching staffs. 
-
-Servicing College Basketball Prospects 
-
-Servicing College Basketball Programs 
-
-Contact
 	
-	Contact forum for questions
+	<section id="serve">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2><img class="header-icon" src="img/ps-icon.png" />WHO WE SERVE</h2>
+                    <h3><a class="page-scroll" href="#prospects"> College Basketball Prospects</a></h2>
+					<h3><a class="page-scroll" href="#programs"> College Basketball Programs</a></h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-LANDING PAGE SECTIONS
-
-
-SERVICING COLLEGE BASKETBALL PROSPECTS
-
-AAU Prospects
-Our service is built to help AAU athletes through the recruiting process. We believe the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in order to have the opportunity to play college basketball. We service our athletes all year round as we prepare them for college basketball. During the fall and winter months we want our athletes utilizing all the resources offered at their respective high school. During the spring and summer, we offer additional resources through their respective AAU program to make sure athletes are doing everything possible to reach their goals. For many this simply means education on the process and information dissemination. For other athletes, this is a more in depth development opportunity as we help our athletes become physically and mentally prepared to perform. 
-  
-Service Overview
-
-Basic Service
-Register on our platform to receive an evaluation and gain access to resources. 
-
-Video Service
-Let us work with your video to create highlights and to share game film with college coaches for scouting. 
-
-Marketing Service
-Do you have highlight videos, game film, or Hudl video? We want to make sure relevant coaches across the country have your content. 
-
-Consulting Service
-Work with our consultants to make sure your physical skills, mentality, and opportunity put you in the best position to reach your goals of playing college basketball. 
-
-
-JUCO Prospects (KEEP THIS HIDDEN FOR NOW, DON’T WANT TO SHOW THIS YET)
-
-Our service is built to come alongside NJCAA coaching staffs to help their athletes in the transfer process. As athletes prepare for the transfer process, we help them disseminate information across the country in search of the right opportunity at the NCAA level. Our goal with NJCAA programs is to empower the coaching staff and their athletes, making their processes more powerful and efficient.  
-
-Service Overview
-
-SERVICING COLLEGE BASKETBALL PROGRAMS
-
-NCAA (Division I, II, III), NAIA, NJCAA
-Our goal is to help college basketball programs of all levels improve their prospect discovery process. We make sure college coaches have the necessary information, video, and relationships to easily identify relevant prospects at AAU Programs across the country. We understand college coaches cannot see every athlete live, therefore we work to make sure they have a resource to identify prospects who would be a good fit for their program. 
-	
 	<section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Interested In Learning More?</h2>
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                	<h2 class="section-heading">Interested?</h2>
                     <a href="#" class="btn btn-default btn-xl wow tada">Contact Us!</a>
                 </div>
             </div>
         </div>
     </section>
-	
-	<footer id="bottom">
-	</footer>
+
+
+	<section id="prospects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="section-heading"><img class="header-icon" src="img/ps-icon.png" />COLLEGE BASKETBALL PROSPECTS</h2>
+                    <p>Our service is built to help AAU athletes through the recruiting 
+                                    process. We believe the recruiting process is complex and it is ultimately up to the 
+                                    athlete to perform on and off the court in order to have the opportunity to play college 
+                                    basketball. We service our athletes all year round as we prepare them for college 
+                                    basketball. During the fall and winter months we want our athletes utilizing all the 
+                                    resources offered at their respective high school. During the spring and summer, we offer 
+                                    additional resources through their respective AAU program to make sure athletes are doing 
+                                    everything possible to reach their goals. For many this simply means education on the 
+                                    process and information dissemination. For other athletes, this is a more in depth 
+                                    development opportunity as we help our athletes become physically and mentally prepared to 
+                                    perform.
+                    </p>
+                </div>
+            </div>
+            <div class="row" id="prospect-timeline">
+                <div class="col-lg-12 text-center">
+                	<h2>Service Overview:</h2>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Basic Service</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Register on our platform to receive an evaluation and gain access to 
+                                    resources.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Video Service</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Let us work with your video to create highlights and to share game 
+                                    film with college coaches for scouting.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Marketing Service</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Do you have highlight videos, game film, or Hudl video? We want to 
+                                    make sure relevant coaches across the country have your content.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Consulting Service</h3>
+                                </div>
+                                <div class="">
+                                    <p class="text-muted">Work with our consultants to make sure your physical skills, 
+                                    mentality, and opportunity put you in the best position to reach your goals of playing 
+                                    college basketball.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="results" class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Results.</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section id="prospects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="section-heading"><img class="header-icon" src="img/ps-icon.png" />COLLEGE BASKETBALL PROGRAMS</h2>
+                    <h3>NCAA (Division I, II, III), NAIA, NJCAA</h3>
+					<p>Our goal is to help college basketball programs of all levels improve their prospect discovery process. 
+					We make sure college coaches have the necessary information, video, and relationships to easily identify 
+					relevant prospects at AAU Programs across the country. We understand college coaches cannot see every 
+					athlete live, therefore we work to make sure they have a resource to identify prospects who would be a 
+					good fit for their program.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 	
 	
 	<!-- Latest compiled and minified JavaScript -->
