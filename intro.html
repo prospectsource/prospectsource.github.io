@@ -117,8 +117,14 @@
 	background-color: #e7e7e7;
     }
     
+
 	#interested, #programs  {
 	background-color: #939598;
+	color: #fff;
+    }
+    
+    #serve h2, #about h2 {
+    font-size: 28px;
     }
     
     #serve h2 {
@@ -171,13 +177,21 @@
     @media(min-width:700px) {
 	
 	h2 {
-    font-size:36px;
+    font-size:30px;
     }
-	
 	
 	}
     
     @media(min-width:1000px) {
+	
+	.navbar-default .navbar-nav>li>a {
+    color: #5ccae6;
+    font-size: 16px;
+	}
+	
+	}
+	
+	@media(min-width:1000px) {
 	
 	.navbar-default .navbar-nav>li>a {
     color: #5ccae6;
@@ -200,6 +214,11 @@
 	#prospect-timeline ul h3 {
 	margin-top: 20px;
 	margin-bottom: 10px;
+	}
+	
+	#prospect-timeline #results {
+	font-family: 'Venera700';
+	margin-top: 70px;
 	}
 	
 	 p {
@@ -268,7 +287,7 @@
 	  <div class="container">
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
-				<h1><img class="header-icon" src="img/ps-icon.png" />WHAT WE DO</h1>
+				<h2><img class="header-icon" src="img/ps-icon.png" />WHAT WE DO</h2>
 				<p>Prospect Source is a recruiting service built to help athletes through the recruiting process. We believe 
 				the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in 
 				order to have the opportunity to play college basketball. We believe it is our job to help educate and train 
@@ -285,8 +304,11 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2><img class="header-icon" src="img/ps-icon.png" />WHO WE SERVE</h2>
+                	<hr>
                     <h3><a class="page-scroll" href="#prospects"> College Basketball Prospects</a></h2>
+                    <hr>
 					<h3><a class="page-scroll" href="#programs"> College Basketball Programs</a></h2>
+					<hr>
                 </div>
             </div>
         </div>
@@ -330,7 +352,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <i class="fa fa-keyboard-o animated zoomIn fa-5x wow" data-wow-delay=".2s"></i>
+                                <i class="fa fa-keyboard-o animated zoomIn fa-5x wow img-responsive" data-wow-delay=".2s"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -387,7 +409,7 @@
                         </li>
                         <li id="results" class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Results.</h4>
+                               <i id="results" class="fa animated zoomIn wow" data-wow-delay=".2s">RESULTS</i>
                             </div>
                         </li>
                     </ul>
