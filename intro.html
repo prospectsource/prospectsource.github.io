@@ -173,6 +173,10 @@
 	height: 35px;
     width: 35px;
 	}
+
+	.fa  {
+	margin-top: 8px;
+	}
     
     @media(min-width:700px) {
 	
@@ -180,25 +184,51 @@
     font-size:30px;
     }
 	
+}
+
+
+	@media(min-width:768px) {
+	
+	.fa  {
+	margin-top: 18px;
 	}
-    
+	
+}
+
     @media(min-width:1000px) {
 	
 	.navbar-default .navbar-nav>li>a {
     color: #5ccae6;
     font-size: 16px;
 	}
+}
 	
+	@media(min-width:1100px) {
+	
+	.fa  {
+	margin-top: 26px;
+	}	
+	
+	#prospect-timeline #results {
+	font-family: 'Venera700';
+	margin-top: 60px;
+	}
+}
+	
+
+	
+	@media(min-width:1200px) {
+	
+	.fa  {
+	margin-top: 36px;
 	}
 	
-	@media(min-width:1000px) {
-	
-	.navbar-default .navbar-nav>li>a {
-    color: #5ccae6;
-    font-size: 16px;
+	#prospect-timeline #results {
+	font-family: 'Venera700';
+	margin-top: 70px;
 	}
+}
 	
-	}
 	
 	#results h4 {
 	margin-top: 65px;
@@ -216,18 +246,13 @@
 	margin-bottom: 10px;
 	}
 	
-	#prospect-timeline #results {
-	font-family: 'Venera700';
-	margin-top: 70px;
-	}
+	
 	
 	 p {
 	padding-bottom: 40px;
 	}
 	
-	.fa  {
-	margin-top: 35px;
-	}
+	
     
     </style>
     
@@ -286,14 +311,10 @@
 	<section id="about">
 	  <div class="container">
 		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
-				<h2><img class="header-icon" src="img/ps-icon.png" />WHAT WE DO</h2>
-				<p>Prospect Source is a recruiting service built to help athletes through the recruiting process. We believe 
-				the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in 
-				order to have the opportunity to play college basketball. We believe it is our job to help educate and train 
-				athletes on this process, while offering resources. Our end goal is to empower both athletes and college 
-				basketball coaching staffs.
-				</p>
+			<div class="col-sm-4">
+			  	<a href="#modal1" data-toggle="modal">	
+					<h2>WHAT WE DO</h2>
+			  	<a>
 			</div>
 		</div>
 	  </div>
@@ -352,7 +373,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <i class="fa fa-keyboard-o animated zoomIn fa-5x wow img-responsive" data-wow-delay=".2s"></i>
+                                <i class="fa fa-keyboard-o animated zoomIn fa-3x wow" data-wow-delay=".2s"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -517,6 +538,36 @@
         </div>
     </section>
 	
+	<!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h1>Kingdom Hoops Teams</h1>
+                            <p class="item-intro text-muted"></p>
+                            <img class="img-responsive img-centered" src="https://kingdomcares.github.io/img/programs/hoops-teams-color.jpg" alt="">
+                            <p>Prospect Source is a recruiting service built to help athletes through the recruiting process. We believe 
+				the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in 
+				order to have the opportunity to play college basketball. We believe it is our job to help educate and train 
+				athletes on this process, while offering resources. Our end goal is to empower both athletes and college 
+				basketball coaching staffs.
+				</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa "></i>Back To Programs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -533,6 +584,16 @@
     
     <!-- Submit the Form to Google Using "AJAX" -->
   	<script type="text/javascript"  src="js/prospect-form-submission-handler.js"></script>
+  	
+  	
+  	<script>
+  	$(document).ready(function() {
+  	
+  	 if ($(document).width() > 1100) {
+    	return $(".timeline-image").html("<i class='fa fa-keyboard-o animated zoomIn fa-5x wow' data-wow-delay='.2s'></i>");
+  			} 
+  	});
+	</script>
 
 </body>
 </html>
