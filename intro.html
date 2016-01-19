@@ -178,7 +178,13 @@
     .navbar-brand img {
     height: 35px;
     width: 35px;
+    margin-right: 10px;
+    display: inline;
 	}
+    
+    #mainNav .name {
+    display: none;
+    }
     
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #e7e7e7;
@@ -215,6 +221,10 @@
 
 
 	@media(min-width:768px) {
+	
+	#mainNav .name {
+    display: inline;
+    }
 	
 	.fa  {
 	margin-top: 16px;
@@ -343,7 +353,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span>MENU<span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index"><img src="img/ps-icon.png" /></a>
+                <a class="navbar-brand page-scroll" href="index"><img src="img/ps-icon.png" /><span class="name">Prospect Source</span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
