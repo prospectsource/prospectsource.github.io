@@ -412,7 +412,7 @@
             
         	<div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-            		<form id="gform" method="POST" class="pure-form pure-form-stacked" action="#">
+            		<form id="gform" method="POST" class="pure-form pure-form-stacked" action="https://script.google.com/macros/d/MNm0pvG0js00ftMedA52Cb8t_Fwpqr7h4/edit?uiv=2&mid=ACjPJvFvDfo8FKc16s4FhaXzIef2CF0pEJ_SZJo9Cnc5ZrhLZz9p1hipd3MajZVOR_Epv6DDzoqlBlsQAe7UyylZdTgjxkz8r0W5RrNvjemmTtGMJsJRgOncaXI4ulyKfaRNRnfZNmbSFKo">
     					<!-- change the form action to your script url -->
 						<div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -430,8 +430,15 @@
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Home Address</label>
-                                <input type="text" class="form-control" placeholder="123 Main St, Sioux City, IA 51101" id="home" name="home"required data-validation-required-message="Please enter your home address.">
+                                <label>Gender</label>
+                                <input type="text" class="form-control" placeholder="Male/Female" id="gender" name="gender" required data-validation-required-message="Please enter your gender.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Graduation Year</label>
+                                <input type="number" class="form-control" placeholder="2016" id="year" name="year"required data-validation-required-message="Please enter your graduation year.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -454,20 +461,20 @@
                           <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>High School</label>
-                                <input type="text" class="form-control" placeholder="Valley West High School" id="church" name="church" required data-validation-required-message="">
+                                <input type="text" class="form-control" placeholder="Valley West High School" id="school" name="school" required data-validation-required-message="">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                          <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>AAU Club</label>
-                                <input type="text" class="form-control" placeholder="Kingdom Hoops" id="church" name="church" required data-validation-required-message="">
+                                <input type="text" class="form-control" placeholder="Kingdom Hoops" id="club" name="club" required data-validation-required-message="">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <input type="submit" class="btn btn-lg fa fa-paper-plane" value="SEND" >
+                                <input type="submit" class="btn btn-default" value="SEND" >
                             </div>
                         </div>
   					</form>

@@ -3,11 +3,12 @@ function getFormData() {
   var data   = {
     first    : document.getElementById("first").value,
     last   : document.getElementById("last").value,
-    home : document.getElementById("home").value,
+    gender: document.getElementById("gender").value,
+    graduation year : document.getElementById("year").value,
     email : document.getElementById("email").value,
     phone : document.getElementById("phone").value,
-    church : document.getElementById("church").value,
-    reason : document.getElementById("reason").value
+    high school : document.getElementById("school").value,
+    AAU club : document.getElementById("club").value
   }
   console.log(data);
   return data;
