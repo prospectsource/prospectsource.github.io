@@ -8,7 +8,8 @@ function getFormData() {
     email : document.getElementById("email").value,
     phone : document.getElementById("phone").value,
     school : document.getElementById("school").value,
-    club : document.getElementById("club").value
+    club : document.getElementById("club").value,
+    question: document.getElementById("question").value
   }
   console.log(data);
   return data;
