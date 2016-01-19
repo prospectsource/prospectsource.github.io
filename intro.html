@@ -80,6 +80,7 @@
     h1, h2, h3, h4, h5 {
     margin-top: 40px;
     margin-bottom: 40px;
+    font-family: "Venera700";
     }
     
     
@@ -103,6 +104,18 @@
     color: #333;
     background-color: #5ccae6;
     border-color: #fff;
+    border-radius: 25px;
+	}
+	
+	.btn-default:hover,  .btn-default:focus {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff;
+	}
+	
+	.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+	border: 2px solid #5ccae6;    
 	}
     
     #logo  {
@@ -117,15 +130,18 @@
 	background-color: #e7e7e7;
     }
     
+    #about .btn{
+	display: block;
+	width: 100%
+	margin: auto;
+    }
 
 	#interested, #programs  {
 	background-color: #939598;
 	color: #fff;
     }
     
-    #serve h2, #about h2 {
-    font-size: 28px;
-    }
+    
     
     #serve h2 {
     text-align:left;
@@ -175,7 +191,17 @@
 	}
 
 	.fa  {
-	margin-top: 8px;
+	margin-top: 16px;
+	}
+	
+	#marketing {
+	margin-top: 9px;
+	}
+	
+	#results i {
+	margin-top: 43px;
+	font-family: 'Venera700';
+	font-size: 14px;
 	}
     
     @media(min-width:700px) {
@@ -190,9 +216,12 @@
 	@media(min-width:768px) {
 	
 	.fa  {
-	margin-top: 18px;
+	margin-top: 16px;
 	}
 	
+	#about h2{
+	font-size: 20px;
+    }
 }
 
     @media(min-width:1000px) {
@@ -201,18 +230,28 @@
     color: #5ccae6;
     font-size: 16px;
 	}
+	
+	#about h2{
+	font-size: 28px;
+    }
 }
 	
 	@media(min-width:1100px) {
 	
 	.fa  {
-	margin-top: 26px;
+	margin-top: 35px;
 	}	
 	
-	#prospect-timeline #results {
-	font-family: 'Venera700';
-	margin-top: 60px;
+	#marketing {
+	margin-top: 28px;
 	}
+	
+	#results i {
+	margin-top: 61px;
+	font-family: 'Venera700';
+	font-size: 19px;
+	}
+	
 }
 	
 
@@ -223,22 +262,19 @@
 	margin-top: 36px;
 	}
 	
-	#prospect-timeline #results {
-	font-family: 'Venera700';
-	margin-top: 70px;
+	#prospect-timeline {
+	padding-bottom: 100px;
 	}
+	
 }
 	
-	
-	#results h4 {
-	margin-top: 65px;
-	}
+
 	
 	#prospect-timeline {
 	background-color: #e7e7e7;
 	margin-left: 0px;
 	margin-right: 0px;
-	padding-bottom: 40px;
+	padding-bottom: 100px;
 	}
 	
 	#prospect-timeline ul h3 {
@@ -253,6 +289,45 @@
 	}
 	
 	
+	
+	.about-modal .modal-content {
+    padding: 100px 0;
+	}
+
+	.about-modal .close-modal {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+	}
+	
+	.about-modal .close-modal .lr {
+	height:75px;
+	width:1px;
+	margin-left:35px;
+	background-color:#222;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	z-index:1051
+	}
+
+	.about-modal .close-modal .lr .rl {
+	height:75px;
+	width:1px;
+	background-color:#222;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	z-index:1052
+	}
+    
+    #consulting {
+    margin-bottom: 0px;
+    }
     
     </style>
     
@@ -275,12 +350,6 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#prospects">Prospects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#programs">College Programs</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact Us</a>
@@ -312,149 +381,24 @@
 	  <div class="container">
 		<div class="row">
 			<div class="col-sm-4">
-			  	<a href="#modal1" data-toggle="modal">	
-					<h2>WHAT WE DO</h2>
-			  	<a>
+			  	<a class="btn btn-default btn-xl wow zoomIn" href="#Modal1" data-toggle="modal" data-wow-delay="0s">	
+					<h2><br>OUR MISSION<br><br><br></h2>
+			  	</a>
+			</div>
+			<div class="col-sm-4">
+			  	<a class="btn btn-default btn-xl wow zoomIn" href="#Modal2" data-toggle="modal" data-wow-delay="0s">	
+					<h2>Service<br>College<br>Basketball<br>Prospects</h2>
+			  	</a>
+			</div>
+			<div class="col-sm-4">
+			  	<a class="btn btn-default btn-xl wow zoomIn" href="#Modal3" data-toggle="modal" data-wow-delay="0s">	
+					<h2>Service<br>College<br>Basketball<br>Programs</h2>
+			  	</a>
 			</div>
 		</div>
 	  </div>
 	</section>
-	
-	<section id="serve">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2><img class="header-icon" src="img/ps-icon.png" />WHO WE SERVE</h2>
-                	<hr>
-                    <h3><a class="page-scroll" href="#prospects"> College Basketball Prospects</a></h2>
-                    <hr>
-					<h3><a class="page-scroll" href="#programs"> College Basketball Programs</a></h2>
-					<hr>
-                </div>
-            </div>
-        </div>
-    </section>
 
-	<section id="interested">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                	<h2 class="section-heading">Interested?</h2>
-                    <a href="#contact" class="btn btn-default btn-xl wow flipInX page-scroll">Contact Us!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-	<section id="prospects">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2 class="section-heading"><img class="header-icon" src="img/ps-icon.png" />COLLEGE BASKETBALL PROSPECTS</h2>
-                    <p>Our service is built to help AAU athletes through the recruiting 
-        				process. We believe the recruiting process is complex and it is ultimately up to the 
-                                    athlete to perform on and off the court in order to have the opportunity to play college 
-                                    basketball. We service our athletes all year round as we prepare them for college 
-                                    basketball.<br><br>
-                                    During the fall and winter months we want our athletes utilizing all the 
-                                    resources offered at their respective high school. During the spring and summer, we offer 
-                                    additional resources through their respective AAU program to make sure athletes are doing 
-                                    everything possible to reach their goals. For many this simply means education on the 
-                                    process and information dissemination. For other athletes, this is a more in depth 
-                                    development opportunity as we help our athletes become physically and mentally prepared to 
-                                    perform.
-                    </p>
-                </div>
-            </div>
-            <div class="row" id="prospect-timeline">
-                <div class="col-lg-12 text-center">
-                	<h2>Service Overview:</h2>
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <i class="fa fa-keyboard-o animated zoomIn fa-3x wow" data-wow-delay=".2s"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Basic Service</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Register on our platform to receive an evaluation and gain access to 
-                                    resources.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <i class="fa fa-video-camera animated zoomIn fa-5x wow" data-wow-delay=".2s"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Video Service</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Let us work with your video to create highlights and to share game 
-                                    film with college coaches for scouting.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <i class="fa fa-dot-circle-o animated zoomIn fa-5x wow" data-wow-delay=".2s"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Marketing Service</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Do you have highlight videos, game film, or Hudl video? We want to 
-                                    make sure relevant coaches across the country have your content.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <i class="fa fa-thumbs-o-up animated zoomIn fa-5x wow" data-wow-delay=".2s"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Consulting Service</h3>
-                                </div>
-                                <div class="">
-                                    <p class="text-muted">Work with our consultants to make sure your physical skills, 
-                                    mentality, and opportunity put you in the best position to reach your goals of playing 
-                                    college basketball.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="results" class="timeline-inverted">
-                            <div class="timeline-image">
-                               <i id="results" class="fa animated zoomIn wow" data-wow-delay=".2s">RESULTS</i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-	<section id="programs">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2 class="section-heading"><img class="header-icon" src="img/ps-icon.png" />COLLEGE BASKETBALL PROGRAMS</h2>
-                    <h3>NCAA (Division I, II, III), NAIA, NJCAA</h3>
-					<p>Our goal is to help college basketball programs of all levels improve their prospect discovery process. 
-					We make sure college coaches have the necessary information, video, and relationships to easily identify 
-					relevant prospects at AAU Programs across the country. We understand college coaches cannot see every 
-					athlete live, therefore we work to make sure they have a resource to identify prospects who would be a 
-					good fit for their program.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 	
 	<!-- Contact Section -->
     <section id="contact">
@@ -539,7 +483,7 @@
     </section>
 	
 	<!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="about-modal modal fade" id="Modal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -552,16 +496,149 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h1>Kingdom Hoops Teams</h1>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="https://kingdomcares.github.io/img/programs/hoops-teams-color.jpg" alt="">
+                            <h1><img class="header-icon" src="img/ps-icon.png" />OUR MISSION</h1>
                             <p>Prospect Source is a recruiting service built to help athletes through the recruiting process. We believe 
 				the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in 
 				order to have the opportunity to play college basketball. We believe it is our job to help educate and train 
 				athletes on this process, while offering resources. Our end goal is to empower both athletes and college 
 				basketball coaching staffs.
 				</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa "></i>Back To Programs</button>
+                            <button type="button" class="btn btn-default btn-primary" data-dismiss="modal"><i class="fa "></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div class="about-modal modal fade" id="Modal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h1><img class="header-icon" src="img/ps-icon.png" />Service College Basketball Prospects</h1>
+                            <p>Our service is built to help AAU athletes through the recruiting 
+        				process. We believe the recruiting process is complex and it is ultimately up to the 
+                                    athlete to perform on and off the court in order to have the opportunity to play college 
+                                    basketball. We service our athletes all year round as we prepare them for college 
+                                    basketball.<br><br>
+                                    During the fall and winter months we want our athletes utilizing all the 
+                                    resources offered at their respective high school. During the spring and summer, we offer 
+                                    additional resources through their respective AAU program to make sure athletes are doing 
+                                    everything possible to reach their goals. For many this simply means education on the 
+                                    process and information dissemination. For other athletes, this is a more in depth 
+                                    development opportunity as we help our athletes become physically and mentally prepared to 
+                                    perform.
+                    		</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="prospect-timeline">
+                <div class="col-lg-12 text-center">
+                	<h2>Service Overview:</h2>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <i class="fa fa-keyboard-o fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Basic Service</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Register on our platform to receive an evaluation and gain access to 
+                                    resources.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <i class="fa fa-video-camera fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Video Service</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Let us work with your video to create highlights and to share game 
+                                    film with college coaches for scouting.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <i id="marketing" class="fa fa-dot-circle-o fa-5x"></i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Marketing Service</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Do you have highlight videos, game film, or Hudl video? We want to 
+                                    make sure relevant coaches across the country have your content.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <i class="fa fa-wechat fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Consulting Service</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Work with our consultants to make sure your physical skills, 
+                                    mentality, and opportunity put you in the best position to reach your goals of playing 
+                                    college basketball.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="results">
+                            <div class="timeline-image">
+                               <i class="fa">RESULTS</i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           	<button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    
+    <!-- Modal 3 -->
+    <div class="about-modal modal fade" id="Modal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h1><img class="header-icon" src="img/ps-icon.png" />Service College Basketball Programs</h1>
+                            <h3>NCAA (Division I, II, III), NAIA, NJCAA</h3>
+					<p>Our goal is to help college basketball programs of all levels improve their prospect discovery process. 
+					We make sure college coaches have the necessary information, video, and relationships to easily identify 
+					relevant prospects at AAU Programs across the country. We understand college coaches cannot see every 
+					athlete live, therefore we work to make sure they have a resource to identify prospects who would be a 
+					good fit for their program.
+                    </p>
+                            <button type="button" class="btn btn-default btn-primary" data-dismiss="modal"><i class="fa "></i>Close</button>
                         </div>
                     </div>
                 </div>
@@ -586,14 +663,6 @@
   	<script type="text/javascript"  src="js/prospect-form-submission-handler.js"></script>
   	
   	
-  	<script>
-  	$(document).ready(function() {
-  	
-  	 if ($(document).width() > 1100) {
-    	return $(".timeline-image").html("<i class='fa fa-keyboard-o animated zoomIn fa-5x wow' data-wow-delay='.2s'></i>");
-  			} 
-  	});
-	</script>
 
 </body>
 </html>
