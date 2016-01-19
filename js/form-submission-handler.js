@@ -4,11 +4,11 @@ function getFormData() {
     first    : document.getElementById("first").value,
     last   : document.getElementById("last").value,
     gender: document.getElementById("gender").value,
-    graduation year : document.getElementById("year").value,
+    year : document.getElementById("year").value,
     email : document.getElementById("email").value,
     phone : document.getElementById("phone").value,
-    high school : document.getElementById("school").value,
-    AAU club : document.getElementById("club").value
+    school : document.getElementById("school").value,
+    club : document.getElementById("club").value
   }
   console.log(data);
   return data;
