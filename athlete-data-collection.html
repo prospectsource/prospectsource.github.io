@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prospect Source - Athlete Data Collection</title>
+	
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	
+<style>
+#demoContainer {
+    width: 950px;
+    margin: auto;
+}
+
+#demoContainer h1 {
+    text-align: center;
+}
+
+.playerFilterContainer {
+    float: left;
+    width: 300px;
+}
+
+.todoAppContainer {
+    float: left;
+    width: 300px;
+}
+</style>
+
+</head>
+
+<body>
+
+    <title>ReactFire Todo App Demo</title>
+
+
+    <div id="demoContainer">
+    <h1>Prospect Source Demo</h1>
+        <div>
+        	<h2>Player Filter</h2>
+        </div>
+		<div id="container">
+    		<!-- This element's contents will be replaced with your component. -->
+		</div>
+
+        <div class="todoAppContainer">
+            <h2>Player Database</h2>
+            <div id="todoApp3"></div>
+        </div>
+        <div style="clear: both; margin-bottom: 10px;"></div>
+    </div>
+    
+    <!-- React JS -->
+	<script src="https://fb.me/react-0.13.3.js"></script>
+	<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+
+
+	<!-- React JS with Addons for playerFilter -->
+	<script src="https://fb.me/react-with-addons-0.14.3.js"></script>
+	<script src="https://fb.me/react-dom-0.14.3.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+	<!-- ReactFire -->
+	<script src="https://cdn.firebase.com/libs/reactfire/0.5.1/reactfire.min.js"></script>
+
+	<!-- Browser.js for playerFilter -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+
+	<script type="text/jsx" src="js/playerFilter.js"></script>
+	<script type="text/jsx" src="js/todoAppFirebaseImplicit.js"></script>
+    
+    
+  </body>
+</html>
