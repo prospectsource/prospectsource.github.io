@@ -2,9 +2,9 @@
 var TodoList3 = React.createClass({
   render: function() {
     var _this = this;
-    var createItem = function(item, index) {
+    var createItem = function(item, demo) {
       return (
-        <li key={ index }>
+        <li key={ demo }>
           <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
           <div>Position: { item.position }</div>
           <div>Height: { item.height }</div>
