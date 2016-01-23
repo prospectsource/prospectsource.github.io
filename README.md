@@ -8,6 +8,7 @@ I. To edit through Koding.com
   2. refresh page
   3. go to three dots next to “koding-vm-0” in the top left hand corner and copy assigned URL into browser
   4. put “:8080” at the end and it will take me to the editable website.
+![alt text] (img/step1.png)
 
 II. To edit through text-wrangler
   1. command space to pull up iterm
