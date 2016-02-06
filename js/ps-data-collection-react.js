@@ -48,7 +48,8 @@ var TodoApp3 = React.createClass({
   onChange3: function(e) {
     this.setState({text3: e.target.value});
   },
-
+  
+  
   removeItem: function(key) {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
     firebaseRef.child(key).remove();
@@ -79,19 +80,31 @@ var TodoApp3 = React.createClass({
       <section id="data-collection">
     	<div className="container">
     		<div className="row">
-    			<div className="col-sm-12">
-    				<div className="timeline-image1">
+    			<div className="col-sm-4">
+    				<div className="timeline-image1 background-gray">
+    					<h2>1</h2>
     				</div>
-    				<div className="timeline-image2">
+    				<h5 className="timeline-heading1">REGISTER WITH AAU CLUB</h5>
+    			</div>
+    			<div className="col-sm-4">
+    				<div className="timeline-image2 background-blue">
+    					<h2>2</h2>
     				</div>
-    				<div className="timeline-image3">
+    				<h5 className="timeline-heading2">GENERAL INFORMATION</h5>
+    			</div>
+    			<div className="col-sm-4">
+    				<div className="timeline-image3 background-gray">
+    					<h2>3</h2>
     				</div>
+	    			<h5 className="timeline-heading3">BILLING</h5>
     			</div>
     		</div>
     		<div className="row">
-    			<div className="col-sm-4 input-box">
+    			<div className="col-md-4 input-box">
     				<div className="input-container">
             			<h4>CONTACT INFORMATION</h4>
+            			<div>FIRST NAME <input onChange={ this.onChange } value={ this.state.text } /></div>
+						<div>LAST NAME <input onChange={ this.onChange } value={ this.state.text } /></div>            			
             			<div>PHONE (ATHLETE) <input onChange={ this.onChange } value={ this.state.text } /></div>
           				<div>EMAIL (ATHLETE OR PARENT) <input onChange={ this.onChange2 } value={ this.state.text2 } /></div>
           				<div>ADDRESS <input onChange={ this.onChange3 } value={ this.state.text3 } /></div>
@@ -104,7 +117,7 @@ var TodoApp3 = React.createClass({
           				<div>HS COACH PHONE <input onChange={ this.onChange10 } value={ this.state.text10 } /></div>
        				 </div>
     			</div>
-    			<div className="col-sm-4 input-box">
+    			<div className="col-md-4 input-box">
     				<div className="input-container">
             			<h4>ATHLETIC INFORMATION</h4>
             			<div>GRADE/CLASS <input onChange={ this.onChange11 } value={ this.state.text11 } /></div>
@@ -118,7 +131,7 @@ var TodoApp3 = React.createClass({
           				<div>HUDL PROFILE <input onChange={ this.onChange19 } value={ this.state.text19 } /></div>
        				 </div>
     			</div>
-    			<div className="col-sm-4 input-box">
+    			<div className="col-md-4 input-box">
     				<div className="input-container">
             			<h4>ACADEMIC INFORMATION</h4>
             			<div>GPA <input onChange={ this.onChange20 } value={ this.state.text20 } /></div>
@@ -131,11 +144,11 @@ var TodoApp3 = React.createClass({
     	
         <form className="text-center" onSubmit={ this.handleSubmit }>
           
-          <button className="btn btn-default btn-large">{ 'Add #' + (this.state.items.length + 1) }</button>
+          <button className="btn btn-default btn-large">NEXT</button>
         </form>
       </section>
     );
   }
 });
 
-React.render(<TodoApp3 />, document.getElementById('todoApp3'));
+React.render(<TodoApp3 />, document.getElementById('generalInformation'));

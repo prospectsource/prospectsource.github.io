@@ -97,15 +97,22 @@
     .btn-default {
     color: #333;
     background-color: #5ccae6;
-    border-color: #fff;
+    border-color: #939598;
     border-radius: 25px;
     margin-top: 25px;
+    margin-bottom: 25px;
+    width: 75%;
+    padding: 10px;
+    font-family: Venera700;
+    /*font-size: 25px;*/
 	}
+	
+	
 	
 	.btn-default:hover,  .btn-default:focus {
     color: #333;
-    background-color: #fff;
-    border-color: #fff;
+    background-color: #939598;
+    border-color: #939598;
 	}
 	
 	.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
@@ -170,10 +177,6 @@
     width: 100%;
 	}
 	
-	.input-box {
-    margin-top: 120px;
-	}
-	
 	.input-container h4 {
 	text-align: center;
 	margin: 10px 5px 30px 5px; 
@@ -189,47 +192,182 @@
 	}
 	
 	.timeline-image1 {
-    z-index: 100;
-    position: absolute;
-    left: 0;
-    width: 110px;
-    height: 110px;
-    margin-left: 0;
-    border: 7px solid #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f1f1f1;
     border-radius: 100%;
     text-align: center;
     color: #fff;
+	}
+	
+	.background-blue {
     background-color: #5ccae6;
+	}
+	
+	.background-gray {
+    background-color: #939598;
+	}
+	
+	.timeline-image1 h2 {
+    margin: 6px 0px 0px 0px;
+    text-align: center;
+    color: #fff;
+	}
+	
+	.timeline-heading1, .timeline-heading2, .timeline-heading3 {
+    margin-left: 10%;
 	}
 	
 	.timeline-image2 {
-    z-index: 100;
-    position: absolute;
-    left: 50%;
-    width: 110px;
-    height: 110px;
-    margin-left: 0;
-    border: 7px solid #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f1f1f1;
     border-radius: 100%;
     text-align: center;
     color: #fff;
-    background-color: #5ccae6;
+	}
+	
+	.timeline-image2 h2 {
+    margin: 6px 0px 0px 0px;
+    text-align: center;
+    color: #fff;
 	}
 	
 	.timeline-image3 {
-    z-index: 100;
-    position: absolute;
-    left: 90%;
-    width: 110px;
-    height: 110px;
-    margin-left: 0;
-    border: 7px solid #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f1f1f1;
     border-radius: 100%;
     text-align: center;
     color: #fff;
-    background-color: #5ccae6;
 	}
 
+	.timeline-image3 h2 {
+    margin: 6px 0px 0px 0px;
+    text-align: center;
+    color: #fff;
+	}
+	
+	.hr {
+    height: 2px;
+    background-color: #93959B;
+    position: absolute;
+	width: 75%;
+    top: 32%;
+    left: 12%;
+	}
+
+	@media(max-width:768px) {
+	
+	.timeline-image1 {
+    float:left;
+	}
+	
+	.timeline-image2 {
+   	float:left;
+	}
+	
+	.timeline-image3 { 
+    float:left;
+	}
+	
+	.timeline-heading1 {
+    padding-top: 18px;
+	padding-left: 25px;
+    text-align: left;
+	}
+	.timeline-heading2 {
+    padding-top: 18px;
+	padding-left: 25px;
+    text-align: left;
+	}
+	.timeline-heading3 {
+    padding-top: 18px;
+	padding-left: 25px;
+	text-align: left;
+	}
+
+}
+
+	@media(min-width:768px) {
+	
+	.timeline-heading1, .timeline-heading2, .timeline-heading3 {
+    text-align: center;
+    margin-left: 0%;
+	}
+	
+	.timeline-image1 {
+    margin: 8% 0% 8% 29%;
+	}
+	
+	.timeline-image2 {
+    margin: 8% auto;
+	}
+	
+	.timeline-image3 { 
+    margin: 8% 0% 8% 46%;
+	}
+	
+	.timeline-heading3 {
+    margin-left: 10%;
+	}
+	
+	.receive  {
+	margin-left: 0px;
+	margin-right: 0px;
+	}
+}
+
+	@media(max-width:1000px) {
+
+	.input-box  {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
+}
+ /*---------CSS for select-club-react.js HTML-----------------------------------*/ 
+ 
+ 	#aau-prospect {
+ 	border-radius: 25px;
+ 	padding: 5%;
+    text-align: center;
+    margin-bottom: 20px;
+ 	}
+ 	
+ 	#registered-aau-programs {
+ 	width: 100%;
+ 	font-family:Venera700;
+ 	}
+ 
+  /*---------CSS for player-registration-react.js HTML-----------------------------------*/ 
+
+ 	.btn-default p {
+    /*font-size: 14px;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+	}
+	
+	.receive  {
+	background-color: #e7e7e7;
+	border-radius: 25px;
+	padding-top: .25%;
+	padding-bottom: .25%;
+	margin-left: 15px;
+	margin-right: 15px;
+	}
+ 	
+ 	.receive span  {
+	font-family: Venera500;
+	}
+ 	
+ 	@media(min-width:768px) {
+ 	
+ 	.receive  {
+	margin-left: 0px;
+	margin-right: 0px;
+	}
+}
+ 	
 </style>
 
 </head>
@@ -263,8 +401,9 @@
         <!-- /.container-fluid -->
     </nav>
     
-    
-	<div id="todoApp3"></div>
+    <div id="playerRegistration"></div>
+    <div id="selectClub"></div>
+	<div id="generalInformation"></div>
     
     		
     
@@ -286,8 +425,10 @@
 	<!-- Browser.js for playerFilter -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
 
+	<script type="text/jsx" src="js/player-registration-react.js"></script>
+	<script type="text/jsx" src="js/select-club-react.js"></script>
 	<script type="text/jsx" src="js/ps-data-collection-react.js"></script>
-    
+
     
   </body>
 </html>
