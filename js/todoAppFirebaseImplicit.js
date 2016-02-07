@@ -2,12 +2,11 @@
 var TodoList3 = React.createClass({
   render: function() {
     var _this = this;
+    var properties = ['name', 'position', 'height']
     var createItem = function(item, index) {
       return (
         <li key={ index }>
-          <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
-          <div>Position: { item.position }</div>
-          <div>Height: { item.height }</div>
+          <div>{properties}: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
           <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
                   Delete Player
@@ -31,7 +30,7 @@ var TodoApp3 = React.createClass({
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
     this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
@@ -48,7 +47,7 @@ var TodoApp3 = React.createClass({
   },
 
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
     firebaseRef.child(key).remove();
   },
 
