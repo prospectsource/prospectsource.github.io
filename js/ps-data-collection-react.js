@@ -33,7 +33,7 @@ var TodoApp3 = React.createClass({
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
     this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
@@ -134,7 +134,7 @@ var TodoApp3 = React.createClass({
   },
   
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
     firebaseRef.child(key).remove();
   },
 
@@ -168,14 +168,59 @@ var TodoApp3 = React.createClass({
         classRank: this.state.classRank
       });
       this.setState({
-        name: '',
+        first: '',
+        last: '', 
+        phone: '',
+        email: '', 
+        address: '',
+        cityStateZip: '', 
+        aauCoach: '',
+        aauEmail: '', 
+        aauPhone: '',
+        hsCoach: '', 
+        hsEmail: '',
+        hsPhone: '', 
+        grade: '',
+        height: '', 
+        weight: '',
+        vert: '', 
         position: '',
-        height: ''
+        aauProgram: '', 
+        aauJersey: '',
+        school: '', 
+        hudl: '',
+        gpa: '',
+        act: '', 
+        classRank: ''
       });
     }
     this.state.text = String.Empty;
     this.state.text2 = String.Empty;
     this.state.text3 = String.Empty;
+    this.state.first = String.Empty;
+    this.state.last = String.Empty; 
+    this.state.phone = String.Empty;
+    this.state.email = String.Empty; 
+	this.state.address = String.Empty;
+    this.state.cityStateZip = String.Empty; 
+    this.state.aauCoach = String.Empty;
+    this.state.aauEmail = String.Empty; 
+    this.state.aauPhone = String.Empty;
+    this.state.hsCoach = String.Empty; 
+    this.state.hsEmail = String.Empty;
+    this.state.hsPhone = String.Empty; 
+    this.state.grade = String.Empty;
+    this.state.height = String.Empty; 
+    this.state.weight = String.Empty;
+    this.state.vert = String.Empty; 
+	this.state.position = String.Empty;
+    this.state.aauProgram = String.Empty; 
+    this.state.aauJersey = String.Empty;
+    this.state.school = String.Empty; 
+    this.state.hudl = String.Empty;
+	this.state.gpa = String.Empty;
+    this.state.act = String.Empty; 
+    this.state.classRank = String.Empty;
   },
 
   render: function() {
