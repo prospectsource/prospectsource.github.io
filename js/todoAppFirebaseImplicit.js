@@ -34,8 +34,8 @@ var TodoApp3 = React.createClass({
     this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
-  handleNameChange: function(e) {
-    this.setState({name: e.target.value});
+  onChange: function(e) {
+    this.setState({text: e.target.value});
   },
   
   onChange2: function(e) {
@@ -55,7 +55,7 @@ var TodoApp3 = React.createClass({
     e.preventDefault();
     if (this.state.text && this.state.text.trim().length !== 0) {
       this.firebaseRefs['items'].push({
-        name: this.state.name,
+        name: this.state.text,
         position: this.state.text2, // "name:" changes the input attribute category
         height: this.state.text3
       });
@@ -65,7 +65,7 @@ var TodoApp3 = React.createClass({
         height: ''
       });
     }
-    this.state.name = String.Empty;
+    this.state.text = String.Empty;
     this.state.text2 = String.Empty;
     this.state.text3 = String.Empty;
   },
@@ -75,7 +75,7 @@ var TodoApp3 = React.createClass({
       <div>
         <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
-          <div>Name: <input onChange={ this.handleNameChange } value={ this.state.name } /></div>
+          <div>Name: <input onChange={ this.onChange } value={ this.state.text } /></div>
           <div>Position: <input onChange={ this.onChange2 } value={ this.state.text2 } /></div>
           <div>Height: <input onChange={ this.onChange3 } value={ this.state.text3 } /></div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
