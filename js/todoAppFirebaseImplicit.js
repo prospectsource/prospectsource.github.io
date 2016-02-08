@@ -2,11 +2,15 @@
 var TodoList3 = React.createClass({
   render: function() {
     var _this = this;
-    var properties = ['name', 'position', 'height']
+    var properties = [{key:1, property:'name'},
+    				  {key:2, property:'position'}
+    				  {key:3, property:'height'}];
     var createItem = function(item, index) {
       return (
         <li key={ index }>
-          <div>{properties}: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
+          <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
+          <div>Position: { item.position /**this ".name" changes the attribute displayed in the todo list */ }</div>
+          <div>Height: { item.height /**this ".name" changes the attribute displayed in the todo list */ }</div>
           <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
                   Delete Player
