@@ -34,7 +34,7 @@ var TodoApp3 = React.createClass({
     this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
-  onNameChange: function(e) {
+  onChangeName: function(e) {
     this.setState({name: e.target.value});
   },
   
@@ -75,7 +75,7 @@ var TodoApp3 = React.createClass({
       <div>
         <TodoList3 items={ this.state.items } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
-          <div>Name: <input onChange={ this.onNameChange } value={ this.state.name } /></div>
+          <div>Name: <input onChange={ this.onChangeName } value={ this.state.name } /></div>
           <div>Position: <input onChange={ this.onChange2 } value={ this.state.text2 } /></div>
           <div>Height: <input onChange={ this.onChange3 } value={ this.state.text3 } /></div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
