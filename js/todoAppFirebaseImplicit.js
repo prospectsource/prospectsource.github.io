@@ -65,7 +65,7 @@ var TodoApp3 = React.createClass({
         height: ''
       });
     }
-    this.state.text = String.Empty;
+    this.state.name = String.Empty;
     this.state.text2 = String.Empty;
     this.state.text3 = String.Empty;
   },
