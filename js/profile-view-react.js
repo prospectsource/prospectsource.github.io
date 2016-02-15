@@ -31,7 +31,19 @@ var ProfileViewPage = React.createClass ({
       <section id="page">
     	<div className="container">
     		<div className="row">
-    			<div className="col-sm-4">
+    			<div className="col-xs-4 col-sm-3">
+    				<div id="profile-picture" className="background-blue">
+    					<h5>AAU PROSPECT</h5>
+    				</div>
+    			</div>
+    		</div>
+    		<div className="row">
+    			<div className="col-xs-4 col-sm-3">
+    				<div id="aau-prospect" className="background-blue">
+    					<h5>AAU PROSPECT</h5>
+    				</div>
+    			</div>
+    			<div className="col-xs-4 col-sm-4">
         			<PlayerProfile prospects={ this.state.prospects } />
       			</div>
       		</div>
