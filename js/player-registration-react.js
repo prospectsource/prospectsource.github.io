@@ -99,7 +99,7 @@ var TodoApp3 = React.createClass({
     	
         <form className="text-center" onSubmit={ this.handleSubmit }>
           
-          <button className="btn btn-default btn-large">Click Here To Register</button>
+          <button className="btn btn-default btn-large">Click To Register</button>
         </form>
       </section>
     );

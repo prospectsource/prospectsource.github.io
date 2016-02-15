@@ -105,12 +105,13 @@ var TodoApp3 = React.createClass({
     				</div>
     			</div>
     			<div className="col-sm-9">
-    				<input className="standalone" type="select" label="Select" placeholder="select">
+    				<label for="sel1">Select Your Club</label>
+    				<select id="sel1" className="form-control standalone" type="select" label="Select" placeholder="select">
       					<option value="Kingdom Hoops">Kingdom Hoops</option>
     					<option value="Rusty's Rascals">Rustys Rascals</option>
     					<option value="McCall MadMen">McCall MadMen</option>
     					<option value="Alex's Angels">Maschoff Monsters</option>
-     				</input>
+     				</select>
     			</div>
     			<div className="col-sm-offset-3 col-sm-9">
     				<div>CREATE USERNAME <input onChange={ this.onChange11 } value={ this.state.text11 } /></div>
