@@ -5,7 +5,6 @@ var PlayerProfile = React.createClass({
       return (
         <div key={ index }>
           <h1>Profile</h1>
-          <div>{item.key()}</div>
           <div>First: { item.first /**this ".name" changes the attribute displayed in the todo list */ }</div>
           <div>Last:{ item.position }</div>
           <div>Phone:{ item.height}</div>
