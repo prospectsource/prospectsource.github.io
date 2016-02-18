@@ -194,7 +194,7 @@
 	border: 4px solid #5ccae6;
 	border-radius: 50px;
 	font-size: 14px;
-	padding: 5px 5px 35px 5px;
+	padding: 10px 5px 10px 5px;
 	}
 	
 	.timeline-image1 {
@@ -335,6 +335,37 @@
 	margin-bottom: 10px;
 	}
 }
+ /*---------CSS for college-coaches-signin-react.js HTML-----------------------------------*/ 
+
+	#logo img{
+	width: 100%;
+	margin-bottom: 30px;
+	}
+	
+	#signin .btn-default {
+    margin: 10px;
+    width: 35%;
+    padding: 10px;
+	}
+	
+	#signin input {
+    margin: 10px;
+    width: 75%;
+    padding: 10px;
+	}
+	
+	#question {
+	background-color: #e7e7e7;
+	}
+	
+	#links  {
+	border: none;
+	}
+	
+	#links h5 {
+	margin: 5% 0% 5% 0%;
+	font-size: 11px;
+	}
 
  /*---------CSS for profile-view-react.js HTML-----------------------------------*/ 
 
@@ -431,12 +462,63 @@
     margin-bottom: 0px;
 	margin-top: 0px;
  	}
+
+/*---------CSS for coach-registration-react.js HTML-----------------------------------*/ 
+
+	.coach-registration {
+	border-radius: 25px;
+ 	padding: 2%;
+    text-align: left;
+    margin-bottom: 5px;
+	margin-top: 5px;
+	overflow: auto; 	
+	}
+	
+	.coach-registration h4 {
+	margin-top: 9%;
+	}
+	
+ 	
+ 	.register-btn {
+ 	border-radius: 25px;
+ 	padding: 2%;
+    text-align: center;
+ 	margin: 0px 0px 0px 0px;
+ 	}
+ 	
+ 	.register-btn h4 {
+ 	margin: 5% 0% 5% 0%;
+ 	}
+ 	
+ 	.men-women-coach  {
+ 	text-align: center;
+ 	}
+ 	
+ 	.page2 {
+	padding: 0% 2% 2% 2%;
+	margin: 70px 15px;
+	border: 4px solid #5ccae6;
+	border-radius: 75px;
+	}
+ 	
+ 	@media(min-width: 920px;) {
+ 	.coach-registration .register-btn {
+ 	float: right;
+ 	}
+ 	
+ 	.men-women-coach  {
+ 	float: left;
+ 	}
+ 	
+ }
+ 	
  	
  </style>
  </head>
  <body>
 
- <div id="coaches-signin"></div> 
+ <div id="coaches-signin"></div>
+ <div id="coach-registration"></div> 
  <div id="profileView"></div>
  
  <!-- React JS -->
@@ -460,6 +542,7 @@
  	<!-- files for React Components -->
  	<script type="text/jsx" src="js/profile-view-react.js"></script>
 	<script type="text/jsx" src="js/college-coaches-signin-react.js"></script>
+	<script type="text/jsx" src="js/coach-registration-react.js"></script>
 
 	 
  </body>

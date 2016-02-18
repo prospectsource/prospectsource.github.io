@@ -106,4 +106,4 @@ var TodoApp3 = React.createClass({
   }
 });
 
-React.render(<TodoApp3 />, document.getElementById('playerRegistration'));
+ReactDOM.render(<TodoApp3 />, document.getElementById('playerRegistration'));

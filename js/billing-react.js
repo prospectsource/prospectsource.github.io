@@ -123,4 +123,4 @@ var Billing = React.createClass({
   }
 });
 
-React.render(<Billing />, document.getElementById('billing'));
+ReactDOM.render(<Billing />, document.getElementById('billing'));

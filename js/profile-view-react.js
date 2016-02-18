@@ -61,9 +61,9 @@ var ProfileViewPage = React.createClass ({
     					<PlayerProfileBasics prospects={ this.state.prospects } />
     				</div>
     			</div>
-    			<div className="col-sm-3">
+    			<div className="">
     				<div id="notifications" className="background-blue">
-    					<p>add to notifications</p>
+    					<h5>add to notifications</h5>
     				</div>
     			</div>
     		</div>
