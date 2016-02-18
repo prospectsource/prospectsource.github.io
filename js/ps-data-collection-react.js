@@ -33,114 +33,114 @@ var TodoApp3 = React.createClass({
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/prospects/');
     this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
-  onFirstChange: function(e) {
+  firstChange: function(e) {
     this.setState({first: e.target.value});
   },
   
-  onLastChange: function(e) {
+  lastChange: function(e) {
     this.setState({last: e.target.value});
   },
   
-  onPhoneChange: function(e) {
+  phoneChange: function(e) {
     this.setState({phone: e.target.value});
   },
   
-  onEmailChange: function(e) {
+  emailChange: function(e) {
     this.setState({email: e.target.value});
   },
   
-  onAddressChange: function(e) {
+  addressChange: function(e) {
     this.setState({address: e.target.value});
   },
   
-  onCityStateZipChange: function(e) {
+  cityStateZipChange: function(e) {
     this.setState({cityStateZip: e.target.value});
   },
   
-  onAauCoachChange: function(e) {
+  aauCoachChange: function(e) {
     this.setState({aauCoach: e.target.value});
   },
   
-  onAauEmailChange: function(e) {
+  aauEmailChange: function(e) {
     this.setState({aauEmail: e.target.value});
   },
   
-  onAauPhoneChange: function(e) {
+  aauPhoneChange: function(e) {
     this.setState({aauPhone: e.target.value});
   },
   
-  onHsCoachChange: function(e) {
+  hsCoachChange: function(e) {
     this.setState({hsCoach: e.target.value});
   },
   
-  onHsEmailChange: function(e) {
+  hsEmailChange: function(e) {
     this.setState({hsEmail: e.target.value});
   },
   
-  onHsPhoneChange: function(e) {
+  hsPhoneChange: function(e) {
     this.setState({hsPhone: e.target.value});
   },
   
-  onGradeChange: function(e) {
+  gradeChange: function(e) {
     this.setState({grade: e.target.value});
   },
   
-  onHeightChange: function(e) {
+  heightChange: function(e) {
     this.setState({height: e.target.value});
   },
   
-  onWeightChange: function(e) {
+  weightChange: function(e) {
     this.setState({weight: e.target.value});
   },
   
-  onVertChange: function(e) {
+  vertChange: function(e) {
     this.setState({vert: e.target.value});
   },
   
-  onPositionChange: function(e) {
+  positionChange: function(e) {
     this.setState({position: e.target.value});
   },
   
-  onAauProgramChange: function(e) {
+  aauProgramChange: function(e) {
     this.setState({aauProgram: e.target.value});
   },
   
-  onAauJerseyChange: function(e) {
+  aauJerseyChange: function(e) {
     this.setState({aauJersey: e.target.value});
   },
   
-  onSchoolChange: function(e) {
+  schoolChange: function(e) {
     this.setState({school: e.target.value});
   },
   
-  onHudlChange: function(e) {
+  hudlChange: function(e) {
     this.setState({hudl: e.target.value});
   },
   
-  onGpaChange: function(e) {
+  gpaChange: function(e) {
     this.setState({gpa: e.target.value});
   },
   
-  onActChange: function(e) {
+  actChange: function(e) {
     this.setState({act: e.target.value});
   },
   
-  onClassRankChange: function(e) {
+  classRankChange: function(e) {
     this.setState({classRank: e.target.value});
   },
   
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/prospects/');
     firebaseRef.child(key).remove();
   },
 
   handleSubmit: function(e) {
     e.preventDefault();
-    if (this.state.text && this.state.text.trim().length !== 0) {
+    if (this.state.first && this.state.first.trim().length !== 0) {
       this.firebaseRefs['items'].push({
         first: this.state.first,// "name:" changes the input attribute category
         last: this.state.last, 
@@ -226,14 +226,15 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       
-      <section id="data-collection">
+      <section className="page">
+        <form onSubmit={ this.handleSubmit }>
     	<div className="container">
     		<div className="row">
     			<div className="col-sm-4">
     				<div className="timeline-image1 background-gray">
     					<h2>1</h2>
     				</div>
-    				<h5 className="timeline-heading1">REGISTER WITH AAU CLUB</h5>
+    				<h5 className="timeline-heading1">Select CLUB</h5>
     			</div>
     			<div className="col-sm-4">
     				<div className="timeline-image2 background-blue">
@@ -252,48 +253,49 @@ var TodoApp3 = React.createClass({
     			<div className="col-md-4 input-box">
     				<div className="input-container">
             			<h4>CONTACT INFORMATION</h4>
-            			<div>FIRST NAME <input onChange={ this.onFirstChange } value={ this.state.first } /></div>
-						<div>LAST NAME <input onChange={ this.onLastChange } value={ this.state.last } /></div>            			
-            			<div>PHONE (ATHLETE) <input onChange={ this.onPhoneChange } value={ this.state.phone } /></div>
-          				<div>EMAIL (ATHLETE OR PARENT) <input onChange={ this.onEmailChange } value={ this.state.email } /></div>
-          				<div>ADDRESS <input onChange={ this.onAddressChange } value={ this.state.address } /></div>
-          				<div>CITY/STATE/ZIP <input onChange={ this.onCityStateZipChange } value={ this.state.cityStateZip } /></div>
-          				<div>AAU COACH NAME <input onChange={ this.onAauCoachChange } value={ this.state.aauCoach } /></div>
-          				<div>AAU COACH EMAIL <input onChange={ this.onAauEmailChange } value={ this.state.aauEmail } /></div>
-          				<div>AAU COACH PHONE <input onChange={ this.onAauPhoneChange } value={ this.state.aauPhone } /></div>
-          				<div>HS COACH NAME <input onChange={ this.onHsCoachChange } value={ this.state.hsCoach } /></div>
-          				<div>HS COACH EMAIL <input onChange={ this.onHsEmailChange } value={ this.state.hsEmail } /></div>
-          				<div>HS COACH PHONE <input onChange={ this.onHsPhoneChange } value={ this.state.hsPhone } /></div>
+            			<div className="first-name-container">
+            				<div>FIRST NAME </div>
+            				<div><input onChange={ this.firstChange } value={ this.state.first } /></div>
+            			</div>
+						<div>LAST NAME <input onChange={ this.lastChange } value={ this.state.last } /></div>            			
+            			<div>PHONE (ATHLETE) <input onChange={ this.phoneChange } value={ this.state.phone } /></div>
+          				<div>EMAIL (ATHLETE OR PARENT) <input onChange={ this.emailChange } value={ this.state.email } /></div>
+          				<div>ADDRESS <input onChange={ this.addressChange } value={ this.state.address } /></div>
+          				<div>CITY/STATE/ZIP <input onChange={ this.cityStateZipChange } value={ this.state.cityStateZip } /></div>
+          				<div>AAU COACH NAME <input onChange={ this.aauCoachChange } value={ this.state.aauCoach } /></div>
+          				<div>AAU COACH EMAIL <input onChange={ this.aauEmailChange } value={ this.state.aauEmail } /></div>
+          				<div>AAU COACH PHONE <input onChange={ this.aauPhoneChange } value={ this.state.aauPhone } /></div>
+          				<div>HS COACH NAME <input onChange={ this.hsCoachChange } value={ this.state.hsCoach } /></div>
+          				<div>HS COACH EMAIL <input onChange={ this.hsEmailChange } value={ this.state.hsEmail } /></div>
+          				<div>HS COACH PHONE <input onChange={ this.hsPhoneChange } value={ this.state.hsPhone } /></div>
        				 </div>
     			</div>
     			<div className="col-md-4 input-box">
     				<div className="input-container">
             			<h4>ATHLETIC INFORMATION</h4>
-            			<div>GRADE/CLASS <input onChange={ this.onGradeChange } value={ this.state.grade } /></div>
-          				<div>HEIGHT <input onChange={ this.onHeightChange } value={ this.state.height } /></div>
-          				<div>WEIGHT <input onChange={ this.onWeightChange } value={ this.state.weight } /></div>
-          				<div>VERTICAL JUMP <input onChange={ this.onVertChange } value={ this.state.vert } /></div>
-          				<div>POSITION <input onChange={ this.onPositionChange } value={ this.state.position } /></div>
-          				<div>AAU PROGRAM <input onChange={ this.onAauProgramChange } value={ this.state.aauProgram } /></div>
-          				<div>AAU JERSEY <input onChange={ this.onAauJerseyChange } value={ this.state.aauJersey } /></div>
-          				<div>HIGH SCHOOL <input onChange={ this.onSchoolChange} value={ this.state.school } /></div>
-          				<div>HUDL PROFILE <input onChange={ this.onHudlChange } value={ this.state.hudl } /></div>
+            			<div>GRADE/CLASS <input onChange={ this.gradeChange } value={ this.state.grade } /></div>
+          				<div>HEIGHT <input onChange={ this.heightChange } value={ this.state.height } /></div>
+          				<div>WEIGHT <input onChange={ this.weightChange } value={ this.state.weight } /></div>
+          				<div>VERTICAL JUMP <input onChange={ this.vertChange } value={ this.state.vert } /></div>
+          				<div>POSITION <input onChange={ this.positionChange } value={ this.state.position } /></div>
+          				<div>AAU PROGRAM <input onChange={ this.aauProgramChange } value={ this.state.aauProgram } /></div>
+          				<div>AAU JERSEY <input onChange={ this.aauJerseyChange } value={ this.state.aauJersey } /></div>
+          				<div>HIGH SCHOOL <input onChange={ this.schoolChange} value={ this.state.school } /></div>
+          				<div>HUDL PROFILE <input onChange={ this.hudlChange } value={ this.state.hudl } /></div>
        				 </div>
     			</div>
     			<div className="col-md-4 input-box">
     				<div className="input-container">
             			<h4>ACADEMIC INFORMATION</h4>
-            			<div>GPA <input onChange={ this.onGpaChange } value={ this.state.gpa } /></div>
-          				<div>ACT <input onChange={ this.onActChange } value={ this.state.act } /></div>
-          				<div>CLASS RANK <input onChange={ this.onClassRankChange } value={ this.state.classRank } /></div>
+            			<div>GPA <input onChange={ this.gpaChange } value={ this.state.gpa } /></div>
+          				<div>ACT <input onChange={ this.actChange } value={ this.state.act } /></div>
+          				<div>CLASS RANK <input onChange={ this.classRankChange } value={ this.state.classRank } /></div>
        				</div>
     			</div>
     		</div>
     	</div>
-    	
-        <form className="text-center" onSubmit={ this.handleSubmit }>
           
-          <button className="btn btn-default btn-large">NEXT</button>
+          <button id="prospect-data-button" className="btn btn-default btn-large center-button">NEXT</button>
         </form>
       </section>
     );

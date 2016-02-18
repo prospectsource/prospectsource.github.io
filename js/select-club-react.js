@@ -76,7 +76,8 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       
-      <section id="data-collection">
+      <section className="page">
+       <form onSubmit={ this.handleSubmit }>
     	<div className="container">
     		<div className="row">
     			<div className="col-sm-4">
@@ -120,9 +121,8 @@ var TodoApp3 = React.createClass({
     		</div>
     	</div>
     	
-        <form className="text-center" onSubmit={ this.handleSubmit }>
           
-          <button className="btn btn-default btn-large">NEXT</button>
+          <button className="btn btn-default btn-large center-button">NEXT</button>
         </form>
       </section>
     );

@@ -76,7 +76,7 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       
-      <section id="data-collection">
+      <section className="page">
     	<div className="container">
     		<div className="row">
     			<div className="col-xs-12">

@@ -11,7 +11,6 @@
 	<!-- Latest compiled and minified Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	
-	
 <style>
 <style type="text/css">
 
@@ -173,11 +172,11 @@
 	border-radius: 100px;
 	}
 	
-	#player-profile  {
-	padding: 0px;
+	.page {
+	padding: 0% 0% 2% 0%;
 	margin: 70px 15px;
 	border: 4px solid #5ccae6;
-	border-radius: 100px;
+	border-radius: 75px;
 	}
 	
 	input {
@@ -264,7 +263,7 @@
     left: 12%;
 	}
 	
-	#prospect-data-button {
+	.center-button {
 	margin-left: 12.5%;
 	}
 
@@ -308,7 +307,7 @@
 	}
 	
 	.timeline-image1 {
-    margin: 8% 0% 8% 29%;
+    margin: 8% 0% 8% 40%;
 	}
 	
 	.timeline-image2 {
@@ -374,11 +373,131 @@
  	@media(min-width:768px) {
  	
  	.receive  {
+	    width: 73%;
 	margin-left: 0px;
 	margin-right: 0px;
 	}
-}
+	
+	}
+	
+  /*---------CSS for profile-view-react.js HTML-----------------------------------*/ 
+
+	#profile {
+	background-color: #e7e7e7;
+ 	}
+	
+	#profile-top-row {
+	margin-top: 2%;
+ 	}
  	
+	#profile-picture {
+    background-color: #5ccae6;
+ 	border-radius: 25px;
+ 	padding: 5%;
+    text-align: center;
+    margin-bottom: 20px;
+	margin-top: 20px;
+ 	}
+	
+	#notifications {
+    background-color: #5ccae6;
+ 	border-radius: 25px;
+ 	padding: 2%;
+    text-align: center;
+    margin-bottom: 20px;
+	margin-top: 20px;
+ 	}
+	
+	#club-logo  {
+    background-color: #5ccae6;
+ 	border-radius: 25px;
+ 	padding: 5%;
+    text-align: center;
+    margin-bottom: 20px;
+	margin-top: 10px;
+ 	}
+	
+	#profile-basics {
+ 	border-radius: 25px;
+ 	padding: .5%;
+    margin-bottom: 20px;
+	margin-top: 20px;
+	}
+	
+	#notifications p {
+    margin-bottom: 0px;
+        font-size: 13px;
+	}
+ 	
+ 	#profile-basics h3 {
+ 	margin-top: 0px;
+ 	margin-bottom:5%;
+ 	}
+ 	
+ 	#profile-contact-info {
+ 	background-color: #fff;
+ 	border-radius: 50px;
+ 	padding: 5%;
+    margin-bottom: 20px;
+	margin-top: 20px;
+	}
+	
+	#profile-contact-info  h3{
+ 	margin-top: 0px;
+ 	margin-bottom:5%;
+ 	text-align: center;
+	}
+	
+	#profile-contact-info  h4{
+ 	display: inline;
+	}
+	
+	#profile-contact-info  p{
+ 	margin-top: 1.2%;
+ 	margin-bottom:1.2%;
+	}
+ 	
+ 	#profile-contact-info  div{
+ 	margin-top: 5%;
+ 	margin-bottom:5%;
+	}
+ 	
+ 	.data-cat-btn  {
+ 	border-radius: 25px;
+ 	padding: 5%;
+    text-align: center;
+    margin-bottom: 10px;
+	margin-top: 10px;
+ 	}
+ 	
+ 	.data-cat-btn h5 {
+    margin-bottom: 0px;
+	margin-top: 0px;
+ 	}
+ 	
+
+/*---------CSS for billing-react.js HTML-----------------------------------*/ 
+
+	#fee-info {
+ 	padding: 4%;
+ 	}
+ 	
+ 	#fee-info h4 {
+ 	margin-top: 1%;
+ 	margin-bottom: 1%;
+ 	}
+ 	
+ 	.cc-info h3 {
+	text-align: center;
+ 	}
+ 	
+/*---------CSS for completed registration-react.js HTML-----------------------------------*/ 
+ 	
+ 	@media(max-width: 768px)  {
+ 	#congratulations {
+ 	font-size: 26px;
+ 	}
+ 	}
 </style>
 
 </head>
@@ -415,6 +534,8 @@
     <div id="playerRegistration"></div>
     <div id="selectClub"></div>
 	<div id="generalInformation"></div>
+	<div id="billing"></div>
+	<div id="completed-registration"></div>
 	<div id="profileView"></div>
 	
     
@@ -441,6 +562,8 @@
 	<script type="text/jsx" src="js/player-registration-react.js"></script>
 	<script type="text/jsx" src="js/select-club-react.js"></script>
 	<script type="text/jsx" src="js/ps-data-collection-react.js"></script>
+	<script type="text/jsx" src="js/billing-react.js"></script>
+	<script type="text/jsx" src="js/completed-registration-react.js"></script>
 	<script type="text/jsx" src="js/profile-view-react.js"></script>
 
     

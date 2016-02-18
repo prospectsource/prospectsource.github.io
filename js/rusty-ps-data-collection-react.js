@@ -87,6 +87,7 @@ var ContactInfoContainer = React.createClass ({
 		
 		getInitialState: function() {
     		return {
+      			items:[],
       			first: '',
       			last: '',
       			phone:'',
