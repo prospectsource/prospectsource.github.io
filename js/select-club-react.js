@@ -106,7 +106,7 @@ var TodoApp3 = React.createClass({
     				</div>
     			</div>
     			<div className="col-sm-9">
-    				<label for="sel1">Select Your Club</label>
+    				<label htmlFor="sel1">Select Your Club</label>
     				<select id="sel1" className="form-control standalone" type="select" label="Select" placeholder="select">
       					<option value="Kingdom Hoops">Kingdom Hoops</option>
     					<option value="Rusty's Rascals">Rustys Rascals</option>
@@ -129,4 +129,4 @@ var TodoApp3 = React.createClass({
   }
 });
 
-React.render(<TodoApp3 />, document.getElementById('selectClub'));
+ReactDOM.render(<TodoApp3 />, document.getElementById('selectClub'));
