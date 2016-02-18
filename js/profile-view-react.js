@@ -5,9 +5,9 @@ var PlayerProfileBasics = React.createClass({
       return (
         <div id="profile-basics" key={ index }>
           	<h3>{ item.first}  {item.last} ({ item.grade })</h3>
-          	<div>Position:{ item.position}</div>
-        	<div>Height:{ item.height}</div>
-            <div>City/State/Zip:{ item.cityStateZip}</div>
+          	<div><h4>Position:</h4>  { item.position}</div>
+        	<div><h4>Height:</h4>  { item.height}</div>
+            <div><h4>City/State/Zip:</h4>  { item.cityStateZip}</div>
         </div>
       );
     };

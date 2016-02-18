@@ -72,7 +72,7 @@ var CompletedRegistration = React.createClass({
     				</div>
     			</div>
     	  	</div>
-          	<button className="btn btn-default btn-large center-button">Dashboard</button>
+          	<button className="btn btn-default btn-large center-button">View Profile</button>
     	</form>
     </section>
     );
