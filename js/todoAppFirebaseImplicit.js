@@ -58,7 +58,7 @@ var TodoApp3 = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     if (this.state.name && this.state.name.trim().length !== 0) {
-      this.firebaseRefs['items'].push({
+      this.firebaseRefs['prospects'].push({
         name: this.state.name,
         position: this.state.position, // "name:" changes the input attribute category
         height: this.state.height

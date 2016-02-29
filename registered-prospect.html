@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Prospect Source - The Coaches Source for College Basketball Prospects.</title>
+	<title>Prospect Source - Registerd Prospects</title>
 	
 	<!-- Latest compiled and minified Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -54,6 +54,12 @@
 	font-family: 'Venera300';
 	color: #4e4f51;
 	}
+    
+     @media (min-width: 768px)  {
+	.container {
+    width: 97%;
+    }
+}
     
     a 	{
 	text-decoration: none;
@@ -194,7 +200,7 @@
 	border: 4px solid #5ccae6;
 	border-radius: 50px;
 	font-size: 14px;
-	padding: 10px 5px 10px 5px;
+	padding: 10px 5px 35px 5px;
 	}
 	
 	.timeline-image1 {
@@ -339,6 +345,44 @@
 	margin-bottom: 10px;
 	}
 }
+
+ /*---------CSS for club-admin-registration-react.js HTML-----------------------------------*/ 
+
+
+	#club-admin {
+ 	border-radius: 25px;
+ 	padding: 5%;
+    text-align: center;
+    margin-bottom: 20px;
+ 	}
+
+	.receive  {
+	background-color: #e7e7e7;
+	border-radius: 25px;
+	padding-top: .25%;
+	padding-bottom: .25%;
+	margin-left: 15px;
+	margin-right: 15px;
+	}
+ 	
+ 	.receive h5 {
+	margin-top: 6%;
+	margin-bottom: 6%;
+	}
+ 	
+ 	.receive span  {
+	font-family: Venera500;
+	}
+ 	
+ 	@media(min-width:768px) {
+ 	
+ 	.receive  {
+	    width: 73%;
+	margin-left: 0px;
+	margin-right: 0px;
+	}
+
+}
  /*---------CSS for college-coaches-signin-react.js HTML-----------------------------------*/ 
 
 	#logo img{
@@ -407,14 +451,7 @@
     background-color: #939598;
  	}
 	
-	#club-logo  {
-    background-color: #5ccae6;
- 	border-radius: 25px;
- 	padding: 5%;
-    text-align: center;
-    margin-bottom: 20px;
-	margin-top: 10px;
- 	}
+	
 	
 	#profile-basics {
  	background-color: #e7e7e7;
@@ -477,15 +514,17 @@
 	}
  	
  	.data-cat-btn  {
+ 	color: #fff;
  	border-radius: 25px;
  	padding: 5%;
     text-align: center;
     margin-bottom: 10px;
 	margin-top: 10px;
+	clear: left;
  	}
  	
  	.data-cat-btn:hover {
- 	background-color: #fff;
+ 	background-color: #5ccae6;
  	}
  	
  	.data-cat-btn h5 {
@@ -539,7 +578,6 @@
  	.coach-registration {
  	width: 100%;
  	}
- 	
  }
  
  	
@@ -553,20 +591,382 @@
  	.coach-registration {
  	width: 100%;
  	}
- 	
- 	
- 	
  }
  	
+ 	#upload-logo {
+ 	font-family: Venera300;
+ 	}
+ 	
+ 	#gender-info input {
+	width: 20px;
+	height: 20px;	 	
+	margin-left:15%;
+	margin-right:5%;
+	}
+ 	
+ 	.custom-file-input {
+  	color: transparent;
+	}
+
+	.custom-file-input::-webkit-file-upload-button {
+  	display: none;
+	}
+	
+	.custom-file-input::before {
+  	content: 'Choose File';
+  	color: black;
+  	display: inline-block;
+  	background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  	border: 1px solid #999;
+  	border-radius: 15px;
+    padding: 5px;
+  	outline: none;
+  	white-space: nowrap;
+  	-webkit-user-select: none;
+  	cursor: pointer;
+  	font-weight: 700;
+  	font-size: 10pt;
+  	width: 50%;
+  	margin-left: 25%;
+  	text-align: center;
+	}
+	.custom-file-input:hover::before {
+  	border-color: black;
+  	background-color: #5ccae6;
+	}
+	.custom-file-input:active {
+	outline: 0;
+	}
+	.custom-file-input:active::before {
+  	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+	}
+ 	
+ 	.program-button	h2{
+ 	margin-top: 1%;
+    margin-bottom: 1%;
+ 	}
+ 
+ /*---------CSS for my-prospects-react.js HTML-----------------------------------*/ 
+	
+	@media(max-width: 612px) {
+  	h2  {
+    font-size: 25px;
+ 	}
+ 	
+ 	.program-button h2  {
+    font-size: 18px;
+ 	}
+ }
+ 
+ 	.panel-container {
+    background-color: #e7e7e7;
+    margin: 10px 0px;
+    border: 4px solid #5ccae6;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 10px 35px 10px;
+    }
+    
+    .prospect-container {
+    margin: 10px 0px;
+    border: 4px solid #5ccae6;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    clear: left;
+    }
+ 	
+ 	#club-logo  {
+    background-color: #5ccae6;
+ 	border-radius: 25px;
+ 	border: 3px solid #939598;
+ 	padding: 5%;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+	width: 35%;
+	height: 100px;
+	float: left;
+ 	}
+ 	
+ 	@media(min-width: 768px) {
+  	#club-logo  {
+    background-color: #5ccae6;
+ 	border-radius: 25px;
+ 	border: 3px solid #939598;
+ 	padding: 5%;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+	width: 80%;
+	height: 100px;
+	margin-left: 10%;
+ 	}
+ }
+ 	#program-name h5 {
+	margin-top: 25px;
+	margin-left: 0px;
+	margin-bottom: 24px;
+ 	}
+ 	
+
+ 	.panel-cat-name {
+ 	float: left;
+ 	clear: left;
+ 	}
+ 	
+ 	.prospect-categories {
+    padding-left: 0;
+    margin-left: 0px;
+    list-style: none;
+    margin-bottom: 30px;
+    margin-top: 20px;
+	}
+	
+	.prospect-categories>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: .9%;
+    width: 19%
+	}
+	
+	.prospect-categories input {
+	display: block;
+	width: 20px;
+	height: 20px;	 	
+	margin: 0px auto;
+	}
+	
+	.cat-btn  {
+ 	border-radius: 25px;
+ 	padding: 1%;
+    text-align: center;
+    margin-bottom: 1px;
+	margin-top: 1px;
+	clear: left;
+ 	}
+ 	
+ 	.prospect-list {
+	margin-left: 1%;
+ 	}
+ 	
+ 	.prospect-summary {
+ 	position: relative;
+ 	border-radius: 25px;
+ 	padding: 2%;
+    text-align: left;
+    margin-bottom: 5px;
+	margin-top: 0px;
+ 	}
+ 	
+ 	@media(min-width:902px) {
+ 	.prospect-summary {
+ 	position: relative;
+ 	border-radius: 25px;
+ 	padding: -9%;
+    text-align: left;
+ 	}
+ 	}
+ 	
+ 	.prospect-update {
+ 	width: 73%;
+ 	}
+ 	
+ 	
+ 	.prospect-update i {
+ 	font-family: Venera900;
+ 	}
+ 	
+ 	.profile-link-button {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	display: inline;
+	color: #333;
+    border-radius: 25px;
+    width: 15%;
+    padding: 10px;
+    font-family: Venera700;
+    min-width: 100px;
+	}
+ 	
+ 	#prospect-clubname  {
+ 	display: inline;
+ 	float: left;
+  	}
+ 	
+ 	#prospect-account  {
+ 	display: inline;
+ 	float: right;
+ 	}
+ 	
+ 	#prospect-interest   {
+ 	background-color: #e7e7e7;
+ 	padding-top: 9px;
+ 	}
+ 	
+ 	#recruiting-tracking .row {
+ 	margin-left: 0px;
+ 	margin-right: 0px;
+ 	}
+ 	
+ 	#recruiting-tracking h5 {
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	}
+ 	
+ 	.recruiting-tracking-btn  {
+ 	border-radius: 25px;
+ 	padding: 1%;
+    text-align: center;
+    margin-bottom: 1px;
+	margin-top: 1px;
+	color: #fff;
+ 	}
+ 	
+ 	.recruiting-tracking-btn:hover  {
+ 	background-color: #939598;
+ 	}
+ 	
+ 	.recruit-update-container  {
+ 	display: none;
+ 	position: absolute;
+ 	top: 30%;
+ 	left:20%;
+ 	margin: 10px 0px;
+    border: 4px solid #939598;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    width: 65%;
+    background-color: #fff;
+ 	}
+ 	
+ 	
+ 	.recruit-update-container input {
+ 	display:inline;
+    width: 65%;
+    margin: 10px;
+ 	}
+ 	
+ 	.recruit-update-container .btn-default {
+ 	display:inline;
+    width: 25%;
+ 	}
+ 	
+ 	.letter-attributes  {
+ 	border: 4px solid #5ccae6;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    margin-left: 10%;
+    width: 80%;
+ 	}
+ 	
+ 	.letter-attributes input {
+ 	width: 20px;
+	height: 20px;	 	
+	margin-left:15%;
+	margin-right:5%;
+ 	}
+ 	
+ 	#video-description  {
+ 	height: 550px;
+ 	position: relative;
+ 	}
+ 	
+ 	.prospect-container h5 {
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	}
+ 	
+ 	.prospect-container .btn {
+ 	margin-bottom: 13px;
+ 	}
+ 	
+ 	.prospect-container h5, .prospect-container input {
+ 	display: inline;
+ 	}
+ 	
+ 	.video-upload-container {
+ 	margin-top: 3%;
+ 	margin-left: 2%;
+ 	}
+ 	
+ 	.marketing-add-container {
+ 	display: none;
+ 	position: absolute;
+ 	top: 110%;
+ 	left:20%;
+ 	margin: 10px 0px;
+    border: 4px solid #939598;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    width: 65%;
+    background-color: #fff;
+ 	}
+ 	
+ 	.marketing-attributes  {
+ 	border: 4px solid #5ccae6;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    margin-left: 10%;
+    width: 80%;
+ 	}
+ 	
+ 	.marketing-attributes input {
+    width: 20px;
+    height: 20px;
+    margin-left: 0%;
+    margin-right: 5%;
+    }
+ 	
+ 	.marketing-attributes p {
+    margin-left: 2%;
+	margin-right: 2%;
+    }
  	
  </style>
  </head>
  <body>
+ 
+ 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span>MENU<span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index"><img src="img/ps-icon.png" /><span class="name">Prospect Source</span></a>
+            </div>
 
- <div id="coaches-signin"></div>
- <div id="coach-registration"></div> 
- <div id="profileViewContact"></div>
- <div id="profileViewAthletic"></div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+ <div id="prospect-dashboard"></div>
+ <div id="video-service"></div> 
+ <div id=""></div>
+ <div id=""></div>
+ <div id=""></div>
+ <div id=""></div>
  
  
  <!-- React JS -->
@@ -588,9 +988,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
 
  	<!-- files for React Components -->
-	<script type="text/jsx" src="js/college-coaches-signin-react.js"></script>
-	<script type="text/jsx" src="js/coach-registration-react.js"></script>
-	<script type="text/jsx" src="js/profile-view-react.js"></script>
+	<script type="text/jsx" src="js/prospect-dashboard-react.js"></script>
+	<script type="text/jsx" src="js/video-service-react.js"></script>
+	<script type="text/jsx" src="js/program-info-react.js"></script>
+	<script type="text/jsx" src="js/completed-program-registration-react.js"></script>
+	<script type="text/jsx" src="js/club-invite-prospects-react.js"></script>
+	<script type="text/jsx" src="js/my-prospects-react.js"></script>
 	
 
 

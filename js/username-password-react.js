@@ -1,5 +1,5 @@
 
-var CoachRegistration = React.createClass({
+var UsernamePassword = React.createClass({
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -53,43 +53,48 @@ var CoachRegistration = React.createClass({
   render: function() {
     return (
       
-    <section className="page2">
-    	<form className="text-center" onSubmit={ this.handleSubmit }>
-    		<div id="registration-sized" className="container">
-    			<div className="row">
-    				<div className="col-sm-12">
-    					<div className="header text-center">
-    						<h1>College Coach Registration</h1>
-    					</div>
+      <section className="page">
+       <form onSubmit={ this.handleSubmit }>
+    	<div className="container">
+    		<div className="row">
+    			<div className="col-sm-4">
+    				<div className="timeline-image1 background-blue">
+    					<h2>1</h2>
     				</div>
+    				<h5 className="timeline-heading1">CREATE ACCOUNT</h5>
     			</div>
-    			<div className="row">
-    				<div className="col-sm-12 coach-registration background-light-gray">
-    					<div id="" className="col-sm-8 background-light-gray men-women-coach text-left">
-    						<h5>MENS COLLEGE COACH (NCAA, NAIA, NJCAA)</h5>
-    					</div>
-    					<div id="" className="col-sm-4 background-blue register-btn">
-    					<h5>Click Here To Register</h5>
-    					<p>(Basic Account: Free)</p>
-    					</div>
+    			<div className="col-sm-4">
+    				<div className="timeline-image2 background-gray">
+    					<h2>2</h2>
     				</div>
+    				<h5 className="timeline-heading2">GENERAL INFORMATION</h5>
     			</div>
-    			<div className="row">
-    				<div className="col-sm-12 coach-registration background-light-gray">
-    					<div id="" className="col-sm-8 background-light-gray men-women-coach text-left">
-    						<h5>WOMENS COLLEGE COACH (NCAA, NAIA, NJCAA)</h5>
-    					</div>
-    					<div id="" className="col-sm-4 background-blue register-btn">
-    					<h5>Click Here To Register</h5>
-    					<p>(Basic Account: Free)</p>
-    					</div>
+    			<div className="col-sm-4">
+    				<div className="timeline-image3 background-gray">
+    					<h2>3</h2>
     				</div>
+	    			<h5 className="timeline-heading3">INVITE PROSPECTS</h5>
     			</div>
     		</div>
+    		<div className="row">
+    			<div className="col-sm-3">
+    				<div id="club-admin" className="background-blue">
+    					<h5>AAU PROGRAM</h5>
+    				</div>
+    			</div>
+    			<div className="col-sm-9">
+    				<div>CREATE USERNAME <input onChange={ this.onChange11 } value={ this.state.text11 } /></div>
+          			<div>CREATE PASSWORD <input onChange={ this.onChange12 } value={ this.state.text12 } /></div>
+    			</div>
+    		</div>
+    	</div>
+    	
+          
+          <button className="btn btn-default btn-large center-button">NEXT</button>
         </form>
-    </section>
+      </section>
     );
   }
 });
 
-ReactDOM.render(<CoachRegistration />, document.getElementById('coach-registration'));
+ReactDOM.render(<UsernamePassword />, document.getElementById('username-password'));
