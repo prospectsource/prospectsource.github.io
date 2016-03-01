@@ -53,7 +53,7 @@ var CollegeCoachesSignIn = React.createClass({
     			<div className="row">
 		          	<div id="logo" className="col-sm-offset-3 col-sm-6 input-box">
 		          		<div>
-		          			<img src="img/ps-logo-sm.png" className="image-responsive" alt=""/>
+		          			<img src="img/ps-logo-md.png" className="image-responsive" alt=""/>
 		          		</div>
 		          	</div>
     				<div id="signin" className="col-sm-offset-3 col-sm-6 input-box">

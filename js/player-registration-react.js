@@ -1,28 +1,6 @@
 /** @jsx React.DOM */
 
-
-var TodoList3 = React.createClass({
-  render: function() {
-    var _this = this;
-    var createItem = function(item, index) {
-      return (
-        <li key={ index }>
-          <div>Name: { item.name /**this ".name" changes the attribute displayed in the todo list */ }</div>
-          <div>Position: { item.position }</div>
-          <div>Height: { item.height }</div>
-          <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
-                style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
-                  Delete Player
-          	</span>
-          </div>
-        </li>
-      );
-    };
-    return <ul>{ this.props.items.map(createItem) }</ul>;
-  }
-});
-
-var TodoApp3 = React.createClass({
+var PlayerRegistration = React.createClass({
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -54,23 +32,19 @@ var TodoApp3 = React.createClass({
     firebaseRef.child(key).remove();
   },
 
-  handleSubmit: function(e) {
-    e.preventDefault();
-    if (this.state.text && this.state.text.trim().length !== 0) {
-      this.firebaseRefs['items'].push({
-        name: this.state.text,
-        position: this.state.text2, // "name:" changes the input attribute category
-        height: this.state.text3
-      });
-      this.setState({
-        name: '',
-        position: '',
-        height: ''
-      });
-    }
-    this.state.text = String.Empty;
-    this.state.text2 = String.Empty;
-    this.state.text3 = String.Empty;
+  handleButtonClick: function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(selectClub).offset().top - 100
+    }, 800);
   },
 
   render: function() {
@@ -99,11 +73,12 @@ var TodoApp3 = React.createClass({
     	
         <form className="text-center" onSubmit={ this.handleSubmit }>
           
-          <button className="btn btn-default btn-large">Click To Register</button>
+          	<a onClick={this.handleButtonClick} className="btn btn-default btn-large">Click To Register</a>
+       
         </form>
       </section>
     );
   }
 });
 
-ReactDOM.render(<TodoApp3 />, document.getElementById('playerRegistration'));
+ReactDOM.render(<PlayerRegistration />, document.getElementById('playerRegistration'));

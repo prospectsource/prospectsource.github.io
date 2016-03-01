@@ -453,7 +453,7 @@
  	text-align: center;
 	}
 	
-	#profile-athletic-info  h4, #profile-contact-info  h4, #profile-basics h4{
+	#profile-athletic-info  h4, #profile-contact-info  h4, #profile-basics h4, #profile-academic-info h4 {
  	display: inline;
 	}
 	
@@ -462,12 +462,21 @@
  	margin-bottom:1.2%;
 	}
  	
- 	#profile-athletic-info div, #profile-contact-info div, #profile-basics  div{
+ 	#profile-athletic-info div, #profile-contact-info div, #profile-basics  div, #profile-academic-info div{
  	margin-top: 1.5%;
  	margin-bottom:1.5%;
 	}
  	
  	#profile-athletic-info {
+ 	display: none;
+ 	background-color: #fff;
+ 	border-radius: 50px;
+ 	padding: 5%;
+    margin-bottom: 20px;
+	margin-top: 20px;
+	}
+	
+	#profile-academic-info {
  	display: none;
  	background-color: #fff;
  	border-radius: 50px;
@@ -570,13 +579,13 @@
  
  
  <!-- React JS -->
-	<script src="https://fb.me/react-0.13.3.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
 	<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
 
 
 	<!-- React JS with Addons for playerFilter -->
 	<script src="https://fb.me/react-with-addons-0.14.3.js"></script>
-	<script src="https://fb.me/react-dom-0.14.3.js"></script>
 
 	<!-- Firebase -->
 	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>

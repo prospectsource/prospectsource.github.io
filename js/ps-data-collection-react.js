@@ -138,6 +138,8 @@ var TodoApp3 = React.createClass({
     firebaseRef.child(key).remove();
   },
 
+
+
   handleSubmit: function(e) {
     e.preventDefault();
     if (this.state.first && this.state.first.trim().length !== 0) {
@@ -221,6 +223,12 @@ var TodoApp3 = React.createClass({
 	this.state.gpa = String.Empty;
     this.state.act = String.Empty; 
     this.state.classRank = String.Empty;
+  	// Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(plansFeatures).offset().top - 60
+    }, 800);
+  
   },
 
   render: function() {

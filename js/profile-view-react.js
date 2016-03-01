@@ -65,7 +65,7 @@ var PlayerProfileAcademicInfo = React.createClass({
     var _this = this;
     var createInfo = function(item, index) {
       return (
-        <div id="profile-athletic-info" key={ index }>
+        <div id="profile-academic-info" key={ index }>
           	<h3>Academic Information</h3>
           	<div><h4>GPA:</h4>  { item.gpa}</div>
         	<div><h4>ACT:</h4>  { item.act}</div>
@@ -97,12 +97,6 @@ var ProfileViewPage = React.createClass ({
     document.getElementById('profile-academic-info').style.display='none';
   },
 
-  handleAcademicClick: function(event) {
-    document.getElementById('profile-contact-info').style.display='none';
-    document.getElementById('profile-athletic-info').style.display='none';
-    document.getElementById('profile-academic-info').style.display='block';
-  },
-  
   handleAcademicClick: function(event) {
     document.getElementById('profile-contact-info').style.display='none';
     document.getElementById('profile-athletic-info').style.display='none';

@@ -79,5 +79,5 @@ var CompletedRegistration = React.createClass({
   }
 });
 
-ReactDOM.render(<CompletedRegistration />, document.getElementById('completed-registration'));
+ReactDOM.render(<CompletedRegistration />, document.getElementById('completedRegistration'));
 

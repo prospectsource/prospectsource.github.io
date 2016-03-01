@@ -30,25 +30,15 @@ var Billing = React.createClass({
     firebaseRef.child(key).remove();
   },
 
-  handleSubmit: function(e) {
-    e.preventDefault();
-    if (this.state.text && this.state.text.trim().length !== 0) {
-      this.firebaseRefs['prospects'].push({
-        name: this.state.text,
-        position: this.state.text2, // "name:" changes the input attribute category
-        height: this.state.text3
-      });
-      this.setState({
-        name: '',
-        position: '',
-        height: ''
-      });
-    }
-    this.state.text = String.Empty;
-    this.state.text2 = String.Empty;
-    this.state.text3 = String.Empty;
+  handleButtonClick: function(event) {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(completedRegistration).offset().top - 100
+    }, 800);
   },
-
 
   render: function() {
     return (
@@ -116,7 +106,7 @@ var Billing = React.createClass({
     				</div>
     			</div>
     	  	</div>
-          	<button className="btn btn-default btn-large center-button">Finish</button>
+          	<a onClick={this.handleButtonClick} className="btn btn-default btn-large center-button">Finish</a>
     	</form>
     </section>
     );
