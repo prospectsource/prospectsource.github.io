@@ -59,7 +59,6 @@ var CompletedRegistration = React.createClass({
     		<div className="container">
     			<div className="row">
     				<div className="col-sm-12">
-    					<h2 id="congratulations" className="text-center" >Congratulations!</h2>
     					<h3 className="text-center" >You have successfully created your prospect profile!</h3>
     					<p>Now that you have created your profile, you will be entered into our master 
     					prospect database. This database is searched by coaches of all levels.</p>
