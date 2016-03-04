@@ -646,7 +646,7 @@
     margin-bottom: 1%;
  	}
  
- /*---------CSS for my-prospects-react.js HTML-----------------------------------*/ 
+ /*---------CSS for prospects-react.js HTML-----------------------------------*/ 
 	
 	@media(max-width: 612px) {
   	h2  {
@@ -825,6 +825,7 @@
     margin-bottom: 1px;
 	margin-top: 1px;
 	color: #fff;
+	height: 68px;
  	}
  	
  	.recruiting-tracking-btn:hover  {
@@ -932,6 +933,44 @@
 	margin-right: 2%;
     }
  	
+ 	.marketing-confirm-container {
+ 	display: none;
+ 	position: absolute;
+ 	top: 210%;
+ 	left:20%;
+ 	margin: 10px 0px;
+    border: 4px solid #939598;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    width: 65%;
+    background-color: #fff;
+    z-index: 1001;
+ 	}
+ 	
+ 	.marketing-confirm  {
+ 	border: 4px solid #5ccae6;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    margin-left: 10%;
+    margin-top: 3%;
+    width: 80%;
+ 	}
+ 	
+ 	.marketing-confirm input {
+    width: 20px;
+    height: 20px;
+    margin-left: 0%;
+    margin-right: 5%;
+    }
+ 
+ 	
+ 	.marketing-confirm p {
+    margin-left: 2%;
+	margin-right: 2%;
+    }
+ 	
  </style>
  </head>
  <body>
@@ -968,7 +1007,7 @@
 
  <div id="prospect-dashboard"></div>
  <div id="video-service"></div> 
- <div id=""></div>
+ <div id="marketing-service"></div>
  <div id=""></div>
  <div id=""></div>
  <div id=""></div>
@@ -996,7 +1035,7 @@
  	<!-- files for React Components -->
 	<script type="text/jsx" src="js/prospect-dashboard-react.js"></script>
 	<script type="text/jsx" src="js/video-service-react.js"></script>
-	<script type="text/jsx" src="js/program-info-react.js"></script>
+	<script type="text/jsx" src="js/marketing-service-react.js"></script>
 	<script type="text/jsx" src="js/completed-program-registration-react.js"></script>
 	<script type="text/jsx" src="js/club-invite-prospects-react.js"></script>
 	<script type="text/jsx" src="js/my-prospects-react.js"></script>

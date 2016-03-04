@@ -1,5 +1,5 @@
 
-var MarketingService = React.createClass({
+var MarketingServiceAdd = React.createClass({
   render: function() {
     var _this = this;
     var createItem = function(prospect, index) {
@@ -57,7 +57,7 @@ var VideoService = React.createClass({
     firebaseRef.child(key).remove();
   },
 
-  handleMarketingClick: function(event) {
+  handleVideoClick: function(event) {
     document.getElementById("marketing-add").style.display='block';
   },
 
@@ -105,12 +105,12 @@ var VideoService = React.createClass({
 								<li>Upload Video<input className="custom-file-input" type="file" name="video" accept="video/*" /></li>
 								<li>Upload Video<input className="custom-file-input" type="file" name="video" accept="video/*" /></li>    							
     						</ul>
-    						<button className="btn btn-default btn-large center-button" onClick={this.handleMarketingClick}>Submit Video Order</button>
+    						<button className="btn btn-default btn-large center-button" onClick={this.handleVideoClick}>Submit Video Order</button>
     					</div>
     				</div>
     			</div>
     	  	</div>
-    	  	<MarketingService prospects={this.state.prospects} />
+    	  	<MarketingServiceAdd prospects={this.state.prospects} />
     	  	
     </section>
     );

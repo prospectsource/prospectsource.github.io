@@ -1,3 +1,14 @@
+var PlayerPic = React.createClass({
+  render: function() {
+      return (
+        <div>
+          	<h3>{ this.props.prospects.first} </h3>
+        </div>
+      );
+  }
+});
+
+
 var PlayerProfileBasics = React.createClass({
   render: function() {
     var _this = this;
@@ -77,30 +88,111 @@ var PlayerProfileAcademicInfo = React.createClass({
   }
 });
 
+var PlayerRecruitingInterest = React.createClass({
+  render: function() {
+  		return (
+					<div id="player-recruiting-interest" className="">
+    					<div className="prospect-container">
+    						<ul className="prospect-categories list-inline">
+    							<li className="cat-btn background-blue">D1</li>
+    							<li className="cat-btn background-blue">D2</li>
+    							<li className="cat-btn background-blue">D3</li>
+    							<li className="cat-btn background-blue">NAIA</li>
+    							<li className="cat-btn background-blue">JUCO</li>
+    						</ul>
+    						<h2 id="prospect-interest" className="text-center" >Recruiting Interest</h2>
+							<div id="recruiting-interest-cats">   
+								<ul>
+									<li className="btn btn-default">High Major</li>
+									<li className="btn btn-default">High Major - / Mid-Major +</li>
+									<li className="btn btn-default">Mid-Major</li>
+									<li className="btn btn-default">Mid-Major - / Low Major +</li>
+									<li className="btn btn-default">Low Major</li>
+								</ul>						
+							</div>
+							<div id="recruiting-activity-feed" >
+								<RecruitingActivityFeed prospects={this.props.prospects}/>
+							</div>
+    					</div>
+    				</div>
+    			);
+    		}
+});
+
+var RecruitingActivityFeed = React.createClass({
+	render: function()  {
+	var createItem = function(prospect, index) {
+      return (
+        
+          <ul className="prospect-activity background-light-gray list-inline" key={ index }>
+          	<li className="prospect-update"><i>{prospect.first}</i>Southwest Minnesota</li>
+          </ul>
+        
+      );
+    };
+    return <ul className="prospect-list list-unstyled">{ this.props.prospects.map(createItem) }</ul>;
+  }
+});
+
+var CollegeRecruitingSummary = React.createClass({
+  render: function() {
+    var _this = this;
+    var createItem = function(prospect, index) {
+      return (
+         <div id="marketing-add" className="marketing-add-container text-center">
+          <u><h3>Marketing Service</h3></u>
+          <div className="marketing-attributes background-light-gray">
+          	<ul className="list-inline">
+          		<li><input type="checkbox" /><span>Click here if you want to add our marketing service to your cart (send video directly to coaches)</span></li>
+          	</ul> 
+        	<h4>Thanks for submitting your game film!</h4>
+        	<p className="text-left" >Our team will take these files and create a highlight 
+        	video and make game film available upon request for interested college coaches. You will 
+        	receive a notification when your video is complete.</p>
+			<p className="text-left">Your CC on file will be charged accordingly for this service. You will be charged $100 
+			for the video service and an additional $100 IF you clicked above to include our marketing service.</p>
+          </div>        
+        </div>
+      );
+    };
+    return <ul className="prospect-list list-unstyled">{ this.props.prospects.map(createItem) }</ul>;
+  }
+});
+
 var ProfileViewPage = React.createClass ({
   mixins: [ReactFireMixin],
 
   componentWillMount: function() {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/prospects');
-    this.bindAsArray(firebaseRef.limitToLast(25), 'prospects');
+    this.bindAsArray(firebaseRef.limitToLast(6), 'prospects');
   },
 
   handleContactClick: function(event) {
     document.getElementById('profile-contact-info').style.display='block';
     document.getElementById('profile-athletic-info').style.display='none';
     document.getElementById('profile-academic-info').style.display='none';
+    document.getElementById('player-recruiting-interest').style.display='none';
   },
   
   handleAthleticClick: function(event) {
     document.getElementById('profile-contact-info').style.display='none';
     document.getElementById('profile-athletic-info').style.display='block';
     document.getElementById('profile-academic-info').style.display='none';
+    document.getElementById('player-recruiting-interest').style.display='none';
   },
 
   handleAcademicClick: function(event) {
     document.getElementById('profile-contact-info').style.display='none';
     document.getElementById('profile-athletic-info').style.display='none';
     document.getElementById('profile-academic-info').style.display='block';
+    document.getElementById('player-recruiting-interest').style.display='none';
+  },
+  
+  handleRecruitingClick: function(event) {
+    document.getElementById('profile-contact-info').style.display='none';
+    document.getElementById('profile-athletic-info').style.display='none';
+    document.getElementById('profile-academic-info').style.display='none';
+    document.getElementById('player-recruiting-interest').style.display='block';
   },
 
   render: function() {
@@ -110,7 +202,7 @@ var ProfileViewPage = React.createClass ({
     		<div id="profile-top-row" className="row profile-top-row">
     			<div className="col-sm-3">
     				<div id="profile-picture" className="background-blue">
-    					<h5>PROSPECT IMG</h5>
+    					<div><PlayerPic prospects={this.state.prospects} /></div>
     				</div>
     			</div>
     			<div className="col-sm-6">
@@ -147,6 +239,8 @@ var ProfileViewPage = React.createClass ({
 			      		<PlayerProfileContactInfo prospects={ this.state.prospects }/>
 			      		<PlayerProfileAthleticInfo prospects={ this.state.prospects }/>
 			      		<PlayerProfileAcademicInfo prospects={ this.state.prospects }/>
+						<PlayerRecruitingInterest prospects={ this.state.prospects }/>
+						
 			      	</div>	
       			</div>
       		</div>
@@ -158,5 +252,5 @@ var ProfileViewPage = React.createClass ({
 
 
 ReactDOM.render(<ProfileViewPage />,
-    document.getElementById('profileViewContact')
+    document.getElementById('profile-view-page')
 );

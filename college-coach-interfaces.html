@@ -447,7 +447,7 @@
 	margin-top: 20px;
 	}
 	
-	#profile-contact-info  h3, #profile-athletic-info  h3{
+	#profile-contact-info  h3, #profile-athletic-info  h3, #profile-academic-info  h3{
  	margin-top: 0px;
  	margin-bottom:5%;
  	text-align: center;
@@ -485,12 +485,54 @@
 	margin-top: 20px;
 	}
  	
+ 	#player-recruiting-interest {
+ 	display: none;
+ 	background-color: #fff;
+ 	border-radius: 50px;
+ 	padding: 5%;
+    margin-bottom: 20px;
+	margin-top: 20px;
+ 	}
+ 	
+ 	#recruiting-interest-cats  {
+ 	display:inline-block;
+ 	width: 40%;
+ 	}
+ 	
+ 	#recruiting-interest-cats ul {
+ 	padding-left: 0px;
+ 	}
+ 	
+ 	#recruiting-interest-cats .btn {
+ 	margin: 5px 0px 5px 0px;
+ 	width: 90%;
+ 	font-size: 12px;
+ 	}
+ 	
+ 	#recruiting-activity-feed  {
+ 	display:inline-block;
+ 	width: 60%;
+ 	}
+ 	
+ 	#recruiting-activity-feed .btn {
+ 	margin: 2px 0px 2px 0px;
+ 	}
+ 	
+ 	.prospect-activity {
+ 	border-radius: 25px;
+ 	padding: 2%;
+    text-align: left;
+    margin-bottom: 1px;
+	margin-top: 1px;
+ 	}
+ 	
  	.data-cat-btn  {
  	border-radius: 25px;
  	padding: 5%;
     text-align: center;
     margin-bottom: 10px;
 	margin-top: 10px;
+	clear: left;
  	}
  	
  	.data-cat-btn:hover {
@@ -500,6 +542,16 @@
  	.data-cat-btn h5 {
     margin-bottom: 0px;
 	margin-top: 0px;
+ 	}
+ 	
+ 	.cat-btn  {
+ 	border-radius: 25px;
+ 	padding: 1%;
+    text-align: center;
+    margin-bottom: 1px;
+	margin-top: 1px;
+	clear: left;
+	width: 20%;
  	}
 
 /*---------CSS for coach-registration-react.js HTML-----------------------------------*/ 
@@ -563,19 +615,418 @@
  	width: 100%;
  	}
  	
- 	
- 	
  }
+ 	#aau-prospect {
+ 	border-radius: 25px;
+ 	padding: 5%;
+    text-align: center;
+    margin-bottom: 20px;
+ 	}
  	
+  /*---------CSS for completed plans-features-react.js HTML-----------------------------------*/ 
+ 
+	#plans-features-table  {
+  		width: 100%;
+  		font-size: 12px;
+  		margin-bottom: 30px;
+  	}
+  
+  	#plans-features-table h5 {
+  		margin: 10px auto 10px auto;
+  	}
+  
+  	#plans-features-table td, th {
+    	padding: 7px;
+    	border: 1px solid #93959B;
+	}
+  
+  	#table-logo  {
+  		margin: 30px auto;
+  	}
+ 
+ 	.cost {
+ 	color: #5ccae6;
+ 	margin: 0px auto 3px auto;
+ 	}
+ 	
+ 	.cost-month {
+ 	color:  #939598;
+ 	margin: 0px auto 5px auto;
+ 	}
+ 	
+ 	#table-header-row th {
+ 		text-align: center;
+ 		height: 175px;
+ 	}
+ 	
+ 	.features  {
+ 		text-align: left;
+ 		font-family: Venera900;
+ 	}
+ 	
+ 	.x {
+ 	font-family: Venera900;
+ 	font-size: 18px;
+ 	}
+ 	
+ 	tfoot {
+ 	border: none;
+ 	font-family: Venera900;
+ 	}
+ 	
+ 	tfoot input {
+    width: 20px;
+    height: 20px;
+    margin-left: 0%;
+    margin-right: 5%;
+    }
+	
+	tfoot input:hover {
+    cursor:pointer;
+    }
+	 	
+ 	.no-border {
+ 	border: none !important;
+ 	}
+ 	
+ /*---------CSS for college-coach-dashboard-react.js HTML-----------------------------------*/ 
+	
+	@media(max-width: 612px) {
+  	h2  {
+    font-size: 25px;
+ 	}
+ 	
+ 	.program-button h2  {
+    font-size: 18px;
+ 	}
+ }
+ 
+ 	.panel-container {
+    background-color: #e7e7e7;
+    margin: 10px 0px;
+    border: 4px solid #5ccae6;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 10px 35px 10px;
+    }
+    
+    .prospect-container {
+    margin: 10px 0px;
+    border: 4px solid #5ccae6;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    clear: left;
+    }
+ 	
+ 	#club-logo  {
+    background-color: #5ccae6;
+ 	border-radius: 25px;
+ 	border: 3px solid #939598;
+ 	padding: 5%;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+	width: 35%;
+	height: 100px;
+	float: left;
+ 	}
+ 	
+ 	@media(min-width: 768px) {
+  	#club-logo  {
+    background-color: #5ccae6;
+ 	border-radius: 25px;
+ 	border: 3px solid #939598;
+ 	padding: 5%;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+	width: 80%;
+	height: 100px;
+	margin-left: 10%;
+ 	}
+ }
+ 	#program-name h5 {
+	margin-top: 25px;
+	margin-left: 0px;
+	margin-bottom: 24px;
+ 	}
+ 	
+
+ 	.panel-cat-name {
+ 	
+ 	clear: left;
+ 	}
+ 	
+ 	.prospect-categories {
+    padding-left: 0;
+    margin-left: 0px;
+    list-style: none;
+    margin-bottom: 30px;
+    margin-top: 20px;
+	}
+	
+	.prospect-categories>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: .9%;
+    width: 19%
+	}
+	
+	.prospect-categories input {
+	display: block;
+	width: 20px;
+	height: 20px;	 	
+	margin: 0px 10px;
+	}
+	
+	.prospect-categories input:hover {
+    cursor:pointer;
+    }
+	
+	.cat-btn  {
+ 	border-radius: 25px;
+ 	padding: 1%;
+    text-align: center;
+    margin-bottom: 1px;
+	margin-top: 1px;
+	clear: left;
+ 	}
+ 	
+ 	.prospect-list {
+	margin-left: 1%;
+ 	}
+ 	
+ 	.prospect-summary {
+ 	position: relative;
+ 	border-radius: 25px;
+ 	padding: 2%;
+    text-align: left;
+    margin-bottom: 5px;
+	margin-top: 0px;
+ 	}
+ 	
+ 	@media(min-width:902px) {
+ 	.prospect-summary {
+ 	position: relative;
+ 	border-radius: 25px;
+ 	padding: -9%;
+    text-align: left;
+ 	}
+ 	}
+ 	
+ 	.prospect-update {
+ 	width: 73%;
+ 	}
+ 	
+ 	
+ 	.prospect-update i {
+ 	font-family: Venera900;
+ 	}
+ 	
+ 	.profile-link-button {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	display: inline;
+	color: #333;
+    border-radius: 25px;
+    width: 15%;
+    padding: 10px;
+    font-family: Venera700;
+    min-width: 100px;
+	}
+ 	
+ 	#prospect-clubname  {
+ 	display: inline;
+ 	float: left;
+  	}
+ 	
+ 	#prospect-account  {
+ 	display: inline;
+ 	float: right;
+ 	}
+ 	
+ 	#prospect-interest   {
+ 	background-color: #e7e7e7;
+ 	padding-top: 9px;
+ 	}
+ 	
+ 	#recruiting-tracking .row {
+ 	margin-left: 0px;
+ 	margin-right: 0px;
+ 	}
+ 	
+ 	#recruiting-tracking h5 {
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	}
+ 	
+ 	.recruiting-tracking-btn  {
+ 	border-radius: 25px;
+ 	padding: 1%;
+    text-align: center;
+    margin-bottom: 1px;
+	margin-top: 1px;
+	color: #fff;
+	height: 68px;
+ 	}
+ 	
+ 	.recruiting-tracking-btn:hover  {
+ 	background-color: #939598;
+ 	}
+ 	
+ 	.recruit-update-container  {
+ 	display: none;
+ 	position: absolute;
+ 	top: 30%;
+ 	left:20%;
+ 	margin: 10px 0px;
+    border: 4px solid #939598;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    width: 65%;
+    background-color: #fff;
+ 	}
+ 	
+ 	
+ 	.recruit-update-container input {
+ 	display:inline;
+    width: 65%;
+    margin: 10px;
+ 	}
+ 	
+ 	.recruit-update-container .btn-default {
+ 	display:inline;
+    width: 25%;
+ 	}
+ 	
+ 	.letter-attributes  {
+ 	border: 4px solid #5ccae6;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 10px 5px 35px 5px;
+    margin-left: 10%;
+    width: 80%;
+ 	}
+ 	
+ 	.letter-attributes input {
+ 	width: 20px;
+	height: 20px;	 	
+	margin-left:15%;
+	margin-right:5%;
+ 	}
+ 
+ 	.college-coach-cats  {
+ 	border-radius: 25px;
+ 	padding: 5%;
+    text-align: center;
+    margin-bottom: 20px;
+	margin-top: 10px;
+ 	}
+ 	
+ 	#coach-tracking>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 1.66%;
+    width: 30%;
+	}
+	
+	#coach-dashboard-logo {
+	padding: 2%;
+	}
+
+ /*---------CSS for recruiting-feed-react.js HTML-----------------------------------*/ 
+
+	
+	.panel-cat-name {
+ 	float: left;
+ 	clear: left;
+ 	}
+ 	
+ 	.prospect-categories {
+    padding-left: 0;
+    margin-left: 0px;
+    list-style: none;
+    margin-bottom: 30px;
+	}
+	
+	.prospect-categories>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: 7%;
+    width: 40%;
+	}
+	
+	.cat-btn  {
+ 	border-radius: 25px;
+ 	padding: 1%;
+    text-align: center;
+    margin-bottom: 1px;
+	margin-top: 1px;
+	clear: left;
+ 	}
+ 	
+ 	.prospect-list {
+	margin-left: 1%;
+ 	}
+ 	
+ 	.prospect-summary {
+ 	position: relative;
+ 	border-radius: 25px;
+ 	padding: 2%;
+    text-align: left;
+    margin-bottom: 1px;
+	margin-top: 1px;
+ 	}
+ 	
+ 	@media(min-width:902px) {
+ 	.prospect-summary {
+ 	position: relative;
+ 	border-radius: 25px;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+ 	}
+ 	}
+ 	
+ 	.prospect-feed {
+ 	width: 85%;
+ 	}
+ 	
+ 	
+ 	.prospect-update i {
+ 	font-family: Venera900;
+ 	}
+ 	
+ 	.profile-link-button {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	display: inline;
+	color: #333;
+    border-radius: 25px;
+    width: 15%;
+    padding: 10px;
+    font-family: Venera700;
+    min-width: 100px;
+	}
  	
  </style>
  </head>
  <body>
 
  <div id="coaches-signin"></div>
- <div id="coach-registration"></div> 
- <div id="profileViewContact"></div>
- <div id="profileViewAthletic"></div>
+ <div id="mens-womens-registration"></div> 
+ <div id="college-coach-registration"></div>
+ <div id="college-coaches-plans-features"></div>
+ <div id="coach-confirm"></div>
+ <div id="college-coach-dashboard"></div>
+ <div id="recruiting-feed"></div>
+ <div id="profile-view-page"></div>
+ 
  
  
  <!-- React JS -->
@@ -598,8 +1049,13 @@
 
  	<!-- files for React Components -->
 	<script type="text/jsx" src="js/college-coaches-signin-react.js"></script>
-	<script type="text/jsx" src="js/coach-registration-react.js"></script>
+	<script type="text/jsx" src="js/mens-womens-registration-react.js"></script>
+	<script type="text/jsx" src="js/college-coach-registration-react.js"></script>
+	<script type="text/jsx" src="js/college-coaches-plans-features-react.js"></script>
+	<script type="text/jsx" src="js/college-coach-confirm-react.js"></script>
+	<script type="text/jsx" src="js/college-coach-dashboard-react.js"></script>
 	<script type="text/jsx" src="js/profile-view-react.js"></script>
+	<script type="text/jsx" src="js/recruiting-feed-react.js"></script>
 	
 
 

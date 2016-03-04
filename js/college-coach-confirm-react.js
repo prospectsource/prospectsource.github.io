@@ -1,5 +1,4 @@
-                            
-var CollegeCoachesSignIn = React.createClass({
+var CoachRegistrationConfirmation = React.createClass({
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -21,6 +20,10 @@ var CollegeCoachesSignIn = React.createClass({
   onChange2: function(e) {
     this.setState({text2: e.target.value});
   },
+  
+  onChange3: function(e) {
+    this.setState({text3: e.target.value});
+  },
 
   removeItem: function(key) {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
@@ -33,49 +36,42 @@ var CollegeCoachesSignIn = React.createClass({
       this.firebaseRefs['prospects'].push({
         name: this.state.text,
         position: this.state.text2, // "name:" changes the input attribute category
+        height: this.state.text3
       });
       this.setState({
         name: '',
         position: '',
+        height: ''
       });
     }
     this.state.text = String.Empty;
     this.state.text2 = String.Empty;
+    this.state.text3 = String.Empty;
   },
+
 
 
   render: function() {
     return (
       
-    <section className="">
+      <section className="page">
        	<form onSubmit={ this.handleSubmit }>
     		<div className="container">
     			<div className="row">
-		          	<div id="logo" className="col-sm-offset-3 col-sm-6 input-box">
-		          		<div>
-		          			<img src="img/ps-logo-md.png" className="image-responsive" alt=""/>
-		          		</div>
-		          	</div>
-    				<div id="signin" className="col-sm-offset-3 col-sm-6 input-box">
-    					<div className="input-container sign-in text-center">
-    						<div><input onChange={this.handleUserInput} value={ this.state.ccNumber } placeholder="Email"/></div>
-          					<div><input onChange={this.handleUserInput} value={ this.state.ccCode } placeholder="Password" /></div>
-    						<button id="question" className="btn btn-default">?</button>
-    						<button className="btn btn-default">Sign In</button>
-    					</div>
-    				</div>
-    				<div id="signin" className="col-sm-offset-3 col-sm-6 input-box">
-    					<div id="links" className="input-container text-center">
-    						<h5>College basketball prospect? <a href="prospect-registration" >Join now</a>.</h5>
-							<h5>College basketball coach? <a href="coach-registration" >Join now</a>.</h5>
-    					</div>
+    				<div className="col-sm-12">
+    					<h3 className="text-center" >You have successfully created your 														college coach account!</h3>
+    					<p>Please visit your dashboard and use our service to search and 			follow prospects in our database. This platform is intended to help
+your coaching staff discover new prospects and gain more information on prospects you already follow. </p>													
+						<p>Thanks for choosing Prospect Source!</p>
     				</div>
     			</div>
     	  	</div>
+          	<button className="btn btn-default btn-large center-button">View Profile</button>
     	</form>
     </section>
     );
   }
 });
 
-ReactDOM.render(<CollegeCoachesSignIn />, document.getElementById('coaches-signin'));
+ReactDOM.render(<CoachRegistrationConfirmation />, document.getElementById('coach-confirm'));
+

@@ -1,5 +1,5 @@
 var spinner = new Spinner({color: '#ddd'});
-var firebaseRef = 'https://sweltering-fire-7944.firebaseio.com';
+var firebaseRef = 'https://sweltering-fire-7944.firebaseio.com/';
 
 function handleFileSelect(evt) {
   var f = evt.target.files[0];

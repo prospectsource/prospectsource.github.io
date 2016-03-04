@@ -92,4 +92,4 @@ var CoachRegistration = React.createClass({
   }
 });
 
-ReactDOM.render(<CoachRegistration />, document.getElementById('coach-registration'));
+ReactDOM.render(<CoachRegistration />, document.getElementById('mens-womens-registration'));
