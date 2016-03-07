@@ -574,6 +574,10 @@
 	width: 20%;
  	}
 
+	.cat-btn:hover, .cat-btn:active  {
+ 	background-color:  #939598;
+ 	}
+
 /*---------CSS for coach-registration-react.js HTML-----------------------------------*/ 
 
 	.coach-registration {
@@ -803,14 +807,7 @@
     cursor:pointer;
     }
 	
-	.cat-btn  {
- 	border-radius: 25px;
- 	padding: 1%;
-    text-align: center;
-    margin-bottom: 1px;
-	margin-top: 1px;
-	clear: left;
- 	}
+	
  	
  	.prospect-list {
 	margin-left: 1%;
@@ -965,14 +962,14 @@
  	clear: left;
  	}
  	
- 	.prospect-categories {
+ 	.recruiting-feed-categories {
     padding-left: 0;
     margin-left: 0px;
     list-style: none;
     margin-bottom: 30px;
 	}
 	
-	.prospect-categories>li {
+	.recruiting-feed-categories>li {
     display: inline-block;
     padding-right: 5px;
     padding-left: 5px;
@@ -980,14 +977,7 @@
     width: 40%;
 	}
 	
-	.cat-btn  {
- 	border-radius: 25px;
- 	padding: 1%;
-    text-align: center;
-    margin-bottom: 1px;
-	margin-top: 1px;
-	clear: left;
- 	}
+	
  	
  	.prospect-list {
 	margin-left: 1%;
@@ -1072,14 +1062,10 @@
         <!-- /.container-fluid -->
     </nav>
 
- <div id="coachesSignin"></div>
- <div id="mensWomensRegistration"></div> 
- <div id="collegeCoachRegistration"></div>
- <div id="coachGenInfo"></div>
- <div id="collegeCoachesPlansFeatures"></div>
- <div id="coachBilling"></div>
- <div id="coachConfirm"></div>
-
+ 
+ <div id="college-coach-dashboard"></div>
+ <div id="recruiting-feed"></div>
+ <div id="profile-view-page"></div>
  
 
  
@@ -1102,14 +1088,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
 
  	<!-- files for React Components -->
-	<script type="text/jsx" src="js/college-coaches-signin-react.js"></script>
-	<script type="text/jsx" src="js/mens-womens-registration-react.js"></script>
-	<script type="text/jsx" src="js/college-coach-registration-react.js"></script>
-	<script type="text/jsx" src="js/coach-gen-info-react.js"></script>
-	<script type="text/jsx" src="js/college-coaches-plans-features-react.js"></script>
-	<script type="text/jsx" src="js/coach-billing-react.js"></script>
-	<script type="text/jsx" src="js/college-coach-confirm-react.js"></script>
-	
+	<script type="text/jsx" src="js/college-coach-dashboard-react.js"></script>
+	<script type="text/jsx" src="js/profile-view-react.js"></script>
+	<script type="text/jsx" src="js/recruiting-feed-react.js"></script>
 	
 
 

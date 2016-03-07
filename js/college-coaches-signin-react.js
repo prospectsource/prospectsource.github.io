@@ -43,6 +43,20 @@ var CollegeCoachesSignIn = React.createClass({
     this.state.text2 = String.Empty;
   },
 
+   handleButtonClick: function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(mensWomensRegistration).offset().top - 60
+    }, 800);
+  },
 
   render: function() {
     return (
@@ -57,7 +71,7 @@ var CollegeCoachesSignIn = React.createClass({
 		          		</div>
 		          	</div>
     				<div id="signin" className="col-sm-offset-3 col-sm-6 input-box">
-    					<div className="input-container sign-in text-center">
+    					<div className=" sign-in text-center">
     						<div><input onChange={this.handleUserInput} value={ this.state.ccNumber } placeholder="Email"/></div>
           					<div><input onChange={this.handleUserInput} value={ this.state.ccCode } placeholder="Password" /></div>
     						<button id="question" className="btn btn-default">?</button>
@@ -67,7 +81,7 @@ var CollegeCoachesSignIn = React.createClass({
     				<div id="signin" className="col-sm-offset-3 col-sm-6 input-box">
     					<div id="links" className="input-container text-center">
     						<h5>College basketball prospect? <a href="prospect-registration" >Join now</a>.</h5>
-							<h5>College basketball coach? <a href="coach-registration" >Join now</a>.</h5>
+							<h5 onClick={this.handleButtonClick} >College basketball coach? <a href="coach-registration" >Join now</a>.</h5>
     					</div>
     				</div>
     			</div>
@@ -78,4 +92,4 @@ var CollegeCoachesSignIn = React.createClass({
   }
 });
 
-ReactDOM.render(<CollegeCoachesSignIn />, document.getElementById('coaches-signin'));
+ReactDOM.render(<CollegeCoachesSignIn />, document.getElementById('coachesSignin'));

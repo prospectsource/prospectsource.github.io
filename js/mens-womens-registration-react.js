@@ -49,6 +49,22 @@ var CoachRegistration = React.createClass({
     this.state.text2 = String.Empty;
     this.state.text3 = String.Empty;
   },
+  
+  
+   handleButtonClick: function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(collegeCoachRegistration).offset().top - 60
+    }, 800);
+  },
 
   render: function() {
     return (
@@ -68,7 +84,7 @@ var CoachRegistration = React.createClass({
     					<div id="" className="col-sm-8 background-light-gray men-women-coach text-left">
     						<h5>MENS COLLEGE COACH (NCAA, NAIA, NJCAA)</h5>
     					</div>
-    					<div id="" className="col-sm-4 background-blue register-btn">
+    					<div onClick={this.handleButtonClick} id="" className="col-sm-4 background-blue register-btn">
     					<h5>Click Here To Register</h5>
     					<p>(Basic Account: Free)</p>
     					</div>
@@ -79,7 +95,7 @@ var CoachRegistration = React.createClass({
     					<div id="" className="col-sm-8 background-light-gray men-women-coach text-left">
     						<h5>WOMENS COLLEGE COACH (NCAA, NAIA, NJCAA)</h5>
     					</div>
-    					<div id="" className="col-sm-4 background-blue register-btn">
+    					<div onClick={this.handleButtonClick} id="" className="col-sm-4 background-blue register-btn">
     					<h5>Click Here To Register</h5>
     					<p>(Basic Account: Free)</p>
     					</div>
@@ -92,4 +108,4 @@ var CoachRegistration = React.createClass({
   }
 });
 
-ReactDOM.render(<CoachRegistration />, document.getElementById('mens-womens-registration'));
+ReactDOM.render(<CoachRegistration />, document.getElementById('mensWomensRegistration'));

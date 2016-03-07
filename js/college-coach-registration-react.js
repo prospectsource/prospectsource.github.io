@@ -38,7 +38,7 @@ var CollegeCoachRegistration = React.createClass({
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
-      scrollTop: $(generalInformation).offset().top - 60
+      scrollTop: $(coachGenInfo).offset().top - 60
     }, 800);
   },
 
@@ -53,7 +53,7 @@ var CollegeCoachRegistration = React.createClass({
     				<div className="timeline-image1 background-blue">
     					<h2>1</h2>
     				</div>
-    				<h5 className="timeline-heading1">SELECT COLLEGE</h5>
+    				<h5 className="timeline-heading1">CREATE ACCOUNT</h5>
     			</div>
     			<div className="col-sm-4">
     				<div className="timeline-image2 background-gray">
@@ -98,4 +98,4 @@ var CollegeCoachRegistration = React.createClass({
   }
 });
 
-ReactDOM.render(<CollegeCoachRegistration />, document.getElementById('college-coach-registration'));
+ReactDOM.render(<CollegeCoachRegistration />, document.getElementById('collegeCoachRegistration'));

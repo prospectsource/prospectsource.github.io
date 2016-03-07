@@ -134,7 +134,7 @@ var ProspectDashboard = React.createClass({
     						<h2 id="prospect-interest" className="text-center" >My Recruiting Interest</h2>
 							<div id="recruiting-tracking">    						
 								<div className="row">
-									<div className="col-sm-4 recruiting-tracking-btn background-blue" onClick={this.handleLetterClick}><h5>I RECEIVED A LETTER</h5></div>
+									<div className="col-sm-4 recruiting-tracking-btn background-blue" onClick={this.handleLetterClick}><h5>RECEIVED A LETTER</h5></div>
 									<div className="col-sm-4 recruiting-tracking-btn background-blue"><h5>RECEIVED A TEXT</h5></div>
 									<div className="col-sm-4 recruiting-tracking-btn background-blue"><h5>RECEIVED AN EMAIL</h5></div>
 								</div>

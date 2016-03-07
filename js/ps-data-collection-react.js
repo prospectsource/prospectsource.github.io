@@ -133,6 +133,10 @@ var TodoApp3 = React.createClass({
     this.setState({classRank: e.target.value});
   },
   
+  aauClubChange: function(e) {
+    this.setState({aauClub: e.target.value});
+  },
+  
   removeItem: function(key) {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/');
     firebaseRef.child(key).remove();
@@ -167,7 +171,8 @@ var TodoApp3 = React.createClass({
         hudl: this.state.hudl,
         gpa: this.state.gpa,
         act: this.state.act, 
-        classRank: this.state.classRank
+        classRank: this.state.classRank,
+        aauClub: this.state.aauClub
       });
       this.setState({
         first: '',
@@ -193,7 +198,8 @@ var TodoApp3 = React.createClass({
         hudl: '',
         gpa: '',
         act: '', 
-        classRank: ''
+        classRank: '',
+        aauClub: ''
       });
     }
     this.state.text = String.Empty;
@@ -223,6 +229,7 @@ var TodoApp3 = React.createClass({
 	this.state.gpa = String.Empty;
     this.state.act = String.Empty; 
     this.state.classRank = String.Empty;
+    this.state.aauClub = String.Empty;
   	// Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
@@ -299,6 +306,15 @@ var TodoApp3 = React.createClass({
           				<div>ACT <input onChange={ this.actChange } value={ this.state.act } /></div>
           				<div>CLASS RANK <input onChange={ this.classRankChange } value={ this.state.classRank } /></div>
        				</div>
+       				<div className="input-container">
+						<label htmlFor="aau-club">Select Your AAU Club</label>
+						<select onChange={ this.aauClubChange } value={this.state.aauClub} id="aau-club" name="aau-club" className="form-control standalone" type="select" label="Select" placeholder="select">
+							<option value="Kingdom Hoops">Kingdom Hoops</option>
+							<option value="Rusty's Rascals">Rustys Rascals</option>
+							<option value="McCall MadMen">McCall MadMen</option>
+							<option value="Alex's Angels">Maschoff Monsters</option>
+						</select>
+					</div>
     			</div>
     		</div>
     	</div>

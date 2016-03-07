@@ -31,38 +31,46 @@ var TodoApp3 = React.createClass({
       text: ''
     };
   },
-
+  
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/');
     this.bindAsArray(firebaseRef.limitToLast(25), 'items');
   },
 
   onChange: function(e) {
-    this.setState({text: e.target.value});
+    this.setState({aauClub: e.target.value});
   },
   
-  onChange2: function(e) {
-    this.setState({text2: e.target.value});
+  usernameChange: function(e) {
+    this.setState({username: e.target.value});
   },
   
-  onChange3: function(e) {
-    this.setState({text3: e.target.value});
+  passwordChange: function(e) {
+    this.setState({password: e.target.value});
   },
 
-  removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
-    firebaseRef.child(key).remove();
+  
+  handleSubmit: function(e) {
+    e.preventDefault();
+    if (this.state.username && this.state.username.trim().length !== 0) {
+      this.firebaseRefs['prospects'].push({
+        aauClub: this.state.aauClub,
+        username: this.state.username, // "name:" changes the input attribute category
+        password: this.state.password
+      });
+      this.setState({
+        aauClub: '',
+        username: '',
+        password: ''
+      });
+    }
+    this.state.aauClub = String.Empty;
+    this.state.username = String.Empty;
+    this.state.password = String.Empty;
   },
+	
 
-  handleButtonClick: function(event) {
-    // Prevent default anchor click behavior
-    event.preventDefault();
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(generalInformation).offset().top - 60
-    }, 800);
-  },
+  
 
   render: function() {
     return (
@@ -97,8 +105,8 @@ var TodoApp3 = React.createClass({
     				</div>
     			</div>
     			<div className="col-sm-9">
-    				<label htmlFor="sel1">Select Your Club</label>
-    				<select id="sel1" className="form-control standalone" type="select" label="Select" placeholder="select">
+    				<label htmlFor="aau-club">Select Your AAU Club</label>
+    				<select onChange={ this.usernameChange } id="aau-club" name="aau-club" className="form-control standalone" type="select" label="Select" placeholder="select">
       					<option value="Kingdom Hoops">Kingdom Hoops</option>
     					<option value="Rusty's Rascals">Rustys Rascals</option>
     					<option value="McCall MadMen">McCall MadMen</option>
@@ -106,14 +114,14 @@ var TodoApp3 = React.createClass({
      				</select>
     			</div>
     			<div className="col-sm-offset-3 col-sm-9">
-    				<div>CREATE USERNAME <input onChange={ this.onChange11 } value={ this.state.text11 } /></div>
-          			<div>CREATE PASSWORD <input onChange={ this.onChange12 } value={ this.state.text12 } /></div>
+    				<div>CREATE USERNAME <input onChange={ this.usernameChange } value={ this.state.username } /></div>
+          			<div>CREATE PASSWORD <input onChange={ this.onChange12 } value={ this.state.password } /></div>
     			</div>
     		</div>
     	</div>
     	
           
-          <a onClick={this.handleButtonClick} className="btn btn-default btn-large center-button">NEXT</a>
+          <button onClick={this.handleButtonClick} className="btn btn-default btn-large center-button">NEXT</button>
         </form>
       </section>
     );

@@ -49,7 +49,20 @@ var CoachRegistrationConfirmation = React.createClass({
     this.state.text3 = String.Empty;
   },
 
+  handleButtonClick: function(event) {
 
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(coachesConfirm).offset().top - 100
+    }, 800);
+  },
 
   render: function() {
     return (
@@ -66,12 +79,12 @@ your coaching staff discover new prospects and gain more information on prospect
     				</div>
     			</div>
     	  	</div>
-          	<button className="btn btn-default btn-large center-button">View Profile</button>
+          	<button onClick={this.handleButtonClick} className="btn btn-default btn-large center-button">View Profile</button>
     	</form>
     </section>
     );
   }
 });
 
-ReactDOM.render(<CoachRegistrationConfirmation />, document.getElementById('coach-confirm'));
+ReactDOM.render(<CoachRegistrationConfirmation />, document.getElementById('coachConfirm'));
 

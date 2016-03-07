@@ -114,7 +114,7 @@ var RecruitingFeed = React.createClass({
     				<div className="col-sm-9">
     					<div className="prospect-container">
     						<h2 id="" className="text-center" >D1 Recruiting Feed</h2>
-    						<ul className="prospect-categories list-inline">
+    						<ul className="recruiting-feed-categories list-inline">
     							<li className="cat-btn background-blue">Class</li>
     							<li className="cat-btn background-blue">State</li>    							
     						</ul>

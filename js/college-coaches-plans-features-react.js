@@ -41,7 +41,7 @@ var CollegeCoachesPlansFeatures = React.createClass({
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
-      scrollTop: $(billing).offset().top - 100
+      scrollTop: $(coachBilling).offset().top - 60
     }, 800);
   },
 
@@ -51,9 +51,28 @@ var CollegeCoachesPlansFeatures = React.createClass({
       <section className="page">
     	<div className="container">
     		<div className="row">
+    			<div className="col-sm-4">
+    				<div className="timeline-image1 background-gray">
+    					<h2>1</h2>
+    				</div>
+    				<h5 className="timeline-heading1">CREATE ACCOUNT</h5>
+    			</div>
+    			<div className="col-sm-4">
+    				<div className="timeline-image2 background-gray">
+    					<h2>2</h2>
+    				</div>
+    				<h5 className="timeline-heading2">GENERAL INFORMATION</h5>
+    			</div>
+    			<div className="col-sm-4">
+    				<div className="timeline-image3 background-blue">
+    					<h2>3</h2>
+    				</div>
+	    			<h5 className="timeline-heading3">BILLING</h5>
+    			</div>
+    		</div>
+    		<div className="row">
     			<div className="col-xs-12">
     				<div className="header text-center">
-    					<img id="table-logo" src="img/ps-logo-sm.png" className="img-responsive" alt=""/>
     					<h2>Plans & Features</h2>
     				</div>
     			</div>
@@ -75,6 +94,14 @@ var CollegeCoachesPlansFeatures = React.createClass({
 						<td className="" >Receive Prospect Referrals(no registration required)</td>
 					  </tr>
 					</tbody>
+					<tfoot>
+					  <tr>	
+						<td className=" background-blue">
+							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<div>Free!</div>
+						</td>
+					  </tr>
+					</tfoot>
 				</table>
     		  </div>
     		  <div className="col-md-4">
@@ -208,4 +235,4 @@ var CollegeCoachesPlansFeatures = React.createClass({
   }
 });
 
-ReactDOM.render(<CollegeCoachesPlansFeatures />, document.getElementById('college-coaches-plans-features'));
+ReactDOM.render(<CollegeCoachesPlansFeatures />, document.getElementById('collegeCoachesPlansFeatures'));

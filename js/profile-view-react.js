@@ -2,7 +2,7 @@ var PlayerPic = React.createClass({
   render: function() {
       return (
         <div>
-          	<h3>{ this.props.prospects.first} </h3>
+          	<h3>PLAYER PIC</h3>
         </div>
       );
   }
@@ -92,15 +92,15 @@ var PlayerRecruitingInterest = React.createClass({
   render: function() {
   		return (
 					<div id="player-recruiting-interest" className="">
-    					<div className="prospect-container">
-    						<ul className="prospect-categories list-inline">
-    							<li className="cat-btn background-blue">D1</li>
-    							<li className="cat-btn background-blue">D2</li>
-    							<li className="cat-btn background-blue">D3</li>
-    							<li className="cat-btn background-blue">NAIA</li>
-    							<li className="cat-btn background-blue">JUCO</li>
-    						</ul>
-    						<h2 id="prospect-interest" className="text-center" >Recruiting Interest</h2>
+    					
+							<ul className="prospect-categories list-inline">
+								<li className="cat-btn background-blue">D1</li>
+								<li className="cat-btn background-blue">D2</li>
+								<li className="cat-btn background-blue">D3</li>
+								<li className="cat-btn background-blue">NAIA</li>
+								<li className="cat-btn background-blue">JUCO</li>
+							</ul>
+							<h2 id="prospect-interest" className="text-center" >Recruiting Interest</h2>
 							<div id="recruiting-interest-cats">   
 								<ul>
 									<li className="btn btn-default">High Major</li>
@@ -113,7 +113,7 @@ var PlayerRecruitingInterest = React.createClass({
 							<div id="recruiting-activity-feed" >
 								<RecruitingActivityFeed prospects={this.props.prospects}/>
 							</div>
-    					</div>
+    					
     				</div>
     			);
     		}

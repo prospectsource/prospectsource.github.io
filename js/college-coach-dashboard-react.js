@@ -1,3 +1,38 @@
+var MyProspectsList = React.createClass({
+  render: function() {
+    var _this = this;
+    var createItem = function(prospect, index) {
+      return (
+        <li key={ index }>
+          <ul className="prospect-summary background-light-gray list-inline">
+          	<li className="prospect-feed"><i>{prospect.first} {prospect.last}</i> received a text from Southwest Minnesota</li>
+          	<li className="profile-link-button text-center background-gray">Profile</li>
+          </ul>
+        </li>
+      );
+    };
+    return <ul className="prospect-list list-unstyled">{ this.props.prospects.map(createItem) }</ul>;
+  }
+});
+
+var RecruitFeed = React.createClass({
+  render: function() {
+      return (
+        <div id="d1-recruiting-feed" className="col-md-9">
+			<div className="prospect-container">
+				<h2 id="" className="text-center" >D1 Recruiting Feed</h2>
+				<ul className="recruiting-feed-categories list-inline">
+					<li className="cat-btn background-blue">Class</li>
+					<li className="cat-btn background-blue">State</li>    							
+				</ul>
+			<MyProspectsList prospects={this.props.prospects}/>
+			</div>
+		</div>
+      );  
+  }
+});
+
+
 
 var Letter = React.createClass({
   render: function() {
@@ -83,7 +118,15 @@ var CollegeCoachDashboard = React.createClass({
     this.state.text3 = String.Empty;
   },
 
-
+  handleDashboardClick: function(event) {
+    document.getElementById('d1-recruiting-feed').style.display='none';
+    document.getElementById('coach-database-container').style.display='block';
+  },
+  
+  handleDOneClick: function(event) {
+    document.getElementById('d1-recruiting-feed').style.display='block';
+    document.getElementById('coach-database-container').style.display='none';
+  },
 
   render: function() {
     return (
@@ -94,7 +137,7 @@ var CollegeCoachDashboard = React.createClass({
     				<div className="col-md-3">
     					<div className="panel-container">
     						<div id="program-name" ><h5>School Name</h5></div>
-    						<div id="" className="data-cat-btn background-gray">
+    						<div id="" className="data-cat-btn background-gray" onClick={this.handleDashboardClick}>
     							<h5>Dashboard</h5>
 							</div>
     						<div className="panel-cat-name">
@@ -109,7 +152,7 @@ var CollegeCoachDashboard = React.createClass({
 							<div className="panel-cat-name">
 								<h5>Recruiting Feeds</h5>
 							</div>
-							<div id="" className="data-cat-btn background-blue" onClick={this.handleContactClick}>
+							<div id="" className="data-cat-btn background-blue" onClick={this.handleDOneClick}>
 								<h5>D1 Recruiting</h5>
 							</div>
 							<div id="" className="data-cat-btn background-blue" onClick={this.handleContactClick}>
@@ -126,11 +169,11 @@ var CollegeCoachDashboard = React.createClass({
 							</div>
 						</div>    				
     				</div>
-    				<div className="col-md-9">
+    				<div id="coach-database-container" className="col-md-9">
     					<div className="prospect-container">
 							<div id="">    						
 								<ul id="coach-tracking" className="list-inline">
-									<li className="college-coach-cats background-gray" onClick={this.handleLetterClick}><h5>Prospect Database</h5></li>
+									<li className="college-coach-cats background-gray"><h5>Prospect Database</h5></li>
 									<li className="college-coach-cats background-gray"><h5>Club Database</h5></li>
 									<li className="college-coach-cats background-gray"><h5>My Recruits</h5></li>
 								</ul>
@@ -140,9 +183,12 @@ var CollegeCoachDashboard = React.createClass({
 							</div>
     					</div>
     				</div>
+    				<RecruitFeed prospects={this.state.prospects} />
+
     			</div>
     	  	</div>
     	  	<Letter prospects={this.state.prospects} />
+    	  	
     	  	
     </section>
     );

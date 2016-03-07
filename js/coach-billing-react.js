@@ -1,4 +1,4 @@
-var Billing = React.createClass({
+var CoachBilling = React.createClass({
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -36,7 +36,7 @@ var Billing = React.createClass({
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
-      scrollTop: $(completedRegistration).offset().top - 100
+      scrollTop: $(coachConfirm).offset().top - 100
     }, 800);
   },
 
@@ -51,7 +51,7 @@ var Billing = React.createClass({
     					<div className="timeline-image1 background-gray">
     						<h2>1</h2>
     					</div>
-    					<h5 className="timeline-heading1">SELECT CLUB</h5>
+    					<h5 className="timeline-heading1">Create Account</h5>
     				</div>
     				<div className="col-sm-4">
     					<div className="timeline-image2 background-gray">
@@ -67,25 +67,7 @@ var Billing = React.createClass({
     				</div>
     			</div>
     			<div className="row">
-    				<div className="col-md-4 input-box">
-    					<div id="fee-info" className="">
-    						<h4><u>Once registered...</u></h4>
-							<div>you will have
-								access to our premium services:
-								<ul>
-									<li>- Video Service</li>
-									<li>- Marketing Service</li>
-									<li>- Consulting Service</li>
-								</ul>
-								When premium services are purchased,
-								we will bill the credit card
-								on file. You can delete or remove
-								your credit card and profile at any
-								time.
-							</div>
-    					</div>
-    				</div>
-    				<div className="col-md-4 input-box">
+    				<div className="col-md-offset-1 col-sm-5 input-box">
     					<div className="input-container cc-info">
     						<h3>CC Information</h3>
     						<div>CC Number<input onChange={this.handleUserInput} value={ this.state.ccNumber } /></div>
@@ -94,7 +76,7 @@ var Billing = React.createClass({
           					<div>Name On Card<input onChange={this.handleUserInput} value={ this.state.ccName } /></div>
     					</div>
     				</div>
-    				<div className="col-md-4 input-box">
+    				<div className="col-sm-5 input-box">
     					<div className="input-container cc-info">
     						<h3>Billing Address</h3>
     						<div>Street<input onChange={this.handleUserInput} value={ this.state.billingStreet } /></div>
@@ -112,4 +94,4 @@ var Billing = React.createClass({
   }
 });
 
-ReactDOM.render(<Billing />, document.getElementById('billing'));
+ReactDOM.render(<CoachBilling />, document.getElementById('coachBilling'));

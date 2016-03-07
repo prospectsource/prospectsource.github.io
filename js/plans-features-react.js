@@ -3,31 +3,35 @@ var PlayerRegistration = React.createClass({
 
   getInitialState: function() {
     return {
-      items: [],
-      text: ''
+      prospects: [],
+      planSelection: '',
     };
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
-    this.bindAsArray(firebaseRef.limitToLast(25), 'items');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'prospects');
   },
 
-  onChange: function(e) {
-    this.setState({text: e.target.value});
-  },
-  
-  onChange2: function(e) {
-    this.setState({text2: e.target.value});
-  },
-  
-  onChange3: function(e) {
-    this.setState({text3: e.target.value});
+  planSelectionChange: function(e) {
+    this.setState({planSelection: e.target.value});
   },
 
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/players/');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
     firebaseRef.child(key).remove();
+  },
+
+  handleSubmit: function(e) {
+    e.preventDefault();
+    if (this.state.planSelection && this.state.planSelection.trim().length !== 0) {
+      this.firebaseRefs['prospects'].push({
+        planSelection: this.state.planSelection
+      });
+      this.setState({
+        planSelection: ''
+      });
+    }
   },
 
   handleButtonClick: function(event) {
@@ -49,6 +53,7 @@ var PlayerRegistration = React.createClass({
     return (
       
       <section className="page">
+        <form className="text-center" onSubmit={ this.handleSubmit }>
     	<div className="container">
     		<div className="row">
     			<div className="col-xs-12">
@@ -80,6 +85,14 @@ var PlayerRegistration = React.createClass({
 						<td className="" >Showcase Recruiting Interest To College Coaches</td>
 					  </tr>
 					</tbody>
+					<tfoot>
+					  <tr>	
+						<td className=" background-blue">
+							<input name="price-choice" type="radio" onChange={this.state.planSelectionChange} value={ this.state.planSelection } value="free" />
+							<div>Free!</div>
+						</td>
+					  </tr>
+					</tfoot>
 				</table>
     		  </div>
     		  <div className="col-md-2">
@@ -119,14 +132,14 @@ var PlayerRegistration = React.createClass({
 					<tfoot>
 					  <tr>	
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.state.planSelectionChange} value={ this.state.planSelection } value="5.00" />
 							<div>Monthly</div>
 							<div>$5.00/month</div>
 						</td>
 					  </tr>
 					  <tr>	
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.state.planSelectionChange} value={ this.state.planSelection } value="54.00"/>
 							<div>Yearly</div>
 							<div>$54.00</div>
 							<div>(10% off)</div>
@@ -174,14 +187,14 @@ var PlayerRegistration = React.createClass({
 					<tfoot>
 					  <tr>
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
 							<div>Monthly</div>
 							<div>$13.33/month</div>
 						</td>
 					  </tr>
 					  <tr>
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
 							<div>Yearly</div>
 							<div>$144.00</div>
 							<div>(10% off)</div>							
@@ -232,14 +245,14 @@ var PlayerRegistration = React.createClass({
 					<tfoot>
 					  <tr>
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
 							<div>Monthly</div>
 							<div>$21.67/month</div>
 						</td>		
 					  </tr>
 					  <tr>
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
 							<div>Yearly</div>
 							<div>$234.00</div>
 							<div>(10% off)</div>
@@ -293,14 +306,14 @@ var PlayerRegistration = React.createClass({
 					<tfoot>
 					  <tr>
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
 							<div>Monthly</div>
 							<div>$38.33/month</div>
 						</td>
 					  </tr>
 					  <tr>	
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state } />
+							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
 							<div>Yearly</div>
 							<div>$414.00</div>
 							<div>(10% off)</div>
@@ -313,9 +326,9 @@ var PlayerRegistration = React.createClass({
     		</div>
     	</div>
     	
-        <form className="text-center" onSubmit={ this.handleSubmit }>
+        
           
-          	<a onClick={this.handleButtonClick} className="btn btn-default btn-large">To Billing</a>
+          	<button className="btn btn-default btn-large">To Billing</button>
        
         </form>
       </section>
