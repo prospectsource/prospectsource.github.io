@@ -25,6 +25,8 @@ $control c
 ```
   2. takes you to home directory
   
+-----
 
-
-
+Notes: 
+Tmux
+https://robots.thoughtbot.com/a-tmux-crash-course
