@@ -4,6 +4,9 @@ import Chat from '../components/Chat.jsx';
 import SelectClub from '../components/SelectClub.jsx';
 import ProspectRegistration from '../components/ProspectRegistration.jsx';
 import GeneralInformation from '../components/GeneralInformation.jsx';
+import PlansFeatures from '../components/PlansFeatures.jsx';
+import Billing from '../components/Billing.jsx';
+import ThankYou  from '../components/ThankYou.jsx';
 
 import Login from '../components/Login.jsx';
 import Router from 'react-router';
@@ -12,14 +15,14 @@ let DefaultRoute = Router.DefaultRoute;
 
 let routes = (
   <Route path="/" handler={App}>
-    <DefaultRoute handler={Login} />
+    <DefaultRoute handler={Chat} />
     <Route path="prospectregistration" handler={ProspectRegistration} />
     <Route path="select_club" handler={SelectClub} />
     <Route path="General_Information" handler={GeneralInformation} />
+    <Route path="Plans_and_Features" handler={PlansFeatures} />
+    <Route path="Billing" handler={Billing} />    
+    <Route path="thank_you" handler={ThankYou} />
 
-//    <Route path="Plans and Features " handler={GeneralInformation} />
-//    <Route path="Billing" handler={GeneralInformation} />    --  payment processinng of choice
-//    <Route path="Thank You" handler={GeneralInformation} />
 //    <Route path="Dashboard" handler={GeneralInformation} />
 
     <Route path="chat" handler={Chat} />

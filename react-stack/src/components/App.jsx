@@ -36,7 +36,6 @@ class App extends React.Component {
     return (
       <div>
         <AppBar title="Awesome Chat App"
-            
              //onTitleTouchTap={handleTouchTap}
              iconElementLeft={<IconButton><NavigationClose /></IconButton>}
              iconElementRight={<FlatButton label="Save" />}

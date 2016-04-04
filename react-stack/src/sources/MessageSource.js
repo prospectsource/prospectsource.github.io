@@ -11,8 +11,8 @@ let MessageSource = {
         firebaseRef.off();
       }
 
-      firebaseRef = new Firebase('https://react-stack.firebaseio.com/messages/' +
-        state.selectedChannel.key);
+      firebaseRef = new Firebase('https://prospect-source.firebaseio.com/messages/' +
+        'josh_is_cool');
 
       return new Promise((resolve, reject) => {
         firebaseRef.once("value", (dataSnapshot) => {
@@ -43,7 +43,10 @@ let MessageSource = {
         }
 
         firebaseRef.push({
-          "message": state.message,
+          "first":"Josh",
+          "last":"McCall",
+          "message": state.message.message,
+          "test": state.message,
           "date": new Date().toUTCString(),
           "author": state.user.google.displayName,
           "userId": state.user.uid,

@@ -19,7 +19,7 @@ class Actions {
 
   login(router){
     return (dispatch) => {
-      var firebaseRef = new Firebase('https://react-stack.firebaseio.com');
+      var firebaseRef = new Firebase('https://prospect-source.firebaseio.com/');
       firebaseRef.authWithOAuthPopup("google", (error, user)=> {
         if(error){
           return;

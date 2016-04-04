@@ -22,7 +22,6 @@ class ChatStore {
       messagesLoading: true
     });
   }
-
   @bind(Actions.messagesReceived)
   receivedMessages(messages){
     _(messages)

@@ -2,8 +2,34 @@ import React from 'react';
 import MessageList from './MessageList.jsx';
 import ChannelList from './ChannelList.jsx';
 import MessageBox from './MessageBox.jsx';
+import ChatStore from '../stores/ChatStore';
+import Actions from '../actions';
 
 class GeneralInformation extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      message: '',
+      firstName: '',
+      lastName: ''
+    }
+  }
+  onFirstNameChange(evt){
+    this.setState({
+      firstName: evt.target.value
+    });
+  }
+  onLastNameChange(evt){
+    this.setState({
+      lastName: evt.target.value
+    });
+  }
+  handleSubmit(){
+      event.preventDefault();
+      console.log(this.state);
+      Actions.sendMessage(this.state);
+      debugger;
+  }
   render(){
     return (
       <div>
@@ -35,10 +61,20 @@ class GeneralInformation extends React.Component {
                         <div className="input-container">
                             <h4>CONTACT INFORMATION</h4>
                             <div className="first-name-container">
-                                <div>FIRST NAME </div>
-                                <div><input  /></div>
+                            <div>FIRST NAME </div>
+                                <div>
+                                    <input 
+                                      value={this.state.firstName}
+                                      onChange={this.onFirstNameChange.bind(this)}
+                                    />
+                                </div>
                             </div>
-                            <div>LAST NAME <input  /></div>            			
+                            <div>LAST NAME 
+                                <input  
+                                  value={this.state.lastName}
+                                  onChange={this.onLastNameChange.bind(this)}
+                                />
+                            </div>            			
                             <div>PHONE (ATHLETE) <input  /></div>
                             <div>EMAIL (ATHLETE OR PARENT) <input  /></div>
                             <div>ADDRESS <input  /></div>
@@ -85,12 +121,13 @@ class GeneralInformation extends React.Component {
                 </div>
             </div>
               
-              <button id="prospect-data-button" className="btn btn-default btn-large center-button">NEXT</button>
+              <button onClick={this.handleSubmit.bind(this)} id="prospect-data-button" className="btn btn-default btn-large center-button">NEXT</button>
             </form>
           </section>
       </div>
     );
   }
+
   }
 
 export default GeneralInformation;

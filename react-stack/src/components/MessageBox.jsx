@@ -15,6 +15,13 @@ class MessageBox extends React.Component {
 
   onChange(evt){
     this.setState({
+      //  var author = this.refs.author.getDOMNode().value.trim();
+      message: evt.target.value,
+    });
+  }
+  onLastNameChange(evt){
+    this.setState({
+      //  var author = this.refs.author.getDOMNode().value.trim();
       message: evt.target.value
     });
   }
@@ -22,9 +29,9 @@ class MessageBox extends React.Component {
   onKeyUp(evt){
     if(evt.keyCode === 13 && trim(evt.target.value) != ''){
       evt.preventDefault();
-
-      Actions.sendMessage(this.state.message);
-
+      this.state.manualset = 'please work';
+      Actions.sendMessage(this.state);
+debugger;
       this.setState({
         message: ''
       });
@@ -40,8 +47,23 @@ class MessageBox extends React.Component {
         padding: 30
       }}>
         <textarea
+          ref='a'
           value={this.state.message}
           onChange={this.onChange.bind(this)}
+          onKeyUp={this.onKeyUp.bind(this)}
+          style={{
+            width: '100%',
+            borderColor: '#D0D0D0',
+            resize: 'none',
+            borderRadius: 3,
+            minHeight: 50,
+            color: '#555',
+            fontSize: 14,
+            outline: 'auto 0px'
+          }} />
+        <textarea
+          value={this.state.lastName}
+          onChange={this.onLastNameChange.bind(this)}
           onKeyUp={this.onKeyUp.bind(this)}
           style={{
             width: '100%',
