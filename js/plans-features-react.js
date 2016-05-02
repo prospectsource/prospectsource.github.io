@@ -187,14 +187,14 @@ var PlayerRegistration = React.createClass({
 					<tfoot>
 					  <tr>
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
+							<input name="price-choice" type="radio" onChange={this.state.planSelectionChange} value={ this.state.planSelection } value="13.33" />
 							<div>Monthly</div>
 							<div>$13.33/month</div>
 						</td>
 					  </tr>
 					  <tr>
 						<td className=" background-blue">
-							<input name="price-choice" type="radio" onChange={this.handleUserInput} value={ this.state.planSelection } />
+							<input name="price-choice" type="radio" onChange={this.state.planSelectionChange} value={ this.state.planSelection } value="144.00"/>
 							<div>Yearly</div>
 							<div>$144.00</div>
 							<div>(10% off)</div>							

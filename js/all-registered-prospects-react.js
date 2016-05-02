@@ -1,14 +1,35 @@
 
-var MyProspectsList = React.createClass({
+var ProspectsList = React.createClass({
   render: function() {
     var _this = this;
     var createItem = function(prospect, index) {
       return (
         <li key={ index }>
-          <ul className="prospect-summary background-light-gray">
-          	<li className="prospect-feed"><i>{prospect.first} {prospect.last}</i> received a text from Southwest Minnesota</li>
-          	<li className="profile-link-button text-center background-gray">Profile</li>
-          </ul>
+          <div id="all-prospects-container" className="prospect-summary background-light-gray ">
+          		<ul id="all-prospects" className=" ">
+					<li className="prospect-feed">{prospect.first} {prospect.last} ({prospect.classRank}/{prospect.position})</li>
+					<li className="prospect-feed">{prospect.cityStateZip}</li>
+					<li className="prospect-feed">{prospect.aauClub}</li>
+				</ul>
+				<ul id="prospect-divisions" className=" ">
+					<li>
+						<div className="highlight-box"></div><p className="text-center">D1</p>
+					</li>
+					<li>
+						<div className="highlight-box"></div><p className="text-center">D2</p>
+					</li>
+					<li>
+						<div className="highlight-box"></div><p className="text-center">D3</p>
+					</li>
+					<li>
+						<div className="highlight-box"></div><p className="text-center">NAIA</p>
+					</li>
+					<li>
+						<div className="highlight-box"></div><p className="text-center">JUCO</p>
+					</li>
+				</ul>
+			<div className="profile-link-button text-center background-gray">Profile</div>
+          </div>
         </li>
       );
     };
@@ -17,7 +38,7 @@ var MyProspectsList = React.createClass({
 });
 
 
-var RecruitingFeed = React.createClass({
+var AllRegistered = React.createClass({
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -113,7 +134,7 @@ var RecruitingFeed = React.createClass({
     				</div>
     				<div className="col-sm-9">
     					<div className="prospect-container">
-    						<h2 id="" className="text-center" >D1 Recruiting Feed</h2>
+    						<h2 id="" className="text-center" >Prospect Source Recruits</h2>
     						<ul className="recruiting-feed-categories list-inline">
     							<li className="cat-btn background-blue">Level</li>
     							<li className="cat-btn background-blue">Class</li>
@@ -122,7 +143,7 @@ var RecruitingFeed = React.createClass({
     							<li className="cat-btn background-blue">ACT</li>
     							<li className="cat-btn background-blue">GPA</li>    							
     						</ul>
-    					<MyProspectsList prospects={this.state.prospects}/>
+    					<ProspectsList prospects={this.state.prospects}/>
     					</div>
     				</div>
     			</div>
@@ -132,5 +153,5 @@ var RecruitingFeed = React.createClass({
   }
 });
 
-ReactDOM.render(<RecruitingFeed />, document.getElementById('recruiting-feed'));
+ReactDOM.render(<AllRegistered />, document.getElementById('all-registered'));
 

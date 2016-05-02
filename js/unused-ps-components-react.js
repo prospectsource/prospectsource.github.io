@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+/data collection with working dropdown for aauclub/
 
 
 var TodoList3 = React.createClass({
@@ -226,13 +226,6 @@ var TodoApp3 = React.createClass({
     this.state.aauJersey = String.Empty;
     this.state.school = String.Empty; 
     this.state.hudl = String.Empty;
-	this.state.gpa = String.Empty;;
-    this.state.vert = String.Empty; 
-	this.state.position = String.Empty;
-    this.state.aauProgram = String.Empty; 
-    this.state.aauJersey = String.Empty;
-    this.state.school = String.Empty; 
-    this.state.hudl = String.Empty;
 	this.state.gpa = String.Empty;
     this.state.act = String.Empty; 
     this.state.classRank = String.Empty;
@@ -300,15 +293,7 @@ var TodoApp3 = React.createClass({
           				<div>WEIGHT <input onChange={ this.weightChange } value={ this.state.weight } /></div>
           				<div>VERTICAL JUMP <input onChange={ this.vertChange } value={ this.state.vert } /></div>
           				<div>POSITION <input onChange={ this.positionChange } value={ this.state.position } /></div>
-          				<div>AAU PROGRAM 
-          					<select onChange={ this.aauClubChange } value={this.state.aauClub} id="aau-club" name="aau-club" className="form-control standalone" type="select">
-								<option value="none" selected>Select Your AAU Club</option>
-								<option value="Kingdom Hoops">Kingdom Hoops</option>
-								<option value="Rusty's Rascals">Rustys Rascals</option>
-								<option value="McCall MadMen">McCall MadMen</option>
-								<option value="Alex's Angels">Maschoff Monsters</option>
-							</select>
-          				</div>
+          				<div>AAU PROGRAM <input onChange={ this.aauProgramChange } value={ this.state.aauProgram } /></div>
           				<div>AAU JERSEY <input onChange={ this.aauJerseyChange } value={ this.state.aauJersey } /></div>
           				<div>HIGH SCHOOL <input onChange={ this.schoolChange} value={ this.state.school } /></div>
           				<div>HUDL PROFILE <input onChange={ this.hudlChange } value={ this.state.hudl } /></div>
@@ -321,6 +306,15 @@ var TodoApp3 = React.createClass({
           				<div>ACT <input onChange={ this.actChange } value={ this.state.act } /></div>
           				<div>CLASS RANK <input onChange={ this.classRankChange } value={ this.state.classRank } /></div>
        				</div>
+       				<div className="input-container">
+						<label htmlFor="aau-club">Select Your AAU Club</label>
+						<select onChange={ this.aauClubChange } value={this.state.aauClub} id="aau-club" name="aau-club" className="form-control standalone" type="select" label="Select" placeholder="select">
+							<option value="Kingdom Hoops">Kingdom Hoops</option>
+							<option value="Rusty's Rascals">Rustys Rascals</option>
+							<option value="McCall MadMen">McCall MadMen</option>
+							<option value="Alex's Angels">Maschoff Monsters</option>
+						</select>
+					</div>
     			</div>
     		</div>
     	</div>

@@ -1,3 +1,31 @@
+var SchoolRecruitingSummary = React.createClass({
+  render: function() {
+    var _this = this;
+    var createItem = function(prospect, index) {
+      return (
+         <div id="school-summary" className="recruit-update-container text-center">
+          <u><h3>Recruiting Letter</h3></u>
+          <input type="text"/><div className="btn-default search">Search School</div>
+          <div className="letter-attributes background-light-gray">
+          	<ul className="">
+          		<li><input type="checkbox" /><span>Mens</span></li>
+          		<li><input type="checkbox" /><span>Womens</span></li>
+          	</ul> 
+        	<label htmlFor="sel1"></label>
+    				<select id="sel1" className="form-control standalone" type="select" label="Select" placeholder="select">
+      					<option value="NCAA D1  V">NCAA D1  V</option>
+    					<option value="NCAA D2  V">NCAA D2  V</option>
+    					<option value="NCAA D3  V">NCAA D3  V</option>
+    					<option value="NCAA NAIA  V">NCAA NAIA  V</option>
+     				</select> 
+          </div>        
+        </div>
+      );
+    };
+    return <ul className="prospect-list list-unstyled">{ this.props.prospects.map(createItem) }</ul>;
+  }
+});
+
 var PlayerPic = React.createClass({
   render: function() {
       return (
@@ -89,6 +117,8 @@ var PlayerProfileAcademicInfo = React.createClass({
 });
 
 var PlayerRecruitingInterest = React.createClass({
+  
+  
   render: function() {
   		return (
 					<div id="player-recruiting-interest" className="">
@@ -111,7 +141,7 @@ var PlayerRecruitingInterest = React.createClass({
 								</ul>						
 							</div>
 							<div id="recruiting-activity-feed" >
-								<RecruitingActivityFeed prospects={this.props.prospects}/>
+								<RecruitingActivityFeed prospects={this.props.prospects} />
 							</div>
     					
     				</div>
@@ -120,12 +150,17 @@ var PlayerRecruitingInterest = React.createClass({
 });
 
 var RecruitingActivityFeed = React.createClass({
+	
+	handleSummaryClick: function(event) {  
+  	document.getElementById('school-summary').style.display='block';
+  	},
+	
 	render: function()  {
 	var createItem = function(prospect, index) {
       return (
         
-          <ul className="prospect-activity background-light-gray list-inline" key={ index }>
-          	<li className="prospect-update"><i>{prospect.first}</i>Southwest Minnesota</li>
+          <ul className="prospect-activity background-light-gray list-inline" onClick={this.handleSummaryClick} key={ index }>
+          	<li className="prospect-update"><i>{prospect.first}</i> Southwest Minnesota</li>
           </ul>
         
       );
@@ -195,6 +230,8 @@ var ProfileViewPage = React.createClass ({
     document.getElementById('player-recruiting-interest').style.display='block';
   },
 
+  
+
   render: function() {
     return (
       <section id="profile" className="page">
@@ -245,6 +282,7 @@ var ProfileViewPage = React.createClass ({
       			</div>
       		</div>
       	</div>
+      	<SchoolRecruitingSummary prospects={this.state.prospects}/>
       </section>
     );
   }
