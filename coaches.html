@@ -16,9 +16,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/animate.min.css" type="text/css">    
 	<link rel="stylesheet" href="css/timeline.css">
@@ -55,12 +53,19 @@
     src: url(react-stack/fonts/Venera-900.otf);
 	}
 
+    
     body {
     background-color: white;
-	font-size: 16px;
-	font-family: 'Venera300';
+	font-size: 18px;
+	font-family: 'Questrial';
 	color: #4e4f51;
 	}
+    
+    h1, h2, h3, h4, h5 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: "Venera700";
+    }
     
     a 	{
 	text-decoration: none;
@@ -77,18 +82,22 @@
     color: #939598;
 	}
     
-    h1, h2, h3, h4, h5 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-family: "Venera700";
+    
+    #logo hr {
+    margin-top: 50px;
+	margin-bottom: 50px;  
     }
     
-    
     hr   {
-    color: #939598
-	width: 75%;  
-	margin-top: 50px;
-	margin-bottom: 50px;  
+	border-top: 1px solid #5ccae6;
+	width: 100%;  
+	margin-top: 0px;
+	margin-bottom: 40px;  
+    }
+    
+    #prospect-timeline h2, #about h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
     }
     
     header {
@@ -198,12 +207,10 @@
 	}
 
 	.fa  {
-	margin-top: 16px;
+	margin-top: 13px;
 	}
 	
-	#marketing {
-	margin-top: 9px;
-	}
+	
 	
 	#results i {
 	margin-top: 43px;
@@ -211,14 +218,7 @@
 	font-size: 14px;
 	}
     
-    @media(min-width:700px) {
-	
-	h2 {
-    font-size:30px;
-    }
-	
-}
-
+    
 
 	@media(min-width:768px) {
 	
@@ -227,12 +227,10 @@
     }
 	
 	.fa  {
-	margin-top: 16px;
+	margin-top: 13px;
 	}
 	
-	#about h2{
-	font-size: 20px;
-    }
+	
 }
 
     @media(min-width:1000px) {
@@ -242,20 +240,16 @@
     font-size: 16px;
 	}
 	
-	#about h2{
-	font-size: 28px;
-    }
+	
 }
 	
 	@media(min-width:1100px) {
 	
 	.fa  {
-	margin-top: 35px;
+	margin-top: 33px;
 	}	
 	
-	#marketing {
-	margin-top: 28px;
-	}
+	
 	
 	#results i {
 	margin-top: 61px;
@@ -270,7 +264,7 @@
 	@media(min-width:1200px) {
 	
 	.fa  {
-	margin-top: 36px;
+	margin-top: 33px;
 	}
 	
 	#prospect-timeline {
@@ -282,7 +276,6 @@
 
 	
 	#prospect-timeline {
-	background-color: #e7e7e7;
 	margin-left: 0px;
 	margin-right: 0px;
 	padding-bottom: 100px;
@@ -340,6 +333,16 @@
     margin-bottom: 0px;
     }
     
+    #about .col-sm-4  {
+	border-radius: 25px;
+	border: 1px solid white;
+	padding: 10px;	
+	}
+    
+    .timeline:before {
+    bottom: 9%;
+	}
+    
     </style>
     
 </head>
@@ -353,17 +356,23 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span>MENU<span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index"><img src="img/ps-icon.png" /><span class="name">Prospect Source</span></a>
+                <a class="navbar-brand page-scroll" href="index"><img src="img/ps-icon.png" /><span class="name"></span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="" href="prospects">Prospects</a>
+                    </li>
+                    <li>
+                        <a class="" href="coaches">Coaches</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="" href="#">Sign-in</a>
                     </li>
                 </ul>
             </div>
@@ -382,7 +391,7 @@
 			<div class="col-lg-10 col-lg-offset-1 text-center">
 				<img src="img/ps-logo-lg.png" class="image-responsive" alt="">
 				<hr>
-				
+				<h2>College Basketball Coaches</h2>
 			</div>
 		</div>
 	  </div>
@@ -391,23 +400,127 @@
 	<section id="about">
 	  <div class="container">
 		<div class="row">
-			<div class="col-sm-4">
-			  	<a class="btn btn-default btn-xl wow zoomIn" href="#Modal1" data-toggle="modal" data-wow-delay="0s">	
-					<h2><br>OUR MISSION<br><br><br></h2>
-			  	</a>
-			</div>
-			<div class="col-sm-4">
-			  	<a class="btn btn-default btn-xl wow zoomIn" href="#Modal2" data-toggle="modal" data-wow-delay="0s">	
-					<h2>For<br>College<br>Basketball<br>Prospects</h2>
-			  	</a>
-			</div>
-			<div class="col-sm-4">
-			  	<a class="btn btn-default btn-xl wow zoomIn" href="#Modal3" data-toggle="modal" data-wow-delay="0s">	
-					<h2>For<br>College<br>Basketball<br>Programs</h2>
-			  	</a>
+			<div class="col-sm-offset-1 col-sm-10">
+				<h2 class="">WHAT WE DO</h2>
+				<hr>
+					<p>	Prospect Source is a software company that is changing the way
+				college coaches’ recruit prospects. Through
+				our relationships with various clubs, we make sure college coaches have the
+				necessary tools to connect with and discover new prospects. Our goal is
+				to provide each college coaching staff with as much information on prospects as
+				possible in order to evaluate and improve the prospect discovery process. We
+				want to give each staff a competitive edge by providing new reports and more
+				in-depth information about the recruitment of each prospect in our database. 
+				</p>
 			</div>
 		</div>
 	  </div>
+	</section>
+	
+	<section id="prospect-timeline">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-offset-1 col-sm-10">
+                	<h2>COLLEGE COACH RECRUITING PLATFORM</h2>
+                	<hr>
+                    <ul class="timeline">
+                        <li>
+                            <div id="timeline-image-top" class="timeline-image">
+                                <i class="fa fa-users fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                                <div class="timeline-heading">
+                                    <h3>Access Database</h3>
+                                </div>
+                                <div class="timeline-body">
+								<p class="text-muted">Connect with our member clubs
+							so you can learn more about their prospects.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <i class="fa fa-keyboard-o  fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                                <div class="timeline-heading">
+                                    <h3>Filter Reports</h3>
+                                </div>
+                                <div class="timeline-body">
+								<p class="text-muted">Create reports to filter
+							prospects according to specific athletic, academic, or
+							recruiting data.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <i id="" class="fa fa-dot-circle-o fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                                <div class="timeline-heading">
+                                    <h3>Discover Prospects</h3>
+                                </div>
+                                <div class="timeline-body">
+								<p class="text-muted">Access our recruiting feeds to
+							see when an athlete at your level is recruited.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <i class="fa fa-info-circle  fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                                <div class="timeline-heading">
+                                    <h3>Track Recruiting</h3>
+                                </div>
+                                <div class="timeline-body">
+								<p class="text-muted">Keep tabs on prospects you
+							are interested in by seeing complete transparency in
+							their recruitment.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <i id="" class="fa fa-video-camera fa-4x"></i>
+                            </div>
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                                <div class="timeline-heading">
+                                    <h3>Receive Video</h3>
+                                </div>
+                                <div class="timeline-body">
+								<p class="text-muted">Let us know if you would
+							like to obtain video of a prospect at one of our
+							member clubs for scouting purposes.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+			
+			</div>
+		</div>
+	</section>
+	
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="column-container" >
+					<div class="col-sm-offset-4 col-sm-4 text-center wow fadeIn"  data-wow-delay="0s">
+						<h1>Sign Me Up!</h1>
+						<a class="btn btn-default btn-xl " href="#Modal3" data-toggle="modal" >	
+							Register
+						</a>
+						<a class="btn btn-default btn-xl " href="#Modal3" data-toggle="modal" >	
+							Sign-in
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	
@@ -429,36 +542,32 @@
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>First Name</label>
                                 <input type="text" class="form-control" placeholder="Eric" id="first" name="first" required data-validation-required-message="Please enter your first name.">
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                          <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Last Name</label>
                                 <input type="text" class="form-control" placeholder="Johnson" id="last" name="last" required data-validation-required-message="Please enter your last name.">
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Gender</label>
                                 <input type="text" class="form-control" placeholder="Male/Female" id="gender" name="gender" required data-validation-required-message="Please enter your gender.">
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Graduation Year</label>
                                 <input type="number" class="form-control" placeholder="2016" id="year" name="year"required data-validation-required-message="Please enter your graduation year.">
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
                                 <input type="email" class="form-control" placeholder="rusty@email.com" id="email" name="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"><span id="email-invalid" style="display:none">
-        Must be a valid email address</span></p>
+                                <span id="email-invalid" style="display:none">
+        Must be a valid email address</span>
     
                             </div>
                         </div>
@@ -466,28 +575,24 @@
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Contact Phone Number</label>
                                 <input type="tel" class="form-control" placeholder="5557654321" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                           <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>High School</label>
                                 <input type="text" class="form-control" placeholder="Valley West High School" id="school" name="school" required data-validation-required-message="">
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                          <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>AAU Club</label>
                                 <input type="text" class="form-control" placeholder="Kingdom Hoops" id="club" name="club" required data-validation-required-message="">
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Questions?</label>
                                 <textarea rows="5" class="form-control" placeholder="Do you have any questions?" id="question" name="question"></textarea>
-                                <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row">
@@ -506,170 +611,7 @@
             
         </div>
     </section>
-	
-	<!-- Modal 1 -->
-    <div class="about-modal modal fade" id="Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h1><img class="header-icon" src="img/ps-icon.png" />OUR MISSION</h1>
-                            <p>Prospect Source is a recruiting service built to help athletes through the recruiting process. We believe 
-				the recruiting process is complex and it is ultimately up to the athlete to perform on and off the court in 
-				order to have the opportunity to play college basketball. We believe it is our job to help educate and train 
-				athletes on this process, while offering resources. Our end goal is to empower both athletes and college 
-				basketball coaching staffs.
-				</p>
-           				<button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal 2 -->
-    <div class="about-modal modal fade" id="Modal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h1><img class="header-icon" src="img/ps-icon.png" />For College Basketball Prospects</h1>
-                            <p>Our service is built to help AAU athletes through the recruiting 
-        				process. We believe the recruiting process is complex and it is ultimately up to the 
-                                    athlete to perform on and off the court in order to have the opportunity to play college 
-                                    basketball. We service our athletes all year round as we prepare them for college 
-                                    basketball.<br><br>
-                                    During the fall and winter months we want our athletes utilizing all the 
-                                    resources offered at their respective high school. During the spring and summer, we offer 
-                                    additional resources through their respective AAU program to make sure athletes are doing 
-                                    everything possible to reach their goals. For many this simply means education on the 
-                                    process and information dissemination. For other athletes, this is a more in depth 
-                                    development opportunity as we help our athletes become physically and mentally prepared to 
-                                    perform.
-                    		</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="prospect-timeline">
-                <div class="col-lg-12 text-center">
-                	<h2>Service Overview:</h2>
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <i class="fa fa-keyboard-o fa-4x"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Basic Service</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Register on our platform to receive an evaluation and gain access to 
-                                    resources.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <i class="fa fa-video-camera fa-4x"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Video Service</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Let us work with your video to create highlights and to share game 
-                                    film with college coaches for scouting.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <i id="marketing" class="fa fa-dot-circle-o fa-5x"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Marketing Service</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Do you have highlight videos, game film, or Hudl video? We want to 
-                                    make sure relevant coaches across the country have your content.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <i class="fa fa-wechat fa-4x"></i>
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Consulting Service</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Work with our consultants to make sure your physical skills, 
-                                    mentality, and opportunity put you in the best position to reach your goals of playing 
-                                    college basketball.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="results">
-                            <div class="timeline-image">
-                               <i class="fa">RESULTS</i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-           	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-    
-    <!-- Modal 3 -->
-    <div class="about-modal modal fade" id="Modal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h1><img class="header-icon" src="img/ps-icon.png" />For College Basketball Programs</h1>
-                            <h3>NCAA (Division I, II, III), NAIA, NJCAA</h3>
-					<p>Our goal is to help college basketball programs of all levels improve their prospect discovery process. 
-					We make sure college coaches have the necessary information, video, and relationships to easily identify 
-					relevant prospects at AAU Programs across the country. We understand college coaches cannot see every 
-					athlete live, therefore we work to make sure they have a resource to identify prospects who would be a 
-					good fit for their program.
-                    </p>
-           					<button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

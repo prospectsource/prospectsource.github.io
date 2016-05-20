@@ -16,9 +16,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.min.css" type="text/css">    
+	<link rel="stylesheet" href="css/timeline.css">
+
     
     
     <style type="text/css">
@@ -57,8 +59,12 @@
     body {
     background-color: black;
 	color: #fff;
-	font-family: 'Venera500';
+	font-family: 'Questrial';
 	}
+    
+    h1, h2, h3, h4, h5   {
+    font-family: 'Venera700';
+    }
     
     a 	{
 	text-decoration: none;
@@ -72,7 +78,7 @@
     }
     
     section {
-    margin: 50px 20px 50px 20px;
+    margin: 0px 20px 50px 20px;
     }
     
     #logo  {
@@ -96,17 +102,27 @@
     width: 100%
     }
     
+    
+    
     .btn-default {
     color: #333;
-    background-color: #fff;
-    border-color: #ccc;
+    background-color: #5ccae6;
+    border-color: #fff;
     border-radius: 25px;
+    margin-top: 5px;
+    width: 100%;
 	}
 	
-	.btn-no-padding  {
-    padding-left: 0px;
-    padding-right: 0px;
-    }
+	.btn-default:hover,  .btn-default:focus {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff;
+	}
+	
+	.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+	border: 2px solid #5ccae6;    
+	}
     
     h2 {
     font-size: 18px;
@@ -138,6 +154,31 @@
     }
 	
 }
+	@media screen and (max-width:768px) {
+	#about .col-sm-4  {
+	margin-top: 30px;
+	}
+}
+
+
+	#about .col-sm-4  {
+	border-radius: 25px;
+	border: 1px solid white;
+	padding: 10px;	
+	}
+
+	@media screen and (min-width: 768px)  {
+	#about .col-sm-4  {
+	margin-left: 11%;	
+	}	
+}
+	
+	.column-container {
+	display: inline-block;
+    width: 80%;
+    margin: 0% 10.2% 0%;
+	}
+	
     </style>
     
 </head>
@@ -157,32 +198,50 @@
 	  </div>
 	</section>
 	
-	<section id="banner">
-	  <div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 text-center">
-				<h1>Launching in Spring 2016 with select AAU Programs!</h1>
-			</div>
-		</div>
-	  </div>
-	</section>
-	
 	<section id="about">
-	  <div class="container">
-		<div class="row">
-			<div class="col-sm-12 text-center btn-no-padding">
-			  	<a class="btn btn-default" href="intro">	
-					<h2>Enter To Learn More</h2>
-			  	</a>
+		<div class="container">
+			<div class="row">
+				<div class="column-container" >
+					<div class="col-sm-4 text-center wow fadeIn"  data-wow-delay="0s">
+						<h2>College Basketball Prospects</h2>
+						<a class="btn btn-default btn-xl" href="#Modal2" data-toggle="modal" >	
+							Register
+						</a>
+						<a class="btn btn-default btn-xl " href="#Modal2" data-toggle="modal" >	
+							Sign-in
+						</a>
+						<a class="btn btn-default" href="prospects">	
+							Learn More
+						</a>
+					</div>
+					<div class=" col-sm-4 text-center wow fadeIn"  data-wow-delay="0s">
+						<h2>College Basketball Coaches</h2>
+						<a class="btn btn-default btn-xl " href="#Modal3" data-toggle="modal" >	
+							Register
+						</a>
+						<a class="btn btn-default btn-xl " href="#Modal3" data-toggle="modal" >	
+							Sign-in
+						</a>
+						<a class="btn btn-default" href="coaches">	
+							Learn More
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
-	  </div>
 	</section>
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	
+		
+	<!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    
+    <!-- Custom Theme JavaScript -->
+    <script src="js/prospect.js"></script>
 	
 
 
