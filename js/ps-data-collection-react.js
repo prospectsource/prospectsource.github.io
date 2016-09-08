@@ -301,8 +301,8 @@ var TodoApp3 = React.createClass({
           				<div>VERTICAL JUMP <input onChange={ this.vertChange } value={ this.state.vert } /></div>
           				<div>POSITION <input onChange={ this.positionChange } value={ this.state.position } /></div>
           				<div>AAU PROGRAM 
-          					<select onChange={ this.aauClubChange } value={this.state.aauClub} id="aau-club" name="aau-club" className="form-control standalone" type="select">
-								<option value="none" value>Select Your AAU Club</option>
+          					<select onChange={ this.aauClubChange } value={this.state.aauClub} id="aau-club" name="aau-club" className="form-control standalone" type="select" defaultvalue="none">
+								<option value="none" >Select Your AAU Club</option>
 								<option value="Kingdom Hoops">Kingdom Hoops</option>
 								<option value="Rusty's Rascals">Rustys Rascals</option>
 								<option value="McCall MadMen">McCall MadMen</option>
