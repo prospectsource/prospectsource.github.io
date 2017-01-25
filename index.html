@@ -109,8 +109,8 @@
     background-color: #5ccae6;
     border-color: #fff;
     border-radius: 25px;
-    margin: 10px;
-    width: 75%;
+    margin-top: 5px;
+    width: 100%;
 	}
 	
 	.btn-default:hover,  .btn-default:focus {
@@ -132,15 +132,7 @@
     @media(min-width:700px) {
 	
 	h2 {
-    font-size: 16px;
-    }
-	
-}
-
-	@media(min-width:1000px) {
-	
-	h2 {
-    font-size: 18px;
+    font-size: 20px;
     }
 	
 }
@@ -167,6 +159,19 @@
 	margin-top: 30px;
 	}
 }
+
+
+	#about .col-sm-4  {
+	border-radius: 25px;
+	border: 1px solid white;
+	padding: 10px;	
+	}
+
+	@media screen and (min-width: 768px)  {
+	#about .col-sm-4  {
+	margin-left: 11%;	
+	}	
+}
 	
 	.column-container {
 	display: inline-block;
@@ -174,38 +179,10 @@
     margin: 0% 10.2% 0%;
 	}
 	
-	.coaches  {
+	#coaches  {
 	margin-bottom: 40px;
 	}
 	
-	.areas  {
-	border-radius: 25px;
-	border: 1px solid white;
-	}
-	
-	#about h2 {
-	height: 40px;
-	}
-	
-	footer {
-	margin-top: 100px;
-	padding-top: 25px;
-	padding-bottom: 50px;
-	border-top: 1px solid white;
-	}
-	
-	footer h2 {
-	text-decoration: underline;
-	}
-	
-	footer ul {
-	list-style: none;
-	padding-left:0;
-	}
-	
-	#media {
- 	margin-top: 35px;
- 	}	
     </style>
     
 </head>
@@ -229,7 +206,7 @@
 		<div class="container-fluid">
             <div  class="row text-center">
             	<div class="col-sm-12">
-            		<h2 style="font-size: 25px;" class="wow bounceInLeft">We Help Coaches Find Prospects</h2>
+            		<h2 style="font-size: 25px;" class="wow bounceInLeft">Coming Soon!</h2>
             	</div>
             </div>
         </div>
@@ -239,86 +216,24 @@
 		<div class="container">
 			<div class="row">
 				<div class="column-container" >
-					<div class="col-sm-4"  data-wow-delay="0s">
-						<div class="areas text-center wow fadeIn">
-							<h2>Men's<br>Basketball</h2>
-							<a class="btn btn-default" href="prospects">	
-								College Coaches
-							</a>
-							<a class="btn btn-default" href="prospects">	
-								Prospects
-							</a>
-						</div>	
+					<div class="col-sm-4 text-center wow fadeIn"  data-wow-delay="0s">
+						<h2>College Basketball Prospects</h2>
+					
+						<a class="btn btn-default" href="prospects">	
+							Learn More
+						</a>
 					</div>
-					<div id="" class="col-sm-4"  data-wow-delay="0s">
-						<div class="areas text-center wow fadeIn">	
-							<h2>Women's<br>Basketball</h2>
-							<a class="btn btn-default" href="coaches">	
-								College Coaches
-							</a>
-							<a class="btn btn-default" href="prospects">	
-								Prospects
-							</a>
-						</div>	
-					</div>
-					<div id="" class="col-sm-4"  data-wow-delay="0s">
-						<div class="areas text-center wow fadeIn">	
-							<h2><br>Football</h2>
-							<a class="btn btn-default" href="coaches">	
-								College Coaches
-							</a>
-							<a class="btn btn-default" href="prospects">	
-								Prospects
-							</a>
-						</div>	
+					<div id="coaches" class=" col-sm-4 text-center wow fadeIn"  data-wow-delay="0s">
+						<h2>College Basketball Coaches</h2>
+						
+						<a class="btn btn-default" href="coaches">	
+							Learn More
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="text-left" >
-					<div class="col-sm-3">
-						<h2>About</h2>
-						<ul>
-							<li>Our Service</li>
-							<li>Why Prospect Source</li>
-						</ul>
-					</div>
-					<div class="col-sm-3">
-						<h2>Products</h2>
-						<ul>
-							<li>Prospect</li>
-							<li>College Coach</li>
-						</ul>
-					</div>
-					<div class="col-sm-3">
-						<h2>Details</h2>
-						<ul>
-							<li>Sign Up</li>
-							<li>Contact Us</li>
-						</ul>
-					</div>
-					<div class="col-sm-3">
-						<h2>Events</h2>
-						<ul>
-							<li>Men's Basketball Prospects</li>
-							<li>Women's Basketball Prospects</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="media" class="row">
-				<div class="col-sm-offset-9 col-sm-3 text-center">
-					<i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
-				</div>
-			</div>
-		</div>
-	</footer>				
-		
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
