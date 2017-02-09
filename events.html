@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Prospect Source - Premier Recruiting Service for AAU & JUCO Basketball Players>
+    <meta name="author" content="Rusty Hutchison">
+
+    <title>Prospect Source</title>
+	<link rel="icon" href="img/ps-icon.png">
+   
+    <!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+
+    <!-- Custom Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.min.css" type="text/css">    
+	<link rel="stylesheet" href="css/timeline.css">
+    
+    <style type="text/css">
+
+	html, body {
+    width: 100%;
+    height: 100%;
+	}
+
+	@font-face {
+    font-family: Venera100;
+    src: url(react-stack/fonts/Venera-100.otf);
+	}
+
+	@font-face {
+    font-family: Venera300;
+    src: url(react-stack/fonts/Venera-300.otf);
+	}
+	
+	@font-face {
+    font-family: Venera500;
+    src: url(react-stack/fonts/Venera-500.otf);
+	}
+
+	@font-face {
+    font-family: Venera700;
+    src: url(react-stack/fonts/Venera-700.otf);
+	}
+	
+	@font-face {
+    font-family: Venera900;
+    src: url(react-stack/fonts/Venera-900.otf);
+	}
+
+    
+    body {
+    background-color: white;
+	font-size: 18px;
+	font-family: 'Questrial';
+	color: #4e4f51;
+	}
+    
+    h1, h2, h3, h4, h5 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: "Venera700";
+    }
+    
+    a 	{
+	text-decoration: none;
+	color: #5ccae6;
+	}
+    
+    a:active {
+    text-decoration: none;
+    color: #939598;
+	}
+    
+    a:focus, a:hover {
+    text-decoration: none;
+    color: #939598;
+	}
+    
+    
+    #logo hr {
+    margin-top: 50px;
+	margin-bottom: 50px;  
+    }
+    
+    hr   {
+	border-top: 1px solid #5ccae6;
+	width: 100%;  
+	margin-top: 0px;
+	margin-bottom: 40px;  
+    }
+    
+    #prospect-timeline h2, #about h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    }
+    
+    header {
+    padding: 50px 0px 50px 0px;
+    }
+    
+    section {
+    padding: 50px 0px 50px 0px;
+    border-top: 2px solid #5ccae6;
+    }
+    
+    .btn-default {
+    color: #333;
+    background-color: #5ccae6;
+    border-color: #fff;
+    border-radius: 25px;
+    margin-top: 25px;
+	}
+	
+	.btn-default:hover,  .btn-default:focus {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff;
+	}
+	
+	.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+	border: 2px solid #5ccae6;    
+	}
+    
+    #logo  {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    }
+    
+     #logo img {
+    }
+    
+    #about {
+	background-color: #e7e7e7;
+    }
+    
+    #about .btn{
+	display: block;
+	width: 100%
+	margin: auto;
+    }
+
+	#interested, #programs  {
+	background-color: #939598;
+	color: #fff;
+    }
+    
+    
+    
+    #serve h2 {
+    text-align:left;
+    }
+    
+    img {
+    width: 100%
+    }
+    
+    .navbar-default {
+    background-color: rgba(255,255,255,.90);
+    border-color: #939598;
+	}
+    
+    .navbar-default .navbar-nav>li>a {
+    color: #5ccae6;
+    font-size: 14px;
+	}
+    
+    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #939598;
+    background-color: transparent;
+	}
+    
+    .navbar-toggle {
+    font-size: 14px;
+	}
+    
+    .navbar-brand {
+	padding: 8px 20px;
+	}
+	
+    .navbar-brand img {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+    display: inline;
+	}
+    
+    #mainNav .name {
+    display: none;
+    }
+    
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    background-color: white;
+	}
+    
+    .header-icon {
+	margin: 0px 12px 0px 0px;
+	height: 35px;
+    width: 35px;
+	}
+
+	.fa  {
+	margin-top: 13px;
+	}
+	
+	
+	
+	#results i {
+	margin-top: 43px;
+	font-family: 'Venera700';
+	font-size: 14px;
+	}
+    
+    
+
+	@media(min-width:768px) {
+	
+	#mainNav .name {
+    display: inline;
+    }
+	
+	.fa  {
+	margin-top: 13px;
+	}
+	
+	
+}
+
+    @media(min-width:1000px) {
+	
+	.navbar-default .navbar-nav>li>a {
+    color: #5ccae6;
+    font-size: 16px;
+	}
+	
+	
+}
+	
+	@media(min-width:1100px) {
+	
+	.fa  {
+	margin-top: 33px;
+	}	
+	
+	
+	
+	#results i {
+	margin-top: 61px;
+	font-family: 'Venera700';
+	font-size: 19px;
+	}
+	
+}
+	
+
+	
+	@media(min-width:1200px) {
+	
+	.fa  {
+	margin-top: 33px;
+	}
+	
+	#prospect-timeline {
+	padding-bottom: 100px;
+	}
+	
+}
+	
+
+	
+	#prospect-timeline {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-bottom: 100px;
+	}
+	
+	#prospect-timeline ul h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	}
+	
+	
+	
+	 p {
+	padding-bottom: 40px;
+	}
+	
+	
+	
+	.about-modal .modal-content {
+    padding: 100px 0;
+	}
+
+	.about-modal .close-modal {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+	}
+	
+	.about-modal .close-modal .lr {
+	height:75px;
+	width:1px;
+	margin-left:35px;
+	background-color:#222;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	z-index:1051
+	}
+
+	.about-modal .close-modal .lr .rl {
+	height:75px;
+	width:1px;
+	background-color:#222;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	z-index:1052
+	}
+    
+    #consulting {
+    margin-bottom: 0px;
+    }
+    
+    #about .col-sm-4  {
+	background-color: #4e4f51;
+	border-radius: 25px;
+	border: 1px solid white;
+	padding: 10px;	
+	}
+	
+	#about h1  {
+	color: white;	
+	}
+    
+    .page-id  {
+    margin: 15px 0 10px;
+    width: 320px;
+    font-size: 16px;
+    }
+    
+    .why-subheaders  {
+    color: #5ccae6;
+    font-weight: bold;
+    padding-bottom: 0px;
+    }
+    
+    #why h4 {
+    margin-bottom: 10px;
+    }
+    
+    </style>
+    
+</head>
+<body>
+
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span>MENU<span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index"><img src="img/ps-icon.png" /><span class="name"></span></a>
+                <div class="page-id">Women's Basketball Prospects</div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sports<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="mens-prospects">Men's Basketball Prospects</a>
+                            </li>
+                            <li>
+                                <a href="womens-prospects">Women's Basketball Prospects</a>
+                            </li>
+                            <li>
+                                <a href="mens-coaches">Men's Basketball Coaches</a>
+                            </li>
+                            <li>
+                                <a href="womens-coaches">Women's Basketball Coaches</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="" href="events">Events</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="contact-us">Contact Us</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+<!-- landing page logo -->
+
+	<header id="logo">
+	  <div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1 text-center">
+				<img src="img/ps-logo-lg.png" class="image-responsive" alt="">
+			</div>
+		</div>
+	  </div>
+	</header>
+	
+	
+	<section id="about">
+	  <div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1 text-center">
+				<img src="img/PS-Elite-Girls-Camp.png" class="image-responsive" alt="">
+			</div>
+		</div>
+	  </div>
+	</section>
+	
+	<section id="button">
+	  	<div class="container">
+			<div class="row">
+                <div class=" col-xs-12">
+                    <a class="btn btn-default" href="https://www.eventbrite.com/e/iowa-prospect-elite-camp-tickets-31584326571">Register for Camp!</a>
+                </div>
+  			</div>
+  		</div>
+  	</section>	
+
+
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+   
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/prospect.js"></script>
+    
+    <!-- Submit the Form to Google Using "AJAX" -->
+  	<script type="text/javascript"  src="js/prospect-form-submission-handler.js"></script>
+  	
+  	
+
+</body>
+</html>
