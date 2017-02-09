@@ -130,7 +130,7 @@
     
     #logo  {
     margin-top: 100px;
-    margin-bottom: 0px;
+    margin-bottom: 100px;
     }
     
      #logo img {
@@ -344,6 +344,58 @@
 	color: white;	
 	}
     
+    .page-id  {
+    margin: 15px 0 10px;
+    width: 320px;
+    font-size: 16px;
+    }
+    
+    .why-subheaders  {
+    color: #5ccae6;
+    font-weight: bold;
+    padding-bottom: 0px;
+    }
+    
+    #why h4 {
+    margin-bottom: 10px;
+    }
+    
+    footer {
+	margin-top: 100px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	border-top: 1px solid white;
+	background-color: #4d4e50;
+	}
+	
+	footer h2 {
+	text-decoration: underline;
+	}
+	
+	footer ul {
+	list-style: none;
+	padding-left:0;
+	}
+	
+	footer hr {
+	margin-top: 25px;
+    margin-bottom: 25px;
+	}
+	
+	footer .fa-youtube {
+	color: white;
+	margin-top: 10px;
+	}
+	
+	@media(max-width:768px) {
+	
+	#footer-logo {
+    width: 50%;
+    margin-bottom: 14px;
+    }
+	
+}
+    
     </style>
     
 </head>
@@ -358,19 +410,34 @@
                     <span>MENU<span>
                 </button>
                 <a class="navbar-brand page-scroll" href="index"><img src="img/ps-icon.png" /><span class="name"></span></a>
+                <div class="page-id">Men's Basketball Prospects</div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="" href="prospects">Prospects</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sports<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="mens-prospects">Men's Basketball Prospects</a>
+                            </li>
+                            <li>
+                                <a href="womens-prospects">Women's Basketball Prospects</a>
+                            </li>
+                            <li>
+                                <a href="mens-coaches">Men's Basketball Coaches</a>
+                            </li>
+                            <li>
+                                <a href="womens-coaches">Women's Basketball Coaches</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a class="" href="coaches">Coaches</a>
+                        <a class="" href="events">Events</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact Us</a>
+                        <a class="page-scroll" href="contact-us">Contact Us</a>
                     </li>
                     
                 </ul>
@@ -389,8 +456,6 @@
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1 text-center">
 				<img src="img/ps-logo-lg.png" class="image-responsive" alt="">
-				<hr>
-				<h2>College Basketball Prospects</h2>
 			</div>
 		</div>
 	  </div>
@@ -400,14 +465,14 @@
 	  <div class="container">
 		<div class="row">
 			<div class="col-sm-offset-1 col-sm-10">
-				<h2 class="">WHAT WE DO</h2>
+				<h2 class="">OUR SERVICE</h2>
 				<hr>
-				<p>	Prospect Source is a software company changing the way prospects market themselves to college coaches’ 
-				throughout the recruiting process. Through our relationships with various clubs, we
-				make sure prospects have the necessary tools to disseminate information and video to the right
-				college coaches. If you are a recruitable prospect, we want to help connect you with college coaches at your
-				recruitment level across the country and ensure they have the necessary resources to evaluate and recruit
-				you. 
+				<p>	Our mission is to connect athletes with college coaches. We manage and position prospect information
+				in a way that college coaches have the necessary relationships and tools to evaluate and discover
+				prospects across the United States. College coaches are faced with evaluating thousands of prospects
+				each year which makes prospect information and video dissemination an important part of the
+				recruiting process. In order to effectively get your information to college coaches, we rely on
+				relationships and coming alongside your club, school, or coach to begin the prospect marketing process.
 				</p>
 			</div>
 		</div>
@@ -418,52 +483,45 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-offset-1 col-sm-10">
-                	<h2>PROSPECT RECRUITING PLATFORM</h2>
+                	<h2>PROSPECT MARKETING PLATFORM</h2>
                 	<hr>
                     <ul class="timeline">
                         <li >
                             <div id="timeline-image-top" class="timeline-image">
-                                <i class="fa fa-user fa-4x"></i>
+                                <i class="fa fa-group fa-4x"></i>
                             </div>
-                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay=".5s">
                                 <div class="timeline-heading">
-                                    <h3>Develop Profile</h3>
+                                    <h3>Prospect Camps</h3>
                                 </div>
                                 <div class="timeline-body">
-	                                    <p class="text-muted">No matter where you are in the
-                                    recruiting process, your recruitment is always evolving
-                                     as each college contacts or recruits you.</p>
+	                                    <p class="text-muted">Exposure & evaluation of top prospects</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <i class="fa fa-info-circle  fa-4x"></i>
+                                <i class="fa fa-info-circle fa-4x"></i>
                             </div>
-                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay=".5s">
                                 <div class="timeline-heading">
-                                    <h3>Showcase Information</h3>
+                                    <h3>Prospect Profiles</h3>
                                 </div>
                                 <div class="timeline-body">
-	                                    <p class="text-muted">Each college coach utilizes
-                                    information differently making it crucial to keep
-                                    contact, athletic, and academic information up-to-date.</p>
+	                                    <p class="text-muted">Showcase key recruiting information</p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <i id="" class="fa fa-video-camera fa-4x"></i>
+                                <i id="" class="fa fa-bullseye fa-4x"></i>
                             </div>
-                            <div class="timeline-panel wow fadeIn"  data-wow-delay="1s">
+                            <div class="timeline-panel wow fadeIn"  data-wow-delay=".5s">
                                 <div class="timeline-heading">
-                                    <h3>Market Video</h3>
+                                    <h3>Prospect Referrals</h3>
                                 </div>
                                 <div class="timeline-body">
-	                                    <p class="text-muted">We have a team in place to create
-                                    highlights, manage game film, and share video with any coach
-                                    at any level. We do not produce mixtapes but rather
-                                    produce video for scouting purposes.</p>
+	                                    <p class="text-muted">Distribute profile & video directly to coaches</p>
                                 </div>
                             </div>
                         </li>
@@ -472,6 +530,75 @@
 			
 			</div>
 		</div>
+	</section>
+
+	<section id="why">
+	  <div class="container">
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<h2 class="">WHY USE OUR SERVICE</h2>
+				<hr>
+				<h4>Not Just A Recruiting Website</h4>
+				<p class="why-subheaders">Our profiles are an always evolving tool for prospects</p>				
+				<p>Unlike many of today’s recruiting services, our prospect profiles go beyond creating a profile on
+				a website. Prospect Source was built from the ground up by developers using the same
+				technology as platforms such as Facebook and Instagram. Using this technology, our profiles
+				were built with features to market prospects to college coaches in ways that have never been
+				done before.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<h4>Transparency</h4>
+				<p class="why-subheaders">We show you exactly what you are paying for</p>				
+				<p>We take pride in the transparency we offer our customers. One of the first features ever offered
+				by Prospect Source was a unique way to show users all of the college coach activity on their
+				content. Ever since, we have put transparency at the forefront of everything we do so we can
+				always show customers what they are paying for. Instead of saying college coaches will be
+				viewing your profile and offering you a scholarship, we are honest and upfront, making the data
+				available and communicating that our job is strictly to get your information to college coaches.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<h4>Distribution</h4>
+				<p class="why-subheaders">Reach more college coaches</p>				
+				<p>When prospects use our premium marketing services, we guarantee more reach than all other
+				recruiting services in the United States. Many services market only to college coaches subscribed
+				to their website. Prospect Source is unique because we can reach every college coaching staff of
+				every level in the country, whether they are subscribed to our service or not. Once a prospect’s
+				content is delivered to a college coaching staff, it is up to them what they do with it, however,
+				we want to make sure they have the opportunity to evaluate every prospect on our platform.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<h4>Data driven philosophy</h4>
+				<p class="why-subheaders">We got into the mind of prospects and college coaches</p>				
+				<p>Before the Prospect Source platform launched, our services underwent a series of tests so we
+				knew what features to include in all of our products. Our research and development was
+				essential to building effective products for prospects and college coaches because of the
+				competitive landscape of college athletic recruiting. Not only did we use data to build our
+				platform, we use data to offer our customers transparency and as a tool to make informed
+				decisions as they take the next step in the recruiting process.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-1 col-sm-10">
+				<h4>Cost effective</h4>
+				<p class="why-subheaders">We want every prospect in the United States on our platform</p>				
+				<p>We want every prospect to have the opportunity to use our services. In order to do this, we offer
+				service that ranges from free to $300 on an annual basis. Like most services, we offer a free
+				profile, however several services can range into the thousands, albeit while offering little
+				transparency in the process.
+				</p>
+			</div>
+		</div>
+	  </div>
 	</section>
 
 <!---
@@ -495,93 +622,49 @@
 	
 	--->
 	
-	<!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-        	<div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Us</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            
-        	<div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-            		<form id="gform" method="POST" class="pure-form pure-form-stacked" action="https://script.google.com/macros/s/AKfycbxI-bQeGnHENS0CeVkidKzxicJFaghdR7k9rFkGM88YOxrDvD29/exec">
-    					<!-- change the form action to your script url -->
-						<div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>First Name</label>
-                                <input type="text" class="form-control" placeholder="Eric" id="first" name="first" required data-validation-required-message="Please enter your first name.">
-                            </div>
-                        </div>
-                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Last Name</label>
-                                <input type="text" class="form-control" placeholder="Johnson" id="last" name="last" required data-validation-required-message="Please enter your last name.">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Gender</label>
-                                <input type="text" class="form-control" placeholder="Male/Female" id="gender" name="gender" required data-validation-required-message="Please enter your gender.">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Graduation Year</label>
-                                <input type="number" class="form-control" placeholder="2016" id="year" name="year"required data-validation-required-message="Please enter your graduation year.">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="rusty@email.com" id="email" name="email" required data-validation-required-message="Please enter your email address.">
-                                <span id="email-invalid" style="display:none">
-        Must be a valid email address</span>
-    
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Contact Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="5557654321" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
-                            </div>
-                        </div>
-                          <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>High School</label>
-                                <input type="text" class="form-control" placeholder="Valley West High School" id="school" name="school" required data-validation-required-message="">
-                            </div>
-                        </div>
-                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>AAU Club</label>
-                                <input type="text" class="form-control" placeholder="Kingdom Hoops" id="club" name="club" required data-validation-required-message="">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Questions?</label>
-                                <textarea rows="5" class="form-control" placeholder="Do you have any questions?" id="question" name="question"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <input type="submit" class="btn btn-default" value="SEND" >
-                            </div>
-                        </div>
-  					</form>
-
-  	<!-- Customise the Thankyou Message People See when they submit the form: -->
-  					<div style="display:none;" id="thankyou_message" class="text-center">
-    					<h2><em>Thanks</em> for contacting us!<br>
-      						We will get back to you soon!</h2>
-  					</div>
-
-            
-        </div>
-    </section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="text-left" >
+					<div class="col-sm-3 col-sm-offset-2 text-center">
+						<ul>
+							<li>
+                                <a href="mens-prospects">Men's Basketball Prospects</a>
+                            </li>
+                            <li>
+                                <a href="womens-prospects">Women's Basketball Prospects</a>
+                            </li>
+                            <li>
+								<a class="" href="events">Events</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-2 text-center">
+						<a href="index"><img src="img/logo-only-flat.png" /></a>
+					</div>
+					<div class="col-sm-3 text-center">
+						<ul>
+							<li>
+                                <a href="mens-coaches">Men's Basketball Coaches</a>
+                            </li>
+                            <li>
+                                <a href="womens-coaches">Women's Basketball Coaches</a>
+                            </li>
+							<li>
+								<a class="page-scroll" href="contact-us">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-offset-5 col-sm-2 text-center">
+						<i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
+				</div>
+			</div>	
+		</div>
+	</footer>
 
 	
 	<!-- Latest compiled and minified JavaScript -->
