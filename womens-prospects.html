@@ -360,6 +360,28 @@
     margin-bottom: 10px;
     }
     
+    footer {
+	margin-top: 100px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	border-top: 1px solid white;
+	background-color: #4d4e50;
+	}
+	
+	footer h2 {
+	text-decoration: underline;
+	}
+	
+	footer ul {
+	list-style: none;
+	padding-left:0;
+	}
+	
+	footer hr {
+	margin-top: 25px;
+    margin-bottom: 25px;
+	}
+    
     </style>
     
 </head>
@@ -586,93 +608,49 @@
 	
 	--->
 	
-	<!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-        	<div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Us</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            
-        	<div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-            		<form id="gform" method="POST" class="pure-form pure-form-stacked" action="https://script.google.com/macros/s/AKfycbxI-bQeGnHENS0CeVkidKzxicJFaghdR7k9rFkGM88YOxrDvD29/exec">
-    					<!-- change the form action to your script url -->
-						<div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>First Name</label>
-                                <input type="text" class="form-control" placeholder="Eric" id="first" name="first" required data-validation-required-message="Please enter your first name.">
-                            </div>
-                        </div>
-                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Last Name</label>
-                                <input type="text" class="form-control" placeholder="Johnson" id="last" name="last" required data-validation-required-message="Please enter your last name.">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Gender</label>
-                                <input type="text" class="form-control" placeholder="Male/Female" id="gender" name="gender" required data-validation-required-message="Please enter your gender.">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Graduation Year</label>
-                                <input type="number" class="form-control" placeholder="2016" id="year" name="year"required data-validation-required-message="Please enter your graduation year.">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="rusty@email.com" id="email" name="email" required data-validation-required-message="Please enter your email address.">
-                                <span id="email-invalid" style="display:none">
-        Must be a valid email address</span>
-    
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Contact Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="5557654321" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
-                            </div>
-                        </div>
-                          <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>High School</label>
-                                <input type="text" class="form-control" placeholder="Valley West High School" id="school" name="school" required data-validation-required-message="">
-                            </div>
-                        </div>
-                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>AAU Club</label>
-                                <input type="text" class="form-control" placeholder="Kingdom Hoops" id="club" name="club" required data-validation-required-message="">
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Questions?</label>
-                                <textarea rows="5" class="form-control" placeholder="Do you have any questions?" id="question" name="question"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <input type="submit" class="btn btn-default" value="SEND" >
-                            </div>
-                        </div>
-  					</form>
-
-  	<!-- Customise the Thankyou Message People See when they submit the form: -->
-  					<div style="display:none;" id="thankyou_message" class="text-center">
-    					<h2><em>Thanks</em> for contacting us!<br>
-      						We will get back to you soon!</h2>
-  					</div>
-
-            
-        </div>
-    </section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="text-left" >
+					<div class="col-sm-3 col-sm-offset-2 text-center">
+						<ul>
+							<li>
+                                <a href="mens-prospects">Men's Basketball Prospects</a>
+                            </li>
+                            <li>
+                                <a href="womens-prospects">Women's Basketball Prospects</a>
+                            </li>
+                            <li>
+								<a class="" href="events">Events</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-2 text-center">
+						<a href="index"><img src="img/logo-only-flat.png" /></a>
+					</div>
+					<div class="col-sm-3 text-center">
+						<ul>
+							<li>
+                                <a href="mens-coaches">Men's Basketball Coaches</a>
+                            </li>
+                            <li>
+                                <a href="womens-coaches">Women's Basketball Coaches</a>
+                            </li>
+							<li>
+								<a class="page-scroll" href="contact-us">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-offset-5 col-sm-2 text-center">
+						<i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
+				</div>
+			</div>	
+		</div>
+	</footer>
 
 	
 	<!-- Latest compiled and minified JavaScript -->
